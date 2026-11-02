@@ -93,4 +93,36 @@ Rules fixed before v2 scoring:
 9. H3 is inconclusive unless the unmutated rule has at least 10 pre-patch detections. The altering mutant removes the sink call. It does not insert the literal `sink_guard`. Preserving mutants are scope-aware rename, a wrap that keeps `*args`/`**kwargs` and `async`, and an alias of the sink's module.
 10. H4 asks for the same invariant text the compiler exports, as Python Semgrep and Python CodeQL. The harness supplies one unrelated few-shot and the CodeQL qlpack scaffold. Ten paraphrased prompts per model at temperature 0.0. Models: `openai/gpt-4o-mini` and `anthropic/claude-3-5-haiku-20241022`. Report pass@1, pass@3 with the validator error fed back, missing qlpack, hallucinated imports, the returned model id, and `semgrep --test` on `benchmarks/dev_fixtures/`. API errors are not syntax failures.
 
+## Addendum 2026-11-02 — Library-on-v1 (locked before library batch)
+
+Frozen dataset: `HELD_OUT_DATASET_SHA256` unchanged (`8316802f…`). No edits to v1 pair labels or oracle ground truth.
+
+**Repository:** `https://github.com/Tito0015/veraptos-threat-library` at git SHA `78b718d72bce1521593774c59b03c0e4edd7088e` (paths below relative to repo root; rules are **not** copied into the benchmark tree).
+
+**Estimand:** For each library rule, run the same diff-intersection matcher as H2 on v1 held-out pairs. Pairs are **out-of-class** for these showcase rules (MCP Python advisories vs GraphQL/DOM/FastAPI rules; OpenZeppelin patch classes vs DVD flash-loan detectors). The primary read is descriptive recall/silence/fix-discrimination counts, not “DVD detector failed.”
+
+**Arms (control = real rule only; no empty/trivial/shuffled in this batch):**
+
+| Rule id | Engine | Path / detect |
+|---|---|---|
+| `graphql-ssrf` | Opengrep | `web2-opengrep/01-graphql-ssrf/graphql-ssrf.yaml` |
+| `dom-xss-postmessage` | Opengrep | `web2-opengrep/02-dom-xss-postmessage/dom-xss-postmessage.yaml` |
+| `mass-assignment-fastapi` | Opengrep | `web2-opengrep/03-mass-assignment-fastapi/mass-assignment-fastapi.yaml` |
+| `express-auth-bypass` | Opengrep | `web2-opengrep/04-express-auth-bypass/express-auth-bypass.yaml` |
+| `jwt-none-alg-go` | Opengrep | `web2-opengrep/05-jwt-none-alg-go/jwt-none-alg-go.yaml` |
+| `veraptos-truster-arbitrary-call` | Slither | `--detect veraptos-truster-arbitrary-call` |
+| `veraptos-side-entrance-state-hijack` | Slither | `--detect veraptos-side-entrance-state-hijack` |
+| `veraptos-rewarder-snapshot-manipulation` | Slither | `--detect veraptos-rewarder-snapshot-manipulation` |
+| `veraptos-puppet-spot-oracle` | Slither | `--detect veraptos-puppet-spot-oracle` |
+| `veraptos-selfie-governance-snapshot` | Slither | `--detect veraptos-selfie-governance-snapshot` |
+
+Web2 rules run on `web2_mcp` pairs only; Web3 detectors on `web3_toctou_cei` only. Wrong-language scans with zero findings count as `ok` / silence, not `scan_error`.
+
+## Addendum 2026-11-02 — Fair baselines pending (not scored yet)
+
+1. Community Opengrep/Semgrep rules by **registry id + upstream commit** only (no vendored rule text).
+2. CodeQL default suites on public clones for these pairs.
+3. LLM held-out **pair recall** (beyond H4 syntax pass@k).
+4. Time-boxed hand-written expert rule per domain (author + time cap pre-registered).
+
 v2 size gate: the active hash changes only when `data/held_out_pairs.csv` has at least 20 `web2_mcp` rows and 20 `web3_toctou_cei` rows. Otherwise the active hash stays at v1 and v2 is not scored. Pairs are not invented to fill the gate. Web3 harvest keeps a row only when the fix diff contains a `.sol` file, the advisory text matches reentrancy, checks-effects-interactions, access control, or a state write, and the pragma selects an installed 0.8 solc (`0.8.10`, `0.8.20`, `0.8.28`). Dropped rows are counted.

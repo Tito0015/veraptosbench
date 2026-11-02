@@ -619,7 +619,7 @@ def parse_slither(payload: str, clone: Path) -> tuple[str, list[dict]]:
                         clone,
                     ),
                     "line": lines[0],
-                    "rule_id": det.get("check") or SLITHER_DETECT,
+                    "rule_id": det.get("check") or slither_detect,
                     "severity": det.get("impact") or "",
                     "message": (det.get("description") or "").split("\n", 1)[0],
                 }
@@ -735,6 +735,9 @@ def run_semgrep(clone: Path, rule: Path) -> tuple[str, list[dict], str, int]:
     except json.JSONDecodeError:
         return "scan_error", [], (proc.stderr or proc.stdout or "")[:800], 0
     if proc.returncode not in (0, 1) and not findings:
+        # ponytail: wrong-language / empty-target scans still parse; treat as silence.
+        if errors == 0:
+            return "ok", [], proc.stderr or "", errors
         return "scan_error", [], proc.stderr or "", errors
     return "ok", findings, proc.stderr or "", errors
 
@@ -779,9 +782,15 @@ def run_codeql(
     return "ok", parse_sarif(payload, clone), analyzed.stderr or ""
 
 
-def run_slither(clone: Path, changed: dict[str, set[int]]) -> tuple[str, list[dict], str, str]:
+def run_slither(
+    clone: Path,
+    changed: dict[str, set[int]],
+    detect: str | None = None,
+    extra_env: dict[str, str] | None = None,
+) -> tuple[str, list[dict], str, str]:
+    slither_detect = detect or SLITHER_DETECT
     spec = first_pragma(clone, changed)
-    env: dict[str, str] = {}
+    env: dict[str, str] = dict(extra_env or {})
     solc_version = ""
     if spec:
         version = pick_solc(spec, installed_solc())
@@ -804,7 +813,7 @@ def run_slither(clone: Path, changed: dict[str, set[int]]) -> tuple[str, list[di
             "--json",
             str(json_path),
             "--detect",
-            SLITHER_DETECT,
+            slither_detect,
             "--compile-force-framework",
             "foundry",
         ]
@@ -836,7 +845,7 @@ def run_slither(clone: Path, changed: dict[str, set[int]]) -> tuple[str, list[di
             "--json",
             str(json_path),
             "--detect",
-            SLITHER_DETECT,
+            slither_detect,
             "--compile-force-framework",
             "solc",
         ]
@@ -936,6 +945,8 @@ def evaluate(
     keep_db: bool,
     source_root: Path | None,
     donor: dict | None,
+    slither_detect: str | None = None,
+    slither_env: dict[str, str] | None = None,
 ) -> dict:
     started = time.perf_counter()
     clone = source_root if source_root else clone_pair(row, side, offline=offline)
@@ -972,7 +983,9 @@ def evaluate(
             keep_db,
         )
     else:
-        outcome, findings, stderr, solc_version = run_slither(clone, changed)
+        outcome, findings, stderr, solc_version = run_slither(
+            clone, changed, detect=slither_detect, extra_env=slither_env
+        )
     scored = score_findings(findings, clone, score_changed, score_oracle) if outcome == "ok" else []
     files = scanned_list(clone)
     head = run(["git", "rev-parse", "HEAD"], cwd=clone)

@@ -1,0 +1,126 @@
+{
+  "pair": "GHSA-84m7-p3x7-pcfv",
+  "target": "library_opengrep",
+  "side": "post",
+  "outcome": "ok",
+  "control": "",
+  "category": "web2_mcp",
+  "repository": "https://github.com/modelcontextprotocol/python-sdk",
+  "cwe": "",
+  "oracle_unresolved": false,
+  "findings": [
+    {
+      "file": "src/mcp/shared/experimental/tasks/helpers.py",
+      "line": 102,
+      "rule_id": "D.veraptos-threat-library.web2-opengrep.03-mass-assignment-fastapi.mass-assignment-fastapi",
+      "severity": "ERROR",
+      "message": "Pydantic request body applied to ORM model without field allowlist",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/shared/experimental/tasks/in_memory_task_store.py",
+      "line": 92,
+      "rule_id": "D.veraptos-threat-library.web2-opengrep.03-mass-assignment-fastapi.mass-assignment-fastapi",
+      "severity": "ERROR",
+      "message": "Pydantic request body applied to ORM model without field allowlist",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/shared/experimental/tasks/in_memory_task_store.py",
+      "line": 104,
+      "rule_id": "D.veraptos-threat-library.web2-opengrep.03-mass-assignment-fastapi.mass-assignment-fastapi",
+      "severity": "ERROR",
+      "message": "Pydantic request body applied to ORM model without field allowlist",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/shared/experimental/tasks/in_memory_task_store.py",
+      "line": 140,
+      "rule_id": "D.veraptos-threat-library.web2-opengrep.03-mass-assignment-fastapi.mass-assignment-fastapi",
+      "severity": "ERROR",
+      "message": "Pydantic request body applied to ORM model without field allowlist",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/shared/experimental/tasks/in_memory_task_store.py",
+      "line": 177,
+      "rule_id": "D.veraptos-threat-library.web2-opengrep.03-mass-assignment-fastapi.mass-assignment-fastapi",
+      "severity": "ERROR",
+      "message": "Pydantic request body applied to ORM model without field allowlist",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/shared/experimental/tasks/in_memory_task_store.py",
+      "line": 219,
+      "rule_id": "D.veraptos-threat-library.web2-opengrep.03-mass-assignment-fastapi.mass-assignment-fastapi",
+      "severity": "ERROR",
+      "message": "Pydantic request body applied to ORM model without field allowlist",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/experimental/tasks/client/test_handlers.py",
+      "line": 189,
+      "rule_id": "D.veraptos-threat-library.web2-opengrep.03-mass-assignment-fastapi.mass-assignment-fastapi",
+      "severity": "ERROR",
+      "message": "Pydantic request body applied to ORM model without field allowlist",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/experimental/tasks/client/test_handlers.py",
+      "line": 413,
+      "rule_id": "D.veraptos-threat-library.web2-opengrep.03-mass-assignment-fastapi.mass-assignment-fastapi",
+      "severity": "ERROR",
+      "message": "Pydantic request body applied to ORM model without field allowlist",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/experimental/tasks/client/test_handlers.py",
+      "line": 553,
+      "rule_id": "D.veraptos-threat-library.web2-opengrep.03-mass-assignment-fastapi.mass-assignment-fastapi",
+      "severity": "ERROR",
+      "message": "Pydantic request body applied to ORM model without field allowlist",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/experimental/tasks/client/test_tasks.py",
+      "line": 204,
+      "rule_id": "D.veraptos-threat-library.web2-opengrep.03-mass-assignment-fastapi.mass-assignment-fastapi",
+      "severity": "ERROR",
+      "message": "Pydantic request body applied to ORM model without field allowlist",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/experimental/tasks/server/test_integration.py",
+      "line": 150,
+      "rule_id": "D.veraptos-threat-library.web2-opengrep.03-mass-assignment-fastapi.mass-assignment-fastapi",
+      "severity": "ERROR",
+      "message": "Pydantic request body applied to ORM model without field allowlist",
+      "nearest_changed_line": null
+    }
+  ],
+  "matches": [],
+  "tp": false,
+  "finding_count": 11,
+  "tp_count": 0,
+  "telemetry": {
+    "tool_version": "opengrep 1.33.1",
+    "rule_sha256": "53fdb6d45061e531a943aa24de12cf2830fa0f9ec7ba889b61ee84d045a41d63",
+    "clone_head": "92120b4b0f50385af096592d7cee932fc1d994e7",
+    "clone_tree": "c5aaa8e9d949cdcec9470c6ed512e97786db13e1",
+    "solc_version": "",
+    "scanned_files_sha256": "377cec300234b2c11d23e823ec7c431d645e8f22fb815637118e5fbd51ca4a67",
+    "scanned_file_count": 134,
+    "diff_files": 3,
+    "diff_lines": 240,
+    "excluded_hunks": 46,
+    "renames": 0,
+    "alarm_count": 11,
+    "semgrep_errors": 0,
+    "runtime_seconds": 39.485,
+    "stderr_sha256": "c630ec3987877b802db86193e911af853f925f4493f6005c346cf315023908d5"
+  },
+  "library_rule_id": "mass-assignment-fastapi",
+  "library_repo": "https://github.com/Tito0015/veraptos-threat-library",
+  "library_git_sha": "78b718d72bce1521593774c59b03c0e4edd7088e",
+  "estimand": "out_of_class_v1"
+}

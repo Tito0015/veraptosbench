@@ -321,6 +321,121 @@ def h4_text() -> list[str]:
     return lines
 
 
+def load_library_results() -> dict[tuple[str, str], dict[tuple[str, str], dict]]:
+    """Map (library_rule_id, target) -> (pair, side) -> payload."""
+    found: dict[tuple[str, str], dict[tuple[str, str], dict]] = {}
+    if not RESULTS.is_dir():
+        return found
+    for path in RESULTS.glob("library_*.json"):
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            continue
+        rule_id = data.get("library_rule_id") or ""
+        target = data.get("target") or ""
+        if not rule_id or not target:
+            continue
+        key = (rule_id, target)
+        found.setdefault(key, {})[(data["pair"], data["side"])] = data
+    return found
+
+
+def summarize_library(
+    held: list[dict],
+    by_side: dict[tuple[str, str], dict],
+    category: str,
+) -> dict:
+    primary = []
+    compile_error = 0
+    sides = ok_sides = 0
+    for row in held:
+        if row["Category"] != category:
+            continue
+        pre = by_side.get((row["GHSA ID"], "pre"))
+        post = by_side.get((row["GHSA ID"], "post"))
+        if pre is None or post is None:
+            continue
+        for side in (pre, post):
+            sides += 1
+            if side.get("outcome") == "ok":
+                ok_sides += 1
+            elif side.get("outcome") == "compile_error":
+                compile_error += 1
+        if pre.get("outcome") == "ok" and post.get("outcome") == "ok":
+            primary.append(
+                {
+                    "recall": bool(pre.get("tp")),
+                    "silence": not bool(post.get("tp")),
+                    "fd": bool(pre.get("tp")) and not bool(post.get("tp")),
+                }
+            )
+    n = len(primary)
+    return {
+        "n": n,
+        "recall": sum(1 for item in primary if item["recall"]),
+        "silence": sum(1 for item in primary if item["silence"]),
+        "fd": sum(1 for item in primary if item["fd"]),
+        "compile_error": compile_error,
+        "sides": sides,
+        "ok_sides": ok_sides,
+    }
+
+
+def library_table_lines(held: list[dict]) -> list[str]:
+    lib = load_library_results()
+    if not lib:
+        return [
+            "## H2 — threat library on v1 (out-of-class)",
+            "",
+            "Not measured. Run `python scripts/library_batch.py` after PREREG addendum.",
+            "",
+        ]
+    lines = [
+        "## H2 — threat library on v1 (out-of-class)",
+        "",
+        "Rules from [veraptos-threat-library](https://github.com/Tito0015/veraptos-threat-library) at SHA `78b718d72bce1521593774c59b03c0e4edd7088e`. Estimand: same matcher as H2; pairs are **not** the DVD/annotated fixture classes these rules target.",
+        "",
+        "| Rule | Engine | Domain | N | Fix discrimination | Pre-patch recall | Post-patch silence | compile_error sides |",
+        "|---|---|---|---|---|---|---|---|",
+    ]
+    for (rule_id, target), by_side in sorted(lib.items()):
+        engine = "opengrep" if "opengrep" in target else "slither"
+        category = "web2_mcp" if engine == "opengrep" else "web3_toctou_cei"
+        summary = summarize_library(held, by_side, category)
+        n = summary["n"]
+        lines.append(
+            "| `{rule}` | {engine} | {domain} | {n} | {fd} | {recall} | {silence} | {comp} |".format(
+                rule=rule_id,
+                engine=engine,
+                domain="Python" if category == "web2_mcp" else "Solidity",
+                n=n,
+                fd=fmt_rate(summary["fd"], n),
+                recall=fmt_rate(summary["recall"], n),
+                silence=fmt_rate(summary["silence"], n),
+                comp=summary["compile_error"],
+            )
+        )
+    lines.append("")
+    return lines
+
+
+def scored_arms_lines() -> list[str]:
+    return [
+        "**Related repos:** [Veraptos Threat Library](https://github.com/Tito0015/veraptos-threat-library) · public package [`veraptosbench-mini`](https://github.com/Tito0015/veraptosbench-mini).",
+        "",
+        "## Scored arms (what each row measures)",
+        "",
+        "| Arm | Status | Rule source | Scoring engine |",
+        "|---|---|---|---|",
+        "| **Treatment (compiler sink-map)** | Scored | `veraptos_static_cli --export-semgrep-python` → `benchmarks/veraptos_rules/web2_invariant.yml` | Opengrep on Python pairs (N=7) |",
+        "| **Baseline (stock Slither)** | Scored | Slither `reentrancy-eth`, `reentrancy-no-eth` — not Veraptos-compiled; no `--export-slither` | Slither on Solidity pairs (N=8) |",
+        "| **Treatment (threat library)** | Scored (out-of-class) | Pinned threat-library paths/detectors (see table below) | Opengrep + library Slither |",
+        "",
+        "The Opengrep H2 row is the compiler Python sink-map only, not a threat-library YAML.",
+        "",
+    ]
+
+
 def gate_lines() -> list[str]:
     if not GATE_JSON.is_file():
         return []
@@ -351,12 +466,17 @@ def render() -> str:
     lines = [
         "# VeraptosBench-mini results",
         "",
+    ]
+    lines.extend(scored_arms_lines())
+    lines.extend(
+        [
         "## v1 archive",
         "",
         "v1 hash `8316802fb09b6a0595d58472ceb810656cf71a8549b495d5641c98dcc478222d`.",
         "An earlier Semgrep run on these 8 Solidity pairs scored recall 0/8 = 0.00 [0.00, 0.32] and silence 8/8 = 1.00 [0.68, 1.00]. That row is not the Web3 measurement. Semgrep is Web2 Python only. Web3 is the Slither row.",
         "",
-    ]
+        ]
+    )
     lines.extend(gate_lines())
     lines.extend(
         [
@@ -470,12 +590,22 @@ def render() -> str:
                 "",
             ]
         )
+    lines.extend(library_table_lines(rows))
     lines.extend(
         [
             "",
             "## In Progress / Compiler Roadmap",
             "",
-            "CodeQL export is not implemented. The Slither row is Slither's built-in `reentrancy-eth` and `reentrancy-no-eth` detectors, not a Veraptos-compiled rule. There is no `--export-slither`.",
+            "CodeQL export is not implemented. **Slither H2** uses stock reentrancy detectors only. **Opengrep H2** uses the Veraptos compiler Python sink-map (`--export-semgrep-python`). Library rules are scored separately (out-of-class on v1). There is no `--export-slither`.",
+            "",
+            "## Pending fair baselines (pre-registered, not scored in this release)",
+            "",
+            "- Opengrep/Semgrep registry rules by upstream rule id + commit only (no vendored rule text).",
+            "- CodeQL default query suites on these public clone targets.",
+            "- LLM held-out pair recall (H4 today is syntax pass@k only).",
+            "- Time-boxed hand-written expert rule per domain.",
+            "",
+            "See [`PREREG.md`](PREREG.md) addenda *Library-on-v1* and *Fair baselines pending*.",
             "",
             "## H3",
             "",

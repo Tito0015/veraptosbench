@@ -1,0 +1,62 @@
+{
+  "pair": "GHSA-mxxr-jv3v-6pgc",
+  "target": "library_opengrep",
+  "side": "post",
+  "outcome": "ok",
+  "control": "",
+  "category": "web2_mcp",
+  "repository": "https://github.com/jlowin/fastmcp",
+  "cwe": "",
+  "oracle_unresolved": false,
+  "findings": [
+    {
+      "file": "src/fastmcp/server/auth/oauth_proxy.py",
+      "line": 1182,
+      "rule_id": "D.veraptos-threat-library.web2-opengrep.03-mass-assignment-fastapi.mass-assignment-fastapi",
+      "severity": "ERROR",
+      "message": "Pydantic request body applied to ORM model without field allowlist",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/fastmcp/server/server.py",
+      "line": 316,
+      "rule_id": "D.veraptos-threat-library.web2-opengrep.03-mass-assignment-fastapi.mass-assignment-fastapi",
+      "severity": "ERROR",
+      "message": "Pydantic request body applied to ORM model without field allowlist",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/fastmcp/utilities/cli.py",
+      "line": 137,
+      "rule_id": "D.veraptos-threat-library.web2-opengrep.03-mass-assignment-fastapi.mass-assignment-fastapi",
+      "severity": "ERROR",
+      "message": "Pydantic request body applied to ORM model without field allowlist",
+      "nearest_changed_line": null
+    }
+  ],
+  "matches": [],
+  "tp": false,
+  "finding_count": 3,
+  "tp_count": 0,
+  "telemetry": {
+    "tool_version": "opengrep 1.33.1",
+    "rule_sha256": "53fdb6d45061e531a943aa24de12cf2830fa0f9ec7ba889b61ee84d045a41d63",
+    "clone_head": "2a20f54617a37213ed83894a8c2f0ac38a2e83a3",
+    "clone_tree": "30c0bd7b5ff0e18eb9c1c4e645a54da66a8e7e77",
+    "solc_version": "",
+    "scanned_files_sha256": "756a66746489a6fd9af709098001c53a0d81efce34e613e0b6e10b6991deba79",
+    "scanned_file_count": 151,
+    "diff_files": 2,
+    "diff_lines": 8,
+    "excluded_hunks": 1,
+    "renames": 0,
+    "alarm_count": 3,
+    "semgrep_errors": 0,
+    "runtime_seconds": 35.972,
+    "stderr_sha256": "d3b01b248a5f703a93e1f3ebe460b0920ccf75330eb0a4d500d4fe300b9e595b"
+  },
+  "library_rule_id": "mass-assignment-fastapi",
+  "library_repo": "https://github.com/Tito0015/veraptos-threat-library",
+  "library_git_sha": "78b718d72bce1521593774c59b03c0e4edd7088e",
+  "estimand": "out_of_class_v1"
+}
