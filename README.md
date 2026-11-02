@@ -1,5 +1,19 @@
 # VeraptosBench-mini results
 
+## Status (read first)
+
+Pilot held-out: **n=7** Python (`web2_mcp`), **n=8** Solidity (`web3_toctou_cei`).
+Pre-registered H2 bars **were not met**; **no general performance claims** in this release.
+This release ships the harness, labeled primary arms, cheap controls, and frozen artifacts.
+**Pending:** fair baselines (see PREREG); v2 held-out (**GATE_FAIL**: 0 of 20 Web3 candidates in public `gate.json`).
+Per-repository recall/silence scores measure **rule–oracle agreement on that advisory**, not the security posture of the upstream project.
+
+**Attribution:** advisory metadata from the [GitHub Advisory Database](https://github.com/advisories) (CC-BY 4.0).
+
+**Third-party rerun:** you may re-score committed YAML, stock Slither detectors, and the pinned threat-library SHA on the same clone pins.
+You **cannot** regenerate `web2_invariant.yml` from this repo alone (requires closed `veraptos_static_cli`).
+`PROVENANCE.json` frozen H1 hashes are integrity checks, not a public compiler replay recipe.
+
 **Related repos:** [Veraptos Threat Library](https://github.com/Tito0015/veraptos-threat-library) · public package [`veraptosbench-mini`](https://github.com/Tito0015/veraptosbench-mini).
 
 ## Scored arms (what each row measures)
@@ -8,9 +22,19 @@
 |---|---|---|---|
 | **Treatment (compiler sink-map)** | Scored | `veraptos_static_cli --export-semgrep-python` → `benchmarks/veraptos_rules/web2_invariant.yml` | Opengrep on Python pairs (N=7) |
 | **Baseline (stock Slither)** | Scored | Slither `reentrancy-eth`, `reentrancy-no-eth` — not Veraptos-compiled; no `--export-slither` | Slither on Solidity pairs (N=8) |
-| **Treatment (threat library)** | Scored (out-of-class) | Pinned threat-library paths/detectors (see table below) | Opengrep + library Slither |
+| **Control (out-of-class library rules)** | Scored (descriptive) | Pinned threat-library paths/detectors (see table below) | Opengrep + library Slither |
 
 The Opengrep H2 row is the compiler Python sink-map only, not a threat-library YAML.
+
+## Results changelog
+
+| Release | Note |
+|---|---|
+| **v0.1-release** | `anthropic/claude-3-5-haiku-20241022`: API 404 on all H4 runs — **not measured** (omitted from headline H4 table). |
+| **v0.1-release** | `openai/gpt-4o-mini`: Semgrep **10/10** pass@k; CodeQL **0/10** (scaffold compile). Label: **small-model baseline**, not frontier LLM. |
+| **v0.1-release** | `claude-sonnet-5.5` row is current-generation syntax/repair (pass@k ≠ held-out recall). |
+| **v0.1.1** | Threat-library arm added **after** v1 primary H2 scores were known (PREREG post-hoc addendum; control arm). |
+| **v0.1.2** | Method-first README: status block, H2 negative controls, CWE sidecar, finding totals, fixture harness check. |
 
 ## v1 archive
 
@@ -62,7 +86,29 @@ Recall by CWE:
 
 | CWE | Pre-patch recall |
 |---|---|
-| unknown | 1/7 = 0.14 |
+| CWE-200 | 1/1 = 1.00 |
+| CWE-346;CWE-1385 | 0/1 = 0.00 |
+| CWE-400;CWE-770;CWE-772 | 0/1 = 0.00 |
+| CWE-639 | 0/1 = 0.00 |
+| CWE-79 | 0/1 = 0.00 |
+| CWE-862 | 0/1 = 0.00 |
+| CWE-918 | 0/1 = 0.00 |
+In-scope subset (sinkmap, sidecar metadata): 1/6 = 0.17.
+
+### Total findings (primary arm, opengrep)
+
+Oracle true positives are a subset of scanner findings. Post-patch **zero TP** can still mean noisy non-oracle alarms.
+
+| Pair | pre `finding_count` | post `finding_count` |
+|---|---|---|
+| `GHSA-5h93-6whr-6q8j` | 267 | 319 |
+| `GHSA-84m7-p3x7-pcfv` | 184 | 184 |
+| `GHSA-hvrp-rf83-w775` | 182 | 182 |
+| `GHSA-jpw9-pfvf-9f58` | 182 | 182 |
+| `GHSA-mxxr-jv3v-6pgc` | 184 | 184 |
+| `GHSA-vj7q-gjh5-988w` | 182 | 182 |
+| `GHSA-vv7q-7jx5-f767` | 237 | 237 |
+
 
 Empty control fix discrimination: not measured.
 Shuffled-oracle fix discrimination: not measured.
@@ -91,14 +137,39 @@ Recall by CWE:
 
 | CWE | Pre-patch recall |
 |---|---|
-| unknown | 0/8 = 0.00 |
+| CWE-116 | 0/1 = 0.00 |
+| CWE-125 | 0/1 = 0.00 |
+| CWE-20 | 0/1 = 0.00 |
+| CWE-354 | 0/2 = 0.00 |
+| CWE-400;CWE-770 | 0/1 = 0.00 |
+| CWE-665 | 0/1 = 0.00 |
+| CWE-669 | 0/1 = 0.00 |
+In-scope subset (sidecar): not measured.
+
+### Total findings (primary arm, slither)
+
+Oracle true positives are a subset of scanner findings. Post-patch **zero TP** can still mean noisy non-oracle alarms.
+
+| Pair | pre `finding_count` | post `finding_count` |
+|---|---|---|
+| `GHSA-4h98-2769-gh6h` | 0 | 0 |
+| `GHSA-5vp3-v4hc-gx76` | 0 | 0 |
+| `GHSA-7grf-83vw-6f5x` | 0 | 0 |
+| `GHSA-93hq-5wgc-jc82` | 34 | 34 |
+| `GHSA-9j3m-g383-29qr` | 0 | 0 |
+| `GHSA-9vx6-7xxf-x967` | 34 | 34 |
+| `GHSA-g4vp-m682-qqmp` | 41 | 41 |
+| `GHSA-wprv-93r4-jj2p` | 34 | 34 |
+
 
 Empty control fix discrimination: not measured.
 Shuffled-oracle fix discrimination: not measured.
 
-## H2 — threat library on v1 (out-of-class)
+## H2 — control: threat library on v1 (out-of-class)
 
-Rules from [veraptos-threat-library](https://github.com/Tito0015/veraptos-threat-library) at SHA `78b718d72bce1521593774c59b03c0e4edd7088e`. Estimand: same matcher as H2; pairs are **not** the DVD/annotated fixture classes these rules target.
+Zeros are the expected outcome: DVD / TS / Go showcase rules vs MCP Python and OpenZeppelin patch-class advisories.
+
+Rules from [veraptos-threat-library](https://github.com/Tito0015/veraptos-threat-library) at SHA `78b718d72bce1521593774c59b03c0e4edd7088e`. Estimand: same matcher as H2; pairs are **not** the fixture classes these rules target.
 
 | Rule | Engine | Domain | N | Fix discrimination | Pre-patch recall | Post-patch silence | compile_error sides |
 |---|---|---|---|---|---|---|---|
@@ -108,10 +179,35 @@ Rules from [veraptos-threat-library](https://github.com/Tito0015/veraptos-threat
 | `jwt-none-alg-go` | opengrep | Python | 7 | 0/7 = 0.00 | 0/7 = 0.00 | 7/7 = 1.00 | 0 |
 | `mass-assignment-fastapi` | opengrep | Python | 7 | 0/7 = 0.00 | 0/7 = 0.00 | 7/7 = 1.00 | 0 |
 | `veraptos-puppet-spot-oracle` | slither | Solidity | 4 | 0/4 = 0.00 | 0/4 = 0.00 | 4/4 = 1.00 | 8 |
-| `veraptos-rewarder-snapshot-manipulation` | slither | Solidity | 4 | 0/4 = 0.00 | 0/4 = 0.00 | 4/4 = 1.00 | 8 |
+| `veraptos-rewarder-snapshot-manipulation` | slither | Solidity | 6 | 0/6 = 0.00 | 0/6 = 0.00 | 6/6 = 1.00 | 3 |
 | `veraptos-selfie-governance-snapshot` | slither | Solidity | 4 | 0/4 = 0.00 | 0/4 = 0.00 | 4/4 = 1.00 | 8 |
-| `veraptos-side-entrance-state-hijack` | slither | Solidity | 4 | 0/4 = 0.00 | 0/4 = 0.00 | 4/4 = 1.00 | 8 |
-| `veraptos-truster-arbitrary-call` | slither | Solidity | 4 | 0/4 = 0.00 | 0/4 = 0.00 | 4/4 = 1.00 | 8 |
+| `veraptos-side-entrance-state-hijack` | slither | Solidity | 8 | 0/8 = 0.00 | 0/8 = 0.00 | 8/8 = 1.00 | 0 |
+| `veraptos-truster-arbitrary-call` | slither | Solidity | 8 | 0/8 = 0.00 | 0/8 = 0.00 | 8/8 = 1.00 | 0 |
+
+Library Slither `compile_error` stderr tails:
+
+- `GHSA-93hq-5wgc-jc82`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-93hq-5wgc-jc82`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-9vx6-7xxf-x967`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-9vx6-7xxf-x967`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-g4vp-m682-qqmp`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-g4vp-m682-qqmp`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-wprv-93r4-jj2p`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-wprv-93r4-jj2p`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-g4vp-m682-qqmp`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-wprv-93r4-jj2p`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-wprv-93r4-jj2p`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-93hq-5wgc-jc82`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-93hq-5wgc-jc82`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-9vx6-7xxf-x967`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-9vx6-7xxf-x967`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-g4vp-m682-qqmp`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-g4vp-m682-qqmp`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-wprv-93r4-jj2p`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-wprv-93r4-jj2p`: slither exited without JSON (~1.4s on veraptos-* detect)
+
+Library Slither `compile_error` sides (four GHSA pairs: `93hq`, `9vx6`, `g4vp`, `wprv`): `--detect veraptos-*` often writes no JSON while **stock** `reentrancy-eth` compiles on the same clone. Do not treat as post-patch silence.
+
 
 
 ## In Progress / Compiler Roadmap
@@ -137,9 +233,11 @@ pass@1 is the first sample. pass@3 allows two repairs that see the validator err
 
 | Model | Semgrep pass@1 | Semgrep pass@3 | CodeQL pass@1 | CodeQL pass@3 | API errors | Missing qlpack | Hallucinated imports | semgrep --test |
 |---|---|---|---|---|---|---|---|---|
-| `anthropic/claude-3-5-haiku-20241022` | 0/10 | 0/10 | 0/10 | 0/10 | 10 | 0 | 0 | 0/0 |
 | `anthropic/claude-sonnet-5.5` | 9/10 | 10/10 | 9/10 | 10/10 | 0 | 10 | 0 | 10/10 |
 | `openai/gpt-4o-mini` | 10/10 | 10/10 | 0/10 | 0/10 | 0 | 10 | 0 | 10/10 |
+
+Haiku 3.5 (`anthropic/claude-3-5-haiku-20241022`) is omitted: all H4 runs returned API 404 (not measured).
+
 
 Returned model ids: `anthropic/claude-sonnet-5.5` returned `anthropic/claude-sonnet-5.5`; `openai/gpt-4o-mini` returned `openai/gpt-4o-mini`
 

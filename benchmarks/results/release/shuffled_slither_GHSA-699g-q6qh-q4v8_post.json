@@ -1,0 +1,307 @@
+{
+  "pair": "GHSA-699g-q6qh-q4v8",
+  "target": "slither",
+  "side": "post",
+  "outcome": "ok",
+  "control": "shuffled",
+  "category": "web3_toctou_cei",
+  "repository": "https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable",
+  "cwe": "",
+  "oracle_unresolved": false,
+  "findings": [
+    {
+      "file": "contracts/governance/TimelockControllerUpgradeable.sol",
+      "line": 300,
+      "rule_id": "reentrancy-eth",
+      "severity": "High",
+      "message": "Reentrancy in TimelockControllerUpgradeable.execute(address,uint256,bytes,bytes32,bytes32) (contracts/governance/TimelockControllerUpgradeable.sol#300-311):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/TimelockControllerUpgradeable.sol",
+      "line": 306,
+      "rule_id": "reentrancy-eth",
+      "severity": "High",
+      "message": "Reentrancy in TimelockControllerUpgradeable.execute(address,uint256,bytes,bytes32,bytes32) (contracts/governance/TimelockControllerUpgradeable.sol#300-311):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/TimelockControllerUpgradeable.sol",
+      "line": 348,
+      "rule_id": "reentrancy-eth",
+      "severity": "High",
+      "message": "Reentrancy in TimelockControllerUpgradeable.execute(address,uint256,bytes,bytes32,bytes32) (contracts/governance/TimelockControllerUpgradeable.sol#300-311):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/TimelockControllerUpgradeable.sol",
+      "line": 310,
+      "rule_id": "reentrancy-eth",
+      "severity": "High",
+      "message": "Reentrancy in TimelockControllerUpgradeable.execute(address,uint256,bytes,bytes32,bytes32) (contracts/governance/TimelockControllerUpgradeable.sol#300-311):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/TimelockControllerUpgradeable.sol",
+      "line": 367,
+      "rule_id": "reentrancy-eth",
+      "severity": "High",
+      "message": "Reentrancy in TimelockControllerUpgradeable.execute(address,uint256,bytes,bytes32,bytes32) (contracts/governance/TimelockControllerUpgradeable.sol#300-311):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/TimelockControllerUpgradeable.sol",
+      "line": 325,
+      "rule_id": "reentrancy-eth",
+      "severity": "High",
+      "message": "Reentrancy in TimelockControllerUpgradeable.executeBatch(address[],uint256[],bytes[],bytes32,bytes32) (contracts/governance/TimelockControllerUpgradeable.sol#325-344):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/TimelockControllerUpgradeable.sol",
+      "line": 340,
+      "rule_id": "reentrancy-eth",
+      "severity": "High",
+      "message": "Reentrancy in TimelockControllerUpgradeable.executeBatch(address[],uint256[],bytes[],bytes32,bytes32) (contracts/governance/TimelockControllerUpgradeable.sol#325-344):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/TimelockControllerUpgradeable.sol",
+      "line": 348,
+      "rule_id": "reentrancy-eth",
+      "severity": "High",
+      "message": "Reentrancy in TimelockControllerUpgradeable.executeBatch(address[],uint256[],bytes[],bytes32,bytes32) (contracts/governance/TimelockControllerUpgradeable.sol#325-344):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/TimelockControllerUpgradeable.sol",
+      "line": 344,
+      "rule_id": "reentrancy-eth",
+      "severity": "High",
+      "message": "Reentrancy in TimelockControllerUpgradeable.executeBatch(address[],uint256[],bytes[],bytes32,bytes32) (contracts/governance/TimelockControllerUpgradeable.sol#325-344):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/TimelockControllerUpgradeable.sol",
+      "line": 367,
+      "rule_id": "reentrancy-eth",
+      "severity": "High",
+      "message": "Reentrancy in TimelockControllerUpgradeable.executeBatch(address[],uint256[],bytes[],bytes32,bytes32) (contracts/governance/TimelockControllerUpgradeable.sol#325-344):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorTimelockControlUpgradeable.sol",
+      "line": 132,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in GovernorTimelockControlUpgradeable._cancel(address[],uint256[],bytes[],bytes32) (contracts/governance/extensions/GovernorTimelockControlUpgradeable.sol#132-143):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorTimelockControlUpgradeable.sol",
+      "line": 140,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in GovernorTimelockControlUpgradeable._cancel(address[],uint256[],bytes[],bytes32) (contracts/governance/extensions/GovernorTimelockControlUpgradeable.sol#132-143):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorTimelockControlUpgradeable.sol",
+      "line": 140,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in GovernorTimelockControlUpgradeable._cancel(address[],uint256[],bytes[],bytes32) (contracts/governance/extensions/GovernorTimelockControlUpgradeable.sol#132-143):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20FlashMintUpgradeable.sol",
+      "line": 90,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC20FlashMintUpgradeable.flashLoan(IERC3156FlashBorrowerUpgradeable,address,uint256,bytes) (contracts/token/ERC20/extensions/ERC20FlashMintUpgradeable.sol#90-110):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20FlashMintUpgradeable.sol",
+      "line": 98,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC20FlashMintUpgradeable.flashLoan(IERC3156FlashBorrowerUpgradeable,address,uint256,bytes) (contracts/token/ERC20/extensions/ERC20FlashMintUpgradeable.sol#90-110):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20FlashMintUpgradeable.sol",
+      "line": 106,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC20FlashMintUpgradeable.flashLoan(IERC3156FlashBorrowerUpgradeable,address,uint256,bytes) (contracts/token/ERC20/extensions/ERC20FlashMintUpgradeable.sol#90-110):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/ERC20Upgradeable.sol",
+      "line": 283,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC20FlashMintUpgradeable.flashLoan(IERC3156FlashBorrowerUpgradeable,address,uint256,bytes) (contracts/token/ERC20/extensions/ERC20FlashMintUpgradeable.sol#90-110):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20FlashMintUpgradeable.sol",
+      "line": 107,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC20FlashMintUpgradeable.flashLoan(IERC3156FlashBorrowerUpgradeable,address,uint256,bytes) (contracts/token/ERC20/extensions/ERC20FlashMintUpgradeable.sol#90-110):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/ERC20Upgradeable.sol",
+      "line": 283,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC20FlashMintUpgradeable.flashLoan(IERC3156FlashBorrowerUpgradeable,address,uint256,bytes) (contracts/token/ERC20/extensions/ERC20FlashMintUpgradeable.sol#90-110):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20FlashMintUpgradeable.sol",
+      "line": 108,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC20FlashMintUpgradeable.flashLoan(IERC3156FlashBorrowerUpgradeable,address,uint256,bytes) (contracts/token/ERC20/extensions/ERC20FlashMintUpgradeable.sol#90-110):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/ERC20Upgradeable.sol",
+      "line": 229,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC20FlashMintUpgradeable.flashLoan(IERC3156FlashBorrowerUpgradeable,address,uint256,bytes) (contracts/token/ERC20/extensions/ERC20FlashMintUpgradeable.sol#90-110):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/ERC20Upgradeable.sol",
+      "line": 235,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC20FlashMintUpgradeable.flashLoan(IERC3156FlashBorrowerUpgradeable,address,uint256,bytes) (contracts/token/ERC20/extensions/ERC20FlashMintUpgradeable.sol#90-110):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20FlashMintUpgradeable.sol",
+      "line": 106,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC20FlashMintUpgradeable.flashLoan(IERC3156FlashBorrowerUpgradeable,address,uint256,bytes) (contracts/token/ERC20/extensions/ERC20FlashMintUpgradeable.sol#90-110):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/ERC20Upgradeable.sol",
+      "line": 287,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC20FlashMintUpgradeable.flashLoan(IERC3156FlashBorrowerUpgradeable,address,uint256,bytes) (contracts/token/ERC20/extensions/ERC20FlashMintUpgradeable.sol#90-110):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20FlashMintUpgradeable.sol",
+      "line": 107,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC20FlashMintUpgradeable.flashLoan(IERC3156FlashBorrowerUpgradeable,address,uint256,bytes) (contracts/token/ERC20/extensions/ERC20FlashMintUpgradeable.sol#90-110):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/ERC20Upgradeable.sol",
+      "line": 287,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC20FlashMintUpgradeable.flashLoan(IERC3156FlashBorrowerUpgradeable,address,uint256,bytes) (contracts/token/ERC20/extensions/ERC20FlashMintUpgradeable.sol#90-110):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/extensions/ERC721WrapperUpgradeable.sol",
+      "line": 48,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC721WrapperUpgradeable.withdrawTo(address,uint256[]) (contracts/token/ERC721/extensions/ERC721WrapperUpgradeable.sol#48-59):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/extensions/ERC721WrapperUpgradeable.sol",
+      "line": 58,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC721WrapperUpgradeable.withdrawTo(address,uint256[]) (contracts/token/ERC721/extensions/ERC721WrapperUpgradeable.sol#48-59):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/extensions/ERC721WrapperUpgradeable.sol",
+      "line": 54,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC721WrapperUpgradeable.withdrawTo(address,uint256[]) (contracts/token/ERC721/extensions/ERC721WrapperUpgradeable.sol#48-59):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/ERC721Upgradeable.sol",
+      "line": 310,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC721WrapperUpgradeable.withdrawTo(address,uint256[]) (contracts/token/ERC721/extensions/ERC721WrapperUpgradeable.sol#48-59):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/extensions/ERC721WrapperUpgradeable.sol",
+      "line": 54,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC721WrapperUpgradeable.withdrawTo(address,uint256[]) (contracts/token/ERC721/extensions/ERC721WrapperUpgradeable.sol#48-59):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/ERC721Upgradeable.sol",
+      "line": 312,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC721WrapperUpgradeable.withdrawTo(address,uint256[]) (contracts/token/ERC721/extensions/ERC721WrapperUpgradeable.sol#48-59):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/extensions/ERC721WrapperUpgradeable.sol",
+      "line": 54,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC721WrapperUpgradeable.withdrawTo(address,uint256[]) (contracts/token/ERC721/extensions/ERC721WrapperUpgradeable.sol#48-59):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/ERC721Upgradeable.sol",
+      "line": 304,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC721WrapperUpgradeable.withdrawTo(address,uint256[]) (contracts/token/ERC721/extensions/ERC721WrapperUpgradeable.sol#48-59):",
+      "nearest_changed_line": null
+    }
+  ],
+  "matches": [],
+  "tp": false,
+  "finding_count": 34,
+  "tp_count": 0,
+  "telemetry": {
+    "tool_version": "0.11.6",
+    "rule_sha256": "shuffled",
+    "clone_head": "31f9fb9d171f60b2271b2b9c6f62d43302bf9489",
+    "clone_tree": "85e560ecf36cfe45da81afdf8dec3a029f7688f6",
+    "solc_version": "0.8.28",
+    "scanned_files_sha256": "d0f198d6bcfed3c9d07aecd6a0cb38845d90d357b09e304c0f5851f048aaeb62",
+    "scanned_file_count": 794,
+    "diff_files": 1,
+    "diff_lines": 1,
+    "excluded_hunks": 0,
+    "renames": 0,
+    "alarm_count": 34,
+    "semgrep_errors": 0,
+    "runtime_seconds": 71.392,
+    "stderr_sha256": "876a068a5871584ba61dccdd1d0345f015f84c17dbd4e13dbed68d993627ce10",
+    "shuffled_from": "GHSA-878m-3g6q-594q"
+  }
+}

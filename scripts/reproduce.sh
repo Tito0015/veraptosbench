@@ -6,6 +6,7 @@ if [[ "${1:-}" != "--verify-all" ]]; then
   echo "usage: bash scripts/reproduce.sh --verify-all" >&2
   exit 2
 fi
+export CARGO_NET_OFFLINE=true
 if command -v python >/dev/null 2>&1; then
   PY=python
 elif command -v python.exe >/dev/null 2>&1; then
@@ -19,4 +20,5 @@ fi
 "$PY" scripts/hash_heldout.py --check
 "$PY" scripts/determinism_check.py
 "$PY" scripts/mutator.py --self-check
+"$PY" scripts/fixture_check.py
 echo "reproduce ok"

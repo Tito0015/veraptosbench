@@ -1,0 +1,33 @@
+{
+  "pair": "GHSA-vqqp-x5qm-5qp4",
+  "target": "semgrep",
+  "side": "pre",
+  "outcome": "ok",
+  "control": "empty",
+  "category": "web2_mcp",
+  "repository": "https://github.com/PrefectHQ/fastmcp",
+  "cwe": "",
+  "oracle_unresolved": false,
+  "findings": [],
+  "matches": [],
+  "tp": false,
+  "finding_count": 0,
+  "tp_count": 0,
+  "telemetry": {
+    "tool_version": "empty",
+    "rule_sha256": "empty",
+    "clone_head": "535a3e124c3a312567168c78ed9b946e133360f6",
+    "clone_tree": "beec4c7a6ad4d29e6a7baac9ac9251739d043d59",
+    "solc_version": "",
+    "scanned_files_sha256": "4352ee7a013ecd8b2f6beba13d3836b5f71563d856bac195d16c32b0c067d6ca",
+    "scanned_file_count": 363,
+    "diff_files": 4,
+    "diff_lines": 64,
+    "excluded_hunks": 18,
+    "renames": 0,
+    "alarm_count": 0,
+    "semgrep_errors": 0,
+    "runtime_seconds": 0.42,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

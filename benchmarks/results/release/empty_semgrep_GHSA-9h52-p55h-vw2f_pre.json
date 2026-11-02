@@ -1,0 +1,33 @@
+{
+  "pair": "GHSA-9h52-p55h-vw2f",
+  "target": "semgrep",
+  "side": "pre",
+  "outcome": "ok",
+  "control": "empty",
+  "category": "web2_mcp",
+  "repository": "https://github.com/modelcontextprotocol/python-sdk",
+  "cwe": "",
+  "oracle_unresolved": false,
+  "findings": [],
+  "matches": [],
+  "tp": false,
+  "finding_count": 0,
+  "tp_count": 0,
+  "telemetry": {
+    "tool_version": "empty",
+    "rule_sha256": "empty",
+    "clone_head": "fa851d93a2036a37cce73e098f7dbc80a6c48765",
+    "clone_tree": "a193db85bd1e9635f32b7f662a3b0e17526dcd62",
+    "solc_version": "",
+    "scanned_files_sha256": "93684e57f93854b0f375a77f620a1161015f1e8beea4435dafe8b271d549d05e",
+    "scanned_file_count": 128,
+    "diff_files": 1,
+    "diff_lines": 1,
+    "excluded_hunks": 2,
+    "renames": 0,
+    "alarm_count": 0,
+    "semgrep_errors": 0,
+    "runtime_seconds": 0.32,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

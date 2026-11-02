@@ -224,6 +224,21 @@ def commit_present(dest: Path, sha: str) -> bool:
     return run(["git", "cat-file", "-e", f"{sha}^{{commit}}"], cwd=dest).returncode == 0
 
 
+def ensure_commits(clone: Path, rows: list[dict], offline: bool = False) -> None:
+    need: set[str] = set()
+    for row in rows:
+        need.add(row["Vulnerable Commit SHA"].lower())
+        need.add(row["Fix Commit SHA"].lower())
+    for needed in need:
+        if commit_present(clone, needed):
+            continue
+        if offline:
+            raise SystemExit(f"offline: commit {needed} not present")
+        fetched = run(["git", "fetch", "--depth", "1", "origin", needed], cwd=clone)
+        if fetched.returncode != 0:
+            raise SystemExit(f"clone fetch failed: {fetched.stderr[:800]}")
+
+
 def clone_pair(row: dict, side: str, offline: bool = False) -> Path:
     pair_id = row["GHSA ID"]
     dest = CLONES / f"{pair_id}_{side}"
@@ -950,6 +965,8 @@ def evaluate(
 ) -> dict:
     started = time.perf_counter()
     clone = source_root if source_root else clone_pair(row, side, offline=offline)
+    if control == "shuffled" and donor is not None and source_root is None:
+        ensure_commits(clone, [row, donor], offline=offline)
     changed, stats = changed_lines(clone, row, side)
     score_changed = changed
     score_oracle = oracle_row
@@ -1011,6 +1028,8 @@ def evaluate(
         "runtime_seconds": round(time.perf_counter() - started, 3),
         "stderr_sha256": hashlib.sha256(stderr.encode()).hexdigest(),
     }
+    if outcome == "compile_error":
+        telemetry["stderr_tail"] = (stderr or "slither exited without JSON output (stderr empty)")[-800:]
     if "shuffled_from" in stats:
         telemetry["shuffled_from"] = stats["shuffled_from"]
     return result_payload(row, target, side, outcome, scored, telemetry, control, unresolved)
@@ -1075,6 +1094,7 @@ def release_name(target: str, pair: str, side: str, control: str) -> Path:
     return RELEASE / f"{prefix}{target}_{pair}_{side}.json"
 
 
+
 def batch_release(args: argparse.Namespace) -> None:
     rows = load_rows(Path(args.csv))
     want = "web2_mcp" if args.target == "semgrep" else "web3_toctou_cei"
@@ -1083,8 +1103,16 @@ def batch_release(args: argparse.Namespace) -> None:
     selected = [row for row in rows if row["Category"] == want]
     oracle = load_oracle(Path(args.oracle) if args.oracle else None)
     rule = Path(args.rule) if args.rule else None
+    if args.target == "semgrep" and rule is None:
+        rule = ROOT / "benchmarks" / "veraptos_rules" / "web2_invariant.yml"
     RELEASE.mkdir(parents=True, exist_ok=True)
-    controls = ("", "empty", "trivial", "shuffled")
+    mode = getattr(args, "controls_mode", "all")
+    if mode == "negative":
+        controls = ("empty", "trivial", "shuffled")
+    elif mode == "primary":
+        controls = ("",)
+    else:
+        controls = ("", "empty", "trivial", "shuffled")
     for row in selected:
         donor = donor_for(selected, row)
         for side in ("pre", "post"):
@@ -1146,6 +1174,12 @@ def main() -> None:
     parser.add_argument("--control", choices=["empty", "trivial", "shuffled"], default="")
     parser.add_argument("--emit-oracle")
     parser.add_argument("--batch", choices=["release"])
+    parser.add_argument(
+        "--controls-mode",
+        choices=["all", "primary", "negative"],
+        default="all",
+        help="primary=real rule only; negative=empty,trivial,shuffled only",
+    )
     parser.add_argument("--self-check", action="store_true")
     args = parser.parse_args()
     if args.self_check:

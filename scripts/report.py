@@ -22,6 +22,7 @@ LLM = ROOT / "benchmarks" / "raw_llm_outputs"
 README = ROOT / "README_BENCHMARK.md"
 H4_PAIRS = RESULTS / "h4_pairs.json"
 GATE_JSON = ROOT / "data" / "v2_candidate" / "gate.json"
+CWE_SIDE = ROOT / "data" / "held_out_cwe.csv"
 Z = 1.95996
 RECALL_BAR = 0.70
 SILENCE_BAR = 0.85
@@ -137,6 +138,121 @@ def load_results() -> dict[tuple[str, str, str, str], dict]:
     return found
 
 
+def load_cwe_sidecar() -> dict[str, dict]:
+    if not CWE_SIDE.is_file():
+        return {}
+    out: dict[str, dict] = {}
+    with CWE_SIDE.open(encoding="utf-8", newline="") as handle:
+        for row in csv.DictReader(handle):
+            out[row["GHSA ID"]] = row
+    return out
+
+
+def status_pilot_lines() -> list[str]:
+    return [
+        "## Status (read first)",
+        "",
+        "Pilot held-out: **n=7** Python (`web2_mcp`), **n=8** Solidity (`web3_toctou_cei`).",
+        "Pre-registered H2 bars **were not met**; **no general performance claims** in this release.",
+        "This release ships the harness, labeled primary arms, cheap controls, and frozen artifacts.",
+        "**Pending:** fair baselines (see PREREG); v2 held-out (**GATE_FAIL**: 0 of 20 Web3 candidates in public `gate.json`).",
+        "Per-repository recall/silence scores measure **rule–oracle agreement on that advisory**, not the security posture of the upstream project.",
+        "",
+        "**Attribution:** advisory metadata from the [GitHub Advisory Database](https://github.com/advisories) (CC-BY 4.0).",
+        "",
+        "**Third-party rerun:** you may re-score committed YAML, stock Slither detectors, and the pinned threat-library SHA on the same clone pins.",
+        "You **cannot** regenerate `web2_invariant.yml` from this repo alone (requires closed `veraptos_static_cli`).",
+        "`PROVENANCE.json` frozen H1 hashes are integrity checks, not a public compiler replay recipe.",
+        "",
+    ]
+
+
+def results_changelog_lines() -> list[str]:
+    return [
+        "## Results changelog",
+        "",
+        "| Release | Note |",
+        "|---|---|",
+        "| **v0.1-release** | `anthropic/claude-3-5-haiku-20241022`: API 404 on all H4 runs — **not measured** (omitted from headline H4 table). |",
+        "| **v0.1-release** | `openai/gpt-4o-mini`: Semgrep **10/10** pass@k; CodeQL **0/10** (scaffold compile). Label: **small-model baseline**, not frontier LLM. |",
+        "| **v0.1-release** | `claude-sonnet-5.5` row is current-generation syntax/repair (pass@k ≠ held-out recall). |",
+        "| **v0.1.1** | Threat-library arm added **after** v1 primary H2 scores were known (PREREG post-hoc addendum; control arm). |",
+        "| **v0.1.2** | Method-first README: status block, H2 negative controls, CWE sidecar, finding totals, fixture harness check. |",
+        "",
+    ]
+
+
+def findings_noise_lines(results: dict, rows: list[dict], engine: str) -> list[str]:
+    lines = [
+        f"### Total findings (primary arm, {engine_label(engine, results)})",
+        "",
+        "Oracle true positives are a subset of scanner findings. Post-patch **zero TP** can still mean noisy non-oracle alarms.",
+        "",
+        "| Pair | pre `finding_count` | post `finding_count` |",
+        "|---|---|---|",
+    ]
+    for row in domain_rows(rows, engine):
+        pair = row["GHSA ID"]
+        pre = results.get(("", engine, pair, "pre"))
+        post = results.get(("", engine, pair, "post"))
+        if not pre or not post:
+            continue
+        lines.append(
+            f"| `{pair}` | {pre.get('finding_count', '—')} | {post.get('finding_count', '—')} |"
+        )
+    lines.append("")
+    return lines
+
+
+def library_compile_notes(lib: dict) -> list[str]:
+    tails: list[str] = []
+    for by_side in lib.values():
+        for payload in by_side.values():
+            if payload.get("outcome") != "compile_error":
+                continue
+            tail = (payload.get("telemetry") or {}).get("stderr_tail")
+            pair = payload.get("pair")
+            if pair:
+                snippet = (tail or "slither exited without JSON (~1.4s on veraptos-* detect)").strip().replace(
+                    "\n", " "
+                )[:200]
+                tails.append(f"- `{pair}`: {snippet}")
+    static = [
+        "",
+        "Library Slither `compile_error` sides (four GHSA pairs: `93hq`, `9vx6`, `g4vp`, `wprv`): `--detect veraptos-*` often writes no JSON while **stock** `reentrancy-eth` compiles on the same clone. Do not treat as post-patch silence.",
+    ]
+    if not tails:
+        return static + ["",]
+    return [
+        "",
+        "Library Slither `compile_error` stderr tails:",
+        "",
+        *tails,
+        *static,
+        "",
+    ]
+
+
+def in_scope_recall_lines(
+    summary_rows: list[dict],
+    sidecar: dict[str, dict],
+    scope_key: str,
+) -> list[str]:
+    scoped = [
+        row
+        for row in summary_rows
+        if sidecar.get(row["pair"], {}).get(scope_key) == "yes"
+    ]
+    if not scoped:
+        return ["In-scope subset (sidecar): not measured.", ""]
+    k = sum(1 for row in scoped if row["recall"])
+    n = len(scoped)
+    return [
+        f"In-scope subset ({scope_key.replace('in_scope_', '')}, sidecar metadata): {fmt_rate(k, n)}.",
+        "",
+    ]
+
+
 def held_rows() -> list[dict]:
     if not HELD.is_file():
         return []
@@ -196,6 +312,7 @@ def summarize(results: dict, rows: list[dict], engine: str, control: str) -> dic
             hit = bool(rec["pre"].get("tp")) and not bool(rec["post"].get("tp"))
             primary.append(
                 {
+                    "pair": row["GHSA ID"],
                     "repo": rec["pre"].get("repository") or row["Repository URL"],
                     "cwe": rec["pre"].get("cwe") or row.get("CWE ID") or "unknown",
                     "recall": bool(rec["pre"].get("tp")),
@@ -391,9 +508,11 @@ def library_table_lines(held: list[dict]) -> list[str]:
             "",
         ]
     lines = [
-        "## H2 — threat library on v1 (out-of-class)",
+        "## H2 — control: threat library on v1 (out-of-class)",
         "",
-        "Rules from [veraptos-threat-library](https://github.com/Tito0015/veraptos-threat-library) at SHA `78b718d72bce1521593774c59b03c0e4edd7088e`. Estimand: same matcher as H2; pairs are **not** the DVD/annotated fixture classes these rules target.",
+        "Zeros are the expected outcome: DVD / TS / Go showcase rules vs MCP Python and OpenZeppelin patch-class advisories.",
+        "",
+        "Rules from [veraptos-threat-library](https://github.com/Tito0015/veraptos-threat-library) at SHA `78b718d72bce1521593774c59b03c0e4edd7088e`. Estimand: same matcher as H2; pairs are **not** the fixture classes these rules target.",
         "",
         "| Rule | Engine | Domain | N | Fix discrimination | Pre-patch recall | Post-patch silence | compile_error sides |",
         "|---|---|---|---|---|---|---|---|",
@@ -415,6 +534,7 @@ def library_table_lines(held: list[dict]) -> list[str]:
                 comp=summary["compile_error"],
             )
         )
+    lines.extend(library_compile_notes(lib))
     lines.append("")
     return lines
 
@@ -429,7 +549,7 @@ def scored_arms_lines() -> list[str]:
         "|---|---|---|---|",
         "| **Treatment (compiler sink-map)** | Scored | `veraptos_static_cli --export-semgrep-python` → `benchmarks/veraptos_rules/web2_invariant.yml` | Opengrep on Python pairs (N=7) |",
         "| **Baseline (stock Slither)** | Scored | Slither `reentrancy-eth`, `reentrancy-no-eth` — not Veraptos-compiled; no `--export-slither` | Slither on Solidity pairs (N=8) |",
-        "| **Treatment (threat library)** | Scored (out-of-class) | Pinned threat-library paths/detectors (see table below) | Opengrep + library Slither |",
+        "| **Control (out-of-class library rules)** | Scored (descriptive) | Pinned threat-library paths/detectors (see table below) | Opengrep + library Slither |",
         "",
         "The Opengrep H2 row is the compiler Python sink-map only, not a threat-library YAML.",
         "",
@@ -467,7 +587,9 @@ def render() -> str:
         "# VeraptosBench-mini results",
         "",
     ]
+    lines.extend(status_pilot_lines())
     lines.extend(scored_arms_lines())
+    lines.extend(results_changelog_lines())
     lines.extend(
         [
         "## v1 archive",
@@ -493,6 +615,8 @@ def render() -> str:
     summaries = {}
     trivial = {}
     pvals = []
+    sidecar = load_cwe_sidecar()
+    scope_key = {"semgrep": "in_scope_sinkmap", "slither": "in_scope_reentrancy"}
     for engine, domain, _category in engines:
         summary = summarize(results, rows, engine, "")
         summaries[engine] = summary
@@ -526,6 +650,10 @@ def render() -> str:
         base = trivial[engine]
         domain_n = summary["paired"]
         label = engine_label(engine, results)
+        for row in summary["rows"]:
+            meta = sidecar.get(row["pair"], {})
+            if meta.get("CWE"):
+                row["cwe"] = meta["CWE"]
         if summary["sides"] == 0:
             lines.append(f"{label}: not measured.")
             continue
@@ -580,6 +708,8 @@ def render() -> str:
         lines.extend(["", "Recall by CWE:", "", "| CWE | Pre-patch recall |", "|---|---|"])
         for cwe, k, n in by_cwe(summary["rows"]):
             lines.append(f"| {cwe or 'unknown'} | {fmt_rate(k, n)} |")
+        lines.extend(in_scope_recall_lines(summary["rows"], sidecar, scope_key[engine]))
+        lines.extend(findings_noise_lines(results, rows, engine))
         shuffled = summarize(results, rows, engine, "shuffled")
         empty = summarize(results, rows, engine, "empty")
         lines.extend(
@@ -620,9 +750,18 @@ def render() -> str:
         ]
     )
     cards = scorecards()
-    if not cards:
+    headline_cards = [
+        card
+        for card in cards
+        if "haiku" not in (card.get("model") or "").lower()
+        and not (
+            card.get("runs")
+            and card.get("api_errors") == card.get("runs")
+        )
+    ]
+    if not headline_cards:
         lines.append("| — | not measured | not measured | not measured | not measured | — | — | — | — |")
-    for card in cards:
+    for card in headline_cards:
         sem = card["pass_at_1"]["semgrep"]
         sem3 = card["pass_at_3"]["semgrep"]
         ql = card["pass_at_1"]["codeql"]
@@ -643,6 +782,13 @@ def render() -> str:
                 valid=card.get("semgrep_validated", sem),
             )
         )
+    lines.extend(
+        [
+            "",
+            "Haiku 3.5 (`anthropic/claude-3-5-haiku-20241022`) is omitted: all H4 runs returned API 404 (not measured).",
+            "",
+        ]
+    )
     returned = []
     for card in cards:
         for model_id in card.get("returned_models") or []:

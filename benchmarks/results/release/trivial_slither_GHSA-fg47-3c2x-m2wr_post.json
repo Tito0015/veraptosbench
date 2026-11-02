@@ -1,0 +1,4493 @@
+{
+  "pair": "GHSA-fg47-3c2x-m2wr",
+  "target": "slither",
+  "side": "post",
+  "outcome": "ok",
+  "control": "trivial",
+  "category": "web3_toctou_cei",
+  "repository": "https://github.com/OpenZeppelin/openzeppelin-contracts",
+  "cwe": "",
+  "oracle_unresolved": false,
+  "findings": [
+    {
+      "file": "contracts/access/AccessControl.sol",
+      "line": 68,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "onlyRole",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/access/AccessControl.sol",
+      "line": 76,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "supportsInterface",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/access/AccessControl.sol",
+      "line": 83,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "hasRole",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/access/AccessControl.sol",
+      "line": 94,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_checkRole",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/access/AccessControl.sol",
+      "line": 115,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "getRoleAdmin",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/access/AccessControl.sol",
+      "line": 129,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "grantRole",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/access/AccessControl.sol",
+      "line": 142,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "revokeRole",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/access/AccessControl.sol",
+      "line": 160,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "renounceRole",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/access/AccessControl.sol",
+      "line": 182,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_setupRole",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/access/AccessControl.sol",
+      "line": 191,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_setRoleAdmin",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/access/AccessControl.sol",
+      "line": 197,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_grantRole",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/access/AccessControl.sol",
+      "line": 204,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_revokeRole",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/access/AccessControlEnumerable.sol",
+      "line": 20,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "supportsInterface",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/access/AccessControlEnumerable.sol",
+      "line": 36,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "getRoleMember",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/access/AccessControlEnumerable.sol",
+      "line": 44,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "getRoleMemberCount",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/access/AccessControlEnumerable.sol",
+      "line": 51,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "grantRole",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/access/AccessControlEnumerable.sol",
+      "line": 59,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "revokeRole",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/access/AccessControlEnumerable.sol",
+      "line": 67,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "renounceRole",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/access/AccessControlEnumerable.sol",
+      "line": 75,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_setupRole",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/access/Ownable.sol",
+      "line": 27,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "constructor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/access/Ownable.sol",
+      "line": 34,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "owner",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/access/Ownable.sol",
+      "line": 41,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "onlyOwner",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/access/Ownable.sol",
+      "line": 53,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "renounceOwnership",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/access/Ownable.sol",
+      "line": 61,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "transferOwnership",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/access/Ownable.sol",
+      "line": 66,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_setOwner",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/finance/PaymentSplitter.sol",
+      "line": 40,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "constructor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/finance/PaymentSplitter.sol",
+      "line": 58,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "receive",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/finance/PaymentSplitter.sol",
+      "line": 65,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "totalShares",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/finance/PaymentSplitter.sol",
+      "line": 72,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "totalReleased",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/finance/PaymentSplitter.sol",
+      "line": 79,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "shares",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/finance/PaymentSplitter.sol",
+      "line": 86,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "released",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/finance/PaymentSplitter.sol",
+      "line": 93,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "payee",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/finance/PaymentSplitter.sol",
+      "line": 101,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "release",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/finance/PaymentSplitter.sol",
+      "line": 121,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_addPayee",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/Governor.sol",
+      "line": 46,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "onlyGovernance",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/Governor.sol",
+      "line": 54,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "constructor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/Governor.sol",
+      "line": 61,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "supportsInterface",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/Governor.sol",
+      "line": 68,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "name",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/Governor.sol",
+      "line": 75,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "version",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/Governor.sol",
+      "line": 92,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "hashProposal",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/Governor.sol",
+      "line": 104,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "state",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/Governor.sol",
+      "line": 128,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "proposalSnapshot",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/Governor.sol",
+      "line": 135,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "proposalDeadline",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/Governor.sol",
+      "line": 164,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "propose",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/Governor.sol",
+      "line": 203,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "execute",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/Governor.sol",
+      "line": 228,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_execute",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/Governor.sol",
+      "line": 248,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_cancel",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/Governor.sol",
+      "line": 271,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "castVote",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/Governor.sol",
+      "line": 279,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "castVoteWithReason",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/Governor.sol",
+      "line": 291,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "castVoteBySig",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/Governor.sol",
+      "line": 313,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_castVote",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/Governor.sol",
+      "line": 334,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_executor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 62,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "constructor",
+      "nearest_changed_line": 209
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 95,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "onlyRoleOrOpenRole",
+      "nearest_changed_line": 176
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 105,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "receive",
+      "nearest_changed_line": 166
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 111,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "isOperation",
+      "nearest_changed_line": 160
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 118,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "isOperationPending",
+      "nearest_changed_line": 153
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 125,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "isOperationReady",
+      "nearest_changed_line": 146
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 133,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "isOperationDone",
+      "nearest_changed_line": 138
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 141,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "getTimestamp",
+      "nearest_changed_line": 130
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 150,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "getMinDelay",
+      "nearest_changed_line": 121
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 158,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "hashOperation",
+      "nearest_changed_line": 113
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 172,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "hashOperationBatch",
+      "nearest_changed_line": 99
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 191,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "schedule",
+      "nearest_changed_line": 80
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 213,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "scheduleBatch",
+      "nearest_changed_line": 58
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 234,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_schedule",
+      "nearest_changed_line": 37
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 247,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "cancel",
+      "nearest_changed_line": 24
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 263,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "execute",
+      "nearest_changed_line": 8
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 285,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "executeBatch",
+      "nearest_changed_line": 11
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 306,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_beforeCall",
+      "nearest_changed_line": 0
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 314,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_afterCall",
+      "nearest_changed_line": 7
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 324,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_call",
+      "nearest_changed_line": 17
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 347,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "updateDelay",
+      "nearest_changed_line": 40
+    },
+    {
+      "file": "contracts/governance/compatibility/GovernorCompatibilityBravo.sol",
+      "line": 53,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "COUNTING_MODE",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/compatibility/GovernorCompatibilityBravo.sol",
+      "line": 61,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "propose",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/compatibility/GovernorCompatibilityBravo.sol",
+      "line": 74,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "propose",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/compatibility/GovernorCompatibilityBravo.sol",
+      "line": 88,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "queue",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/compatibility/GovernorCompatibilityBravo.sol",
+      "line": 101,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "execute",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/compatibility/GovernorCompatibilityBravo.sol",
+      "line": 111,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "cancel",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/compatibility/GovernorCompatibilityBravo.sol",
+      "line": 130,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_encodeCalldata",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/compatibility/GovernorCompatibilityBravo.sol",
+      "line": 149,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_storeProposal",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/compatibility/GovernorCompatibilityBravo.sol",
+      "line": 185,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "proposals",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/compatibility/GovernorCompatibilityBravo.sol",
+      "line": 222,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "getActions",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/compatibility/GovernorCompatibilityBravo.sol",
+      "line": 241,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "getReceipt",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/compatibility/GovernorCompatibilityBravo.sol",
+      "line": 248,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "quorumVotes",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/compatibility/GovernorCompatibilityBravo.sol",
+      "line": 256,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "hasVoted",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/compatibility/GovernorCompatibilityBravo.sol",
+      "line": 263,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_quorumReached",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/compatibility/GovernorCompatibilityBravo.sol",
+      "line": 271,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_voteSucceeded",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/compatibility/GovernorCompatibilityBravo.sol",
+      "line": 279,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_countVote",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorCountingSimple.sol",
+      "line": 35,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "COUNTING_MODE",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorCountingSimple.sol",
+      "line": 42,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "hasVoted",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorCountingSimple.sol",
+      "line": 49,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "proposalVotes",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorCountingSimple.sol",
+      "line": 66,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_quorumReached",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorCountingSimple.sol",
+      "line": 75,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_voteSucceeded",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorCountingSimple.sol",
+      "line": 84,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_countVote",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorProposalThreshold.sol",
+      "line": 16,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "propose",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorTimelockCompound.sol",
+      "line": 95,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "constructor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorTimelockCompound.sol",
+      "line": 102,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "supportsInterface",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorTimelockCompound.sol",
+      "line": 109,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "state",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorTimelockCompound.sol",
+      "line": 129,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "timelock",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorTimelockCompound.sol",
+      "line": 136,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "proposalEta",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorTimelockCompound.sol",
+      "line": 143,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "queue",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorTimelockCompound.sol",
+      "line": 171,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_execute",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorTimelockCompound.sol",
+      "line": 189,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_cancel",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorTimelockCompound.sol",
+      "line": 211,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_executor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorTimelockCompound.sol",
+      "line": 219,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__acceptAdmin",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorTimelockCompound.sol",
+      "line": 234,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "updateTimelock",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorTimelockCompound.sol",
+      "line": 238,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_updateTimelock",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorTimelockControl.sol",
+      "line": 32,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "constructor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorTimelockControl.sol",
+      "line": 39,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "supportsInterface",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorTimelockControl.sol",
+      "line": 46,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "state",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorTimelockControl.sol",
+      "line": 67,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "timelock",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorTimelockControl.sol",
+      "line": 74,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "proposalEta",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorTimelockControl.sol",
+      "line": 82,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "queue",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorTimelockControl.sol",
+      "line": 104,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_execute",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorTimelockControl.sol",
+      "line": 118,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_cancel",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorTimelockControl.sol",
+      "line": 137,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_executor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorTimelockControl.sol",
+      "line": 145,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "updateTimelock",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorTimelockControl.sol",
+      "line": 149,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_updateTimelock",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorVotes.sol",
+      "line": 17,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "constructor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorVotes.sol",
+      "line": 24,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "getVotes",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorVotesComp.sol",
+      "line": 16,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "constructor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorVotesComp.sol",
+      "line": 23,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "getVotes",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorVotesQuorumFraction.sol",
+      "line": 18,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "constructor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorVotesQuorumFraction.sol",
+      "line": 22,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "quorumNumerator",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorVotesQuorumFraction.sol",
+      "line": 26,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "quorumDenominator",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorVotesQuorumFraction.sol",
+      "line": 30,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "quorum",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorVotesQuorumFraction.sol",
+      "line": 34,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "updateQuorumNumerator",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorVotesQuorumFraction.sol",
+      "line": 38,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_updateQuorumNumerator",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/metatx/ERC2771Context.sol",
+      "line": 13,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "constructor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/metatx/ERC2771Context.sol",
+      "line": 17,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "isTrustedForwarder",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/metatx/ERC2771Context.sol",
+      "line": 21,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_msgSender",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/metatx/ERC2771Context.sol",
+      "line": 32,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_msgData",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/metatx/MinimalForwarder.sol",
+      "line": 28,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "constructor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/metatx/MinimalForwarder.sol",
+      "line": 30,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "getNonce",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/metatx/MinimalForwarder.sol",
+      "line": 34,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "verify",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/metatx/MinimalForwarder.sol",
+      "line": 41,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "execute",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/Clones.sol",
+      "line": 24,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "clone",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/Clones.sol",
+      "line": 42,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "cloneDeterministic",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/Clones.sol",
+      "line": 56,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "predictDeterministicAddress",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/Clones.sol",
+      "line": 76,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "predictDeterministicAddress",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/ERC1967/ERC1967Proxy.sol",
+      "line": 21,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "constructor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/ERC1967/ERC1967Proxy.sol",
+      "line": 29,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_implementation",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/ERC1967/ERC1967Upgrade.sol",
+      "line": 36,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_getImplementation",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/ERC1967/ERC1967Upgrade.sol",
+      "line": 43,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_setImplementation",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/ERC1967/ERC1967Upgrade.sol",
+      "line": 53,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_upgradeTo",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/ERC1967/ERC1967Upgrade.sol",
+      "line": 63,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_upgradeToAndCall",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/ERC1967/ERC1967Upgrade.sol",
+      "line": 79,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_upgradeToAndCallSecure",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/ERC1967/ERC1967Upgrade.sol",
+      "line": 124,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_getAdmin",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/ERC1967/ERC1967Upgrade.sol",
+      "line": 131,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_setAdmin",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/ERC1967/ERC1967Upgrade.sol",
+      "line": 141,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_changeAdmin",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/ERC1967/ERC1967Upgrade.sol",
+      "line": 160,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_getBeacon",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/ERC1967/ERC1967Upgrade.sol",
+      "line": 167,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_setBeacon",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/ERC1967/ERC1967Upgrade.sol",
+      "line": 182,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_upgradeBeaconToAndCall",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/Proxy.sol",
+      "line": 21,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_delegate",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/Proxy.sol",
+      "line": 57,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_fallback",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/Proxy.sol",
+      "line": 66,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "fallback",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/Proxy.sol",
+      "line": 74,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "receive",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/Proxy.sol",
+      "line": 84,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_beforeFallback",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/beacon/BeaconProxy.sol",
+      "line": 29,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "constructor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/beacon/BeaconProxy.sol",
+      "line": 37,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_beacon",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/beacon/BeaconProxy.sol",
+      "line": 44,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_implementation",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/beacon/BeaconProxy.sol",
+      "line": 58,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_setBeacon",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/beacon/UpgradeableBeacon.sol",
+      "line": 27,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "constructor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/beacon/UpgradeableBeacon.sol",
+      "line": 34,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "implementation",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/beacon/UpgradeableBeacon.sol",
+      "line": 48,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "upgradeTo",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/beacon/UpgradeableBeacon.sol",
+      "line": 60,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_setImplementation",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/transparent/ProxyAdmin.sol",
+      "line": 20,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "getProxyImplementation",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/transparent/ProxyAdmin.sol",
+      "line": 35,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "getProxyAdmin",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/transparent/ProxyAdmin.sol",
+      "line": 50,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "changeProxyAdmin",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/transparent/ProxyAdmin.sol",
+      "line": 61,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "upgrade",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/transparent/ProxyAdmin.sol",
+      "line": 73,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "upgradeAndCall",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/transparent/TransparentUpgradeableProxy.sol",
+      "line": 33,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "constructor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/transparent/TransparentUpgradeableProxy.sol",
+      "line": 45,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "ifAdmin",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/transparent/TransparentUpgradeableProxy.sol",
+      "line": 62,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "admin",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/transparent/TransparentUpgradeableProxy.sol",
+      "line": 75,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "implementation",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/transparent/TransparentUpgradeableProxy.sol",
+      "line": 86,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "changeAdmin",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/transparent/TransparentUpgradeableProxy.sol",
+      "line": 95,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "upgradeTo",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/transparent/TransparentUpgradeableProxy.sol",
+      "line": 106,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "upgradeToAndCall",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/transparent/TransparentUpgradeableProxy.sol",
+      "line": 113,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_admin",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/transparent/TransparentUpgradeableProxy.sol",
+      "line": 120,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_beforeFallback",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/utils/Initializable.sol",
+      "line": 31,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "initializer",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/utils/UUPSUpgradeable.sol",
+      "line": 27,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "upgradeTo",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/proxy/utils/UUPSUpgradeable.sol",
+      "line": 40,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "upgradeToAndCall",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/security/Pausable.sol",
+      "line": 32,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "constructor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/security/Pausable.sol",
+      "line": 39,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "paused",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/security/Pausable.sol",
+      "line": 50,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "whenNotPaused",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/security/Pausable.sol",
+      "line": 62,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "whenPaused",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/security/Pausable.sol",
+      "line": 74,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_pause",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/security/Pausable.sol",
+      "line": 86,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_unpause",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/security/PullPayment.sol",
+      "line": 28,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "constructor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/security/PullPayment.sol",
+      "line": 46,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "withdrawPayments",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/security/PullPayment.sol",
+      "line": 54,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "payments",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/security/PullPayment.sol",
+      "line": 66,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_asyncTransfer",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/security/ReentrancyGuard.sol",
+      "line": 38,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "constructor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/security/ReentrancyGuard.sol",
+      "line": 49,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "nonReentrant",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/ERC1155.sol",
+      "line": 34,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "constructor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/ERC1155.sol",
+      "line": 41,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "supportsInterface",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/ERC1155.sol",
+      "line": 58,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "uri",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/ERC1155.sol",
+      "line": 69,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "balanceOf",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/ERC1155.sol",
+      "line": 81,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "balanceOfBatch",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/ERC1155.sol",
+      "line": 102,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "setApprovalForAll",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/ERC1155.sol",
+      "line": 112,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "isApprovedForAll",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/ERC1155.sol",
+      "line": 119,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "safeTransferFrom",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/ERC1155.sol",
+      "line": 136,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "safeBatchTransferFrom",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/ERC1155.sol",
+      "line": 162,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_safeTransferFrom",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/ERC1155.sol",
+      "line": 197,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_safeBatchTransferFrom",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/ERC1155.sol",
+      "line": 247,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_setURI",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/ERC1155.sol",
+      "line": 262,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_mint",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/ERC1155.sol",
+      "line": 289,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_mintBatch",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/ERC1155.sol",
+      "line": 319,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_burn",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/ERC1155.sol",
+      "line": 346,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_burnBatch",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/ERC1155.sol",
+      "line": 392,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_beforeTokenTransfer",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/ERC1155.sol",
+      "line": 401,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_doSafeTransferAcceptanceCheck",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/ERC1155.sol",
+      "line": 422,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_doSafeBatchTransferAcceptanceCheck",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/ERC1155.sol",
+      "line": 445,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_asSingletonArray",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/extensions/ERC1155Burnable.sol",
+      "line": 14,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "burn",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/extensions/ERC1155Burnable.sol",
+      "line": 27,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "burnBatch",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/extensions/ERC1155Pausable.sol",
+      "line": 25,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_beforeTokenTransfer",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/extensions/ERC1155Supply.sol",
+      "line": 21,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "totalSupply",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/extensions/ERC1155Supply.sol",
+      "line": 28,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "exists",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/extensions/ERC1155Supply.sol",
+      "line": 35,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_mint",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/extensions/ERC1155Supply.sol",
+      "line": 48,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_mintBatch",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/extensions/ERC1155Supply.sol",
+      "line": 63,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_burn",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/extensions/ERC1155Supply.sol",
+      "line": 75,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_burnBatch",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/presets/ERC1155PresetMinterPauser.sol",
+      "line": 33,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "constructor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/presets/ERC1155PresetMinterPauser.sol",
+      "line": 49,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "mint",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/presets/ERC1155PresetMinterPauser.sol",
+      "line": 63,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "mintBatch",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/presets/ERC1155PresetMinterPauser.sol",
+      "line": 83,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "pause",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/presets/ERC1155PresetMinterPauser.sol",
+      "line": 97,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "unpause",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/presets/ERC1155PresetMinterPauser.sol",
+      "line": 105,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "supportsInterface",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/presets/ERC1155PresetMinterPauser.sol",
+      "line": 115,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_beforeTokenTransfer",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/utils/ERC1155Holder.sol",
+      "line": 11,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "onERC1155Received",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/utils/ERC1155Holder.sol",
+      "line": 21,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "onERC1155BatchReceived",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC1155/utils/ERC1155Receiver.sol",
+      "line": 15,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "supportsInterface",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/ERC20.sol",
+      "line": 53,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "constructor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/ERC20.sol",
+      "line": 61,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "name",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/ERC20.sol",
+      "line": 69,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "symbol",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/ERC20.sol",
+      "line": 86,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "decimals",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/ERC20.sol",
+      "line": 93,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "totalSupply",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/ERC20.sol",
+      "line": 100,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "balanceOf",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/ERC20.sol",
+      "line": 112,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "transfer",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/ERC20.sol",
+      "line": 120,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "allowance",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/ERC20.sol",
+      "line": 131,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "approve",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/ERC20.sol",
+      "line": 149,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "transferFrom",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/ERC20.sol",
+      "line": 177,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "increaseAllowance",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/ERC20.sol",
+      "line": 196,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "decreaseAllowance",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/ERC20.sol",
+      "line": 220,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_transfer",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/ERC20.sol",
+      "line": 251,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_mint",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/ERC20.sol",
+      "line": 274,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_burn",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/ERC20.sol",
+      "line": 304,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_approve",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/ERC20.sol",
+      "line": 330,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_beforeTokenTransfer",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/ERC20.sol",
+      "line": 350,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_afterTokenTransfer",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Burnable.sol",
+      "line": 19,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "burn",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Burnable.sol",
+      "line": 34,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "burnFrom",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Capped.sol",
+      "line": 17,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "constructor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Capped.sol",
+      "line": 25,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "cap",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Capped.sol",
+      "line": 32,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_mint",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20FlashMint.sol",
+      "line": 25,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "maxFlashLoan",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20FlashMint.sol",
+      "line": 37,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "flashFee",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20FlashMint.sol",
+      "line": 58,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "flashLoan",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Pausable.sol",
+      "line": 23,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_beforeTokenTransfer",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Snapshot.sol",
+      "line": 87,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_snapshot",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Snapshot.sol",
+      "line": 98,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_getCurrentSnapshotId",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Snapshot.sol",
+      "line": 105,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "balanceOfAt",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Snapshot.sol",
+      "line": 114,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "totalSupplyAt",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Snapshot.sol",
+      "line": 122,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_beforeTokenTransfer",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Snapshot.sol",
+      "line": 144,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_valueAt",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Snapshot.sol",
+      "line": 171,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_updateAccountSnapshot",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Snapshot.sol",
+      "line": 175,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_updateTotalSupplySnapshot",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Snapshot.sol",
+      "line": 179,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_updateSnapshot",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Snapshot.sol",
+      "line": 187,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_lastSnapshotId",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Votes.sol",
+      "line": 53,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "checkpoints",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Votes.sol",
+      "line": 60,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "numCheckpoints",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Votes.sol",
+      "line": 67,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "delegates",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Votes.sol",
+      "line": 74,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "getVotes",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Votes.sol",
+      "line": 86,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "getPastVotes",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Votes.sol",
+      "line": 99,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "getPastTotalSupply",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Votes.sol",
+      "line": 107,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_checkpointsLookup",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Votes.sol",
+      "line": 136,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "delegate",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Votes.sol",
+      "line": 143,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "delegateBySig",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Votes.sol",
+      "line": 165,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_maxSupply",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Votes.sol",
+      "line": 172,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_mint",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Votes.sol",
+      "line": 182,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_burn",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Votes.sol",
+      "line": 193,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_afterTokenTransfer",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Votes.sol",
+      "line": 208,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_delegate",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Votes.sol",
+      "line": 218,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_moveVotingPower",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Votes.sol",
+      "line": 236,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_writeCheckpoint",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Votes.sol",
+      "line": 252,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_add",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Votes.sol",
+      "line": 256,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_subtract",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20VotesComp.sol",
+      "line": 30,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "getCurrentVotes",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20VotesComp.sol",
+      "line": 37,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "getPriorVotes",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20VotesComp.sol",
+      "line": 44,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_maxSupply",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Wrapper.sol",
+      "line": 20,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "constructor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Wrapper.sol",
+      "line": 27,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "depositFor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Wrapper.sol",
+      "line": 36,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "withdrawTo",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20Wrapper.sol",
+      "line": 46,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_recover",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/draft-ERC20Permit.sol",
+      "line": 35,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "constructor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/draft-ERC20Permit.sol",
+      "line": 40,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "permit",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/draft-ERC20Permit.sol",
+      "line": 64,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "nonces",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/draft-ERC20Permit.sol",
+      "line": 72,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "DOMAIN_SEPARATOR",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/draft-ERC20Permit.sol",
+      "line": 81,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_useNonce",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/presets/ERC20PresetFixedSupply.sol",
+      "line": 24,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "constructor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/presets/ERC20PresetMinterPauser.sol",
+      "line": 35,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "constructor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/presets/ERC20PresetMinterPauser.sol",
+      "line": 51,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "mint",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/presets/ERC20PresetMinterPauser.sol",
+      "line": 65,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "pause",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/presets/ERC20PresetMinterPauser.sol",
+      "line": 79,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "unpause",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/presets/ERC20PresetMinterPauser.sol",
+      "line": 84,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_beforeTokenTransfer",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/utils/SafeERC20.sol",
+      "line": 20,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "safeTransfer",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/utils/SafeERC20.sol",
+      "line": 28,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "safeTransferFrom",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/utils/SafeERC20.sol",
+      "line": 44,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "safeApprove",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/utils/SafeERC20.sol",
+      "line": 59,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "safeIncreaseAllowance",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/utils/SafeERC20.sol",
+      "line": 68,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "safeDecreaseAllowance",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/utils/SafeERC20.sol",
+      "line": 87,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_callOptionalReturn",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/utils/TokenTimelock.sol",
+      "line": 26,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "constructor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/utils/TokenTimelock.sol",
+      "line": 40,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "token",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/utils/TokenTimelock.sol",
+      "line": 47,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "beneficiary",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/utils/TokenTimelock.sol",
+      "line": 54,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "releaseTime",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/utils/TokenTimelock.sol",
+      "line": 61,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "release",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/ERC721.sol",
+      "line": 43,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "constructor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/ERC721.sol",
+      "line": 51,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "supportsInterface",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/ERC721.sol",
+      "line": 61,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "balanceOf",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/ERC721.sol",
+      "line": 69,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "ownerOf",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/ERC721.sol",
+      "line": 78,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "name",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/ERC721.sol",
+      "line": 85,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "symbol",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/ERC721.sol",
+      "line": 92,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "tokenURI",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/ERC721.sol",
+      "line": 104,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_baseURI",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/ERC721.sol",
+      "line": 111,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "approve",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/ERC721.sol",
+      "line": 126,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "getApproved",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/ERC721.sol",
+      "line": 135,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "setApprovalForAll",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/ERC721.sol",
+      "line": 145,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "isApprovedForAll",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/ERC721.sol",
+      "line": 152,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "transferFrom",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/ERC721.sol",
+      "line": 166,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "safeTransferFrom",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/ERC721.sol",
+      "line": 177,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "safeTransferFrom",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/ERC721.sol",
+      "line": 205,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_safeTransfer",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/ERC721.sol",
+      "line": 223,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_exists",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/ERC721.sol",
+      "line": 234,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_isApprovedOrOwner",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/ERC721.sol",
+      "line": 250,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_safeMint",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/ERC721.sol",
+      "line": 258,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_safeMint",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/ERC721.sol",
+      "line": 282,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_mint",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/ERC721.sol",
+      "line": 304,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_burn",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/ERC721.sol",
+      "line": 329,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_transfer",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/ERC721.sol",
+      "line": 354,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_approve",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/ERC721.sol",
+      "line": 369,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_checkOnERC721Received",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/ERC721.sol",
+      "line": 406,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_beforeTokenTransfer",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/extensions/ERC721Burnable.sol",
+      "line": 20,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "burn",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/extensions/ERC721Enumerable.sol",
+      "line": 29,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "supportsInterface",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/extensions/ERC721Enumerable.sol",
+      "line": 36,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "tokenOfOwnerByIndex",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/extensions/ERC721Enumerable.sol",
+      "line": 44,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "totalSupply",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/extensions/ERC721Enumerable.sol",
+      "line": 51,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "tokenByIndex",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/extensions/ERC721Enumerable.sol",
+      "line": 71,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_beforeTokenTransfer",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/extensions/ERC721Enumerable.sol",
+      "line": 95,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_addTokenToOwnerEnumeration",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/extensions/ERC721Enumerable.sol",
+      "line": 105,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_addTokenToAllTokensEnumeration",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/extensions/ERC721Enumerable.sol",
+      "line": 118,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_removeTokenFromOwnerEnumeration",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/extensions/ERC721Enumerable.sol",
+      "line": 143,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_removeTokenFromAllTokensEnumeration",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/extensions/ERC721Pausable.sol",
+      "line": 23,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_beforeTokenTransfer",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/extensions/ERC721URIStorage.sol",
+      "line": 19,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "tokenURI",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/extensions/ERC721URIStorage.sol",
+      "line": 44,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_setTokenURI",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/extensions/ERC721URIStorage.sol",
+      "line": 59,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_burn",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/presets/ERC721PresetMinterPauserAutoId.sol",
+      "line": 51,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "constructor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/presets/ERC721PresetMinterPauserAutoId.sol",
+      "line": 64,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_baseURI",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/presets/ERC721PresetMinterPauserAutoId.sol",
+      "line": 79,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "mint",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/presets/ERC721PresetMinterPauserAutoId.sol",
+      "line": 97,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "pause",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/presets/ERC721PresetMinterPauserAutoId.sol",
+      "line": 111,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "unpause",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/presets/ERC721PresetMinterPauserAutoId.sol",
+      "line": 116,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_beforeTokenTransfer",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/presets/ERC721PresetMinterPauserAutoId.sol",
+      "line": 127,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "supportsInterface",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/utils/ERC721Holder.sol",
+      "line": 19,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "onERC721Received",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC777/ERC777.sol",
+      "line": 59,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "constructor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC777/ERC777.sol",
+      "line": 80,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "name",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC777/ERC777.sol",
+      "line": 87,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "symbol",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC777/ERC777.sol",
+      "line": 97,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "decimals",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC777/ERC777.sol",
+      "line": 106,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "granularity",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC777/ERC777.sol",
+      "line": 113,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "totalSupply",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC777/ERC777.sol",
+      "line": 120,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "balanceOf",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC777/ERC777.sol",
+      "line": 129,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "send",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC777/ERC777.sol",
+      "line": 145,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "transfer",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC777/ERC777.sol",
+      "line": 164,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "burn",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC777/ERC777.sol",
+      "line": 171,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "isOperatorFor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC777/ERC777.sol",
+      "line": 181,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "authorizeOperator",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC777/ERC777.sol",
+      "line": 196,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "revokeOperator",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC777/ERC777.sol",
+      "line": 211,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "defaultOperators",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC777/ERC777.sol",
+      "line": 220,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "operatorSend",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC777/ERC777.sol",
+      "line": 236,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "operatorBurn",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC777/ERC777.sol",
+      "line": 253,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "allowance",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC777/ERC777.sol",
+      "line": 262,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "approve",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC777/ERC777.sol",
+      "line": 277,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "transferFrom",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC777/ERC777.sol",
+      "line": 317,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_mint",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC777/ERC777.sol",
+      "line": 344,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_mint",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC777/ERC777.sol",
+      "line": 376,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_send",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC777/ERC777.sol",
+      "line": 403,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_burn",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC777/ERC777.sol",
+      "line": 429,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_move",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC777/ERC777.sol",
+      "line": 455,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_approve",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC777/ERC777.sol",
+      "line": 476,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_callTokensToSend",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC777/ERC777.sol",
+      "line": 501,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_callTokensReceived",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC777/ERC777.sol",
+      "line": 532,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_beforeTokenTransfer",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC777/presets/ERC777PresetFixedSupply.sol",
+      "line": 20,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "constructor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Address.sol",
+      "line": 26,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "isContract",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Address.sol",
+      "line": 54,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "sendValue",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Address.sol",
+      "line": 79,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "functionCall",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Address.sol",
+      "line": 89,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "functionCall",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Address.sol",
+      "line": 108,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "functionCallWithValue",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Address.sol",
+      "line": 122,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "functionCallWithValue",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Address.sol",
+      "line": 141,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "functionStaticCall",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Address.sol",
+      "line": 151,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "functionStaticCall",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Address.sol",
+      "line": 168,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "functionDelegateCall",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Address.sol",
+      "line": 178,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "functionDelegateCall",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Address.sol",
+      "line": 195,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "verifyCallResult",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Arrays.sol",
+      "line": 20,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "findUpperBound",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Context.sol",
+      "line": 16,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_msgSender",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Context.sol",
+      "line": 20,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_msgData",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Counters.sol",
+      "line": 21,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "current",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Counters.sol",
+      "line": 25,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "increment",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Counters.sol",
+      "line": 31,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "decrement",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Counters.sol",
+      "line": 39,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "reset",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Create2.sol",
+      "line": 29,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "deploy",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Create2.sol",
+      "line": 48,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "computeAddress",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Create2.sol",
+      "line": 56,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "computeAddress",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Multicall.sol",
+      "line": 16,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "multicall",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/StorageSlot.sol",
+      "line": 51,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "getAddressSlot",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/StorageSlot.sol",
+      "line": 60,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "getBooleanSlot",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/StorageSlot.sol",
+      "line": 69,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "getBytes32Slot",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/StorageSlot.sol",
+      "line": 78,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "getUint256Slot",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Strings.sol",
+      "line": 14,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "toString",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Strings.sol",
+      "line": 39,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "toHexString",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Strings.sol",
+      "line": 55,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "toHexString",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Timers.sol",
+      "line": 13,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "getDeadline",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Timers.sol",
+      "line": 17,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "setDeadline",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Timers.sol",
+      "line": 21,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "reset",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Timers.sol",
+      "line": 25,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "isUnset",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Timers.sol",
+      "line": 29,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "isStarted",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Timers.sol",
+      "line": 33,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "isPending",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Timers.sol",
+      "line": 37,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "isExpired",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Timers.sol",
+      "line": 45,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "getDeadline",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Timers.sol",
+      "line": 49,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "setDeadline",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Timers.sol",
+      "line": 53,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "reset",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Timers.sol",
+      "line": 57,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "isUnset",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Timers.sol",
+      "line": 61,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "isStarted",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Timers.sol",
+      "line": 65,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "isPending",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/Timers.sol",
+      "line": 69,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "isExpired",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/cryptography/ECDSA.sol",
+      "line": 20,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_throwError",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/cryptography/ECDSA.sol",
+      "line": 54,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "tryRecover",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/cryptography/ECDSA.sol",
+      "line": 99,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "recover",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/cryptography/ECDSA.sol",
+      "line": 112,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "tryRecover",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/cryptography/ECDSA.sol",
+      "line": 131,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "recover",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/cryptography/ECDSA.sol",
+      "line": 147,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "tryRecover",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/cryptography/ECDSA.sol",
+      "line": 182,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "recover",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/cryptography/ECDSA.sol",
+      "line": 201,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "toEthSignedMessageHash",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/cryptography/ECDSA.sol",
+      "line": 216,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "toTypedDataHash",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/cryptography/MerkleProof.sol",
+      "line": 21,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "verify",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/cryptography/SignatureChecker.sol",
+      "line": 20,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "isValidSignatureNow",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/cryptography/draft-EIP712.sol",
+      "line": 51,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "constructor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/cryptography/draft-EIP712.sol",
+      "line": 67,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_domainSeparatorV4",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/cryptography/draft-EIP712.sol",
+      "line": 75,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_buildDomainSeparator",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/cryptography/draft-EIP712.sol",
+      "line": 98,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_hashTypedDataV4",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/escrow/ConditionalEscrow.sol",
+      "line": 20,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "withdraw",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/escrow/Escrow.sol",
+      "line": 29,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "depositsOf",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/escrow/Escrow.sol",
+      "line": 37,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "deposit",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/escrow/Escrow.sol",
+      "line": 53,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "withdraw",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/escrow/RefundEscrow.sol",
+      "line": 36,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "constructor",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/escrow/RefundEscrow.sol",
+      "line": 45,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "state",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/escrow/RefundEscrow.sol",
+      "line": 52,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "beneficiary",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/escrow/RefundEscrow.sol",
+      "line": 60,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "deposit",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/escrow/RefundEscrow.sol",
+      "line": 69,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "close",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/escrow/RefundEscrow.sol",
+      "line": 78,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "enableRefunds",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/escrow/RefundEscrow.sol",
+      "line": 87,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "beneficiaryWithdraw",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/escrow/RefundEscrow.sol",
+      "line": 96,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "withdrawalAllowed",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/introspection/ERC165.sol",
+      "line": 25,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "supportsInterface",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/introspection/ERC165Checker.sol",
+      "line": 21,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "supportsERC165",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/introspection/ERC165Checker.sol",
+      "line": 35,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "supportsInterface",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/introspection/ERC165Checker.sol",
+      "line": 50,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "getSupportedInterfaces",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/introspection/ERC165Checker.sol",
+      "line": 78,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "supportsAllInterfaces",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/introspection/ERC165Checker.sol",
+      "line": 106,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_supportsERC165Interface",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/introspection/ERC165Storage.sol",
+      "line": 22,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "supportsInterface",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/introspection/ERC165Storage.sol",
+      "line": 37,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_registerInterface",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/introspection/ERC1820Implementer.sol",
+      "line": 23,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "canImplementInterfaceForAddress",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/introspection/ERC1820Implementer.sol",
+      "line": 40,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_registerInterfaceForAddress",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/math/Math.sol",
+      "line": 12,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "max",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/math/Math.sol",
+      "line": 19,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "min",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/math/Math.sol",
+      "line": 27,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "average",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/math/Math.sol",
+      "line": 38,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "ceilDiv",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/math/SafeCast.sol",
+      "line": 31,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "toUint224",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/math/SafeCast.sol",
+      "line": 46,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "toUint128",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/math/SafeCast.sol",
+      "line": 61,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "toUint96",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/math/SafeCast.sol",
+      "line": 76,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "toUint64",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/math/SafeCast.sol",
+      "line": 91,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "toUint32",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/math/SafeCast.sol",
+      "line": 106,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "toUint16",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/math/SafeCast.sol",
+      "line": 121,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "toUint8",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/math/SafeCast.sol",
+      "line": 133,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "toUint256",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/math/SafeCast.sol",
+      "line": 151,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "toInt128",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/math/SafeCast.sol",
+      "line": 169,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "toInt64",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/math/SafeCast.sol",
+      "line": 187,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "toInt32",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/math/SafeCast.sol",
+      "line": 205,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "toInt16",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/math/SafeCast.sol",
+      "line": 223,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "toInt8",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/math/SafeCast.sol",
+      "line": 235,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "toInt256",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/math/SafeMath.sol",
+      "line": 21,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "tryAdd",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/math/SafeMath.sol",
+      "line": 34,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "trySub",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/math/SafeMath.sol",
+      "line": 46,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "tryMul",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/math/SafeMath.sol",
+      "line": 63,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "tryDiv",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/math/SafeMath.sol",
+      "line": 75,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "tryMod",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/math/SafeMath.sol",
+      "line": 92,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "add",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/math/SafeMath.sol",
+      "line": 106,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "sub",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/math/SafeMath.sol",
+      "line": 120,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "mul",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/math/SafeMath.sol",
+      "line": 134,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "div",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/math/SafeMath.sol",
+      "line": 150,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "mod",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/math/SafeMath.sol",
+      "line": 167,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "sub",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/math/SafeMath.sol",
+      "line": 190,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "div",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/math/SafeMath.sol",
+      "line": 216,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "mod",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/math/SignedSafeMath.sol",
+      "line": 22,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "mul",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/math/SignedSafeMath.sol",
+      "line": 36,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "div",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/math/SignedSafeMath.sol",
+      "line": 50,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "sub",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/math/SignedSafeMath.sol",
+      "line": 64,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "add",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/BitMaps.sol",
+      "line": 16,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "get",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/BitMaps.sol",
+      "line": 25,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "setTo",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/BitMaps.sol",
+      "line": 40,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "set",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/BitMaps.sol",
+      "line": 49,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "unset",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableMap.sol",
+      "line": 56,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_set",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableMap.sol",
+      "line": 70,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_remove",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableMap.sol",
+      "line": 78,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_contains",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableMap.sol",
+      "line": 85,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_length",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableMap.sol",
+      "line": 99,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_at",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableMap.sol",
+      "line": 108,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_tryGet",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableMap.sol",
+      "line": 124,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_get",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableMap.sol",
+      "line": 136,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_get",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableMap.sol",
+      "line": 159,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "set",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableMap.sol",
+      "line": 172,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "remove",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableMap.sol",
+      "line": 179,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "contains",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableMap.sol",
+      "line": 186,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "length",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableMap.sol",
+      "line": 199,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "at",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableMap.sol",
+      "line": 210,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "tryGet",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableMap.sol",
+      "line": 222,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "get",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableMap.sol",
+      "line": 232,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "get",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableSet.sol",
+      "line": 53,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_add",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableSet.sol",
+      "line": 71,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_remove",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableSet.sol",
+      "line": 108,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_contains",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableSet.sol",
+      "line": 115,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_length",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableSet.sol",
+      "line": 129,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_at",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableSet.sol",
+      "line": 141,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_values",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableSet.sol",
+      "line": 157,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "add",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableSet.sol",
+      "line": 167,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "remove",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableSet.sol",
+      "line": 174,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "contains",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableSet.sol",
+      "line": 181,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "length",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableSet.sol",
+      "line": 195,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "at",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableSet.sol",
+      "line": 207,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "values",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableSet.sol",
+      "line": 223,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "add",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableSet.sol",
+      "line": 233,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "remove",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableSet.sol",
+      "line": 240,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "contains",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableSet.sol",
+      "line": 247,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "length",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableSet.sol",
+      "line": 261,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "at",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableSet.sol",
+      "line": 273,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "values",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableSet.sol",
+      "line": 296,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "add",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableSet.sol",
+      "line": 306,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "remove",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableSet.sol",
+      "line": 313,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "contains",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableSet.sol",
+      "line": 320,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "length",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableSet.sol",
+      "line": 334,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "at",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/utils/structs/EnumerableSet.sol",
+      "line": 346,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "values",
+      "nearest_changed_line": null
+    }
+  ],
+  "matches": [
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 263,
+      "rule_id": "trivial.every-function",
+      "match_mode": "function"
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 285,
+      "rule_id": "trivial.every-function",
+      "match_mode": "function"
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 306,
+      "rule_id": "trivial.every-function",
+      "match_mode": "function"
+    }
+  ],
+  "tp": true,
+  "finding_count": 555,
+  "tp_count": 3,
+  "telemetry": {
+    "tool_version": "trivial",
+    "rule_sha256": "trivial",
+    "clone_head": "cec4f2ef57495d8b1742d62846da212515d99dd5",
+    "clone_tree": "20779d99e6dade5b683bf46cf63b374ec1a8a76a",
+    "solc_version": "",
+    "scanned_files_sha256": "1015bf11b48865896529de9d4e1dfd3d1f3a977b51b722895b2fd926c492f6c6",
+    "scanned_file_count": 179,
+    "diff_files": 1,
+    "diff_lines": 4,
+    "excluded_hunks": 2,
+    "renames": 1,
+    "alarm_count": 555,
+    "semgrep_errors": 0,
+    "runtime_seconds": 0.601,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

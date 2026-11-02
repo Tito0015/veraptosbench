@@ -1,0 +1,115 @@
+{
+  "pair": "GHSA-fg47-3c2x-m2wr",
+  "target": "slither",
+  "side": "pre",
+  "outcome": "ok",
+  "control": "shuffled",
+  "category": "web3_toctou_cei",
+  "repository": "https://github.com/OpenZeppelin/openzeppelin-contracts",
+  "cwe": "",
+  "oracle_unresolved": false,
+  "findings": [
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 263,
+      "rule_id": "reentrancy-eth",
+      "severity": "High",
+      "message": "Reentrancy in TimelockController.execute(address,uint256,bytes,bytes32,bytes32) (contracts/governance/TimelockController.sol#263-274):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 272,
+      "rule_id": "reentrancy-eth",
+      "severity": "High",
+      "message": "Reentrancy in TimelockController.execute(address,uint256,bytes,bytes32,bytes32) (contracts/governance/TimelockController.sol#263-274):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 330,
+      "rule_id": "reentrancy-eth",
+      "severity": "High",
+      "message": "Reentrancy in TimelockController.execute(address,uint256,bytes,bytes32,bytes32) (contracts/governance/TimelockController.sol#263-274):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 273,
+      "rule_id": "reentrancy-eth",
+      "severity": "High",
+      "message": "Reentrancy in TimelockController.execute(address,uint256,bytes,bytes32,bytes32) (contracts/governance/TimelockController.sol#263-274):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 315,
+      "rule_id": "reentrancy-eth",
+      "severity": "High",
+      "message": "Reentrancy in TimelockController.execute(address,uint256,bytes,bytes32,bytes32) (contracts/governance/TimelockController.sol#263-274):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 285,
+      "rule_id": "reentrancy-eth",
+      "severity": "High",
+      "message": "Reentrancy in TimelockController.executeBatch(address[],uint256[],bytes[],bytes32,bytes32) (contracts/governance/TimelockController.sol#285-301):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 298,
+      "rule_id": "reentrancy-eth",
+      "severity": "High",
+      "message": "Reentrancy in TimelockController.executeBatch(address[],uint256[],bytes[],bytes32,bytes32) (contracts/governance/TimelockController.sol#285-301):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 330,
+      "rule_id": "reentrancy-eth",
+      "severity": "High",
+      "message": "Reentrancy in TimelockController.executeBatch(address[],uint256[],bytes[],bytes32,bytes32) (contracts/governance/TimelockController.sol#285-301):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 300,
+      "rule_id": "reentrancy-eth",
+      "severity": "High",
+      "message": "Reentrancy in TimelockController.executeBatch(address[],uint256[],bytes[],bytes32,bytes32) (contracts/governance/TimelockController.sol#285-301):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 315,
+      "rule_id": "reentrancy-eth",
+      "severity": "High",
+      "message": "Reentrancy in TimelockController.executeBatch(address[],uint256[],bytes[],bytes32,bytes32) (contracts/governance/TimelockController.sol#285-301):",
+      "nearest_changed_line": null
+    }
+  ],
+  "matches": [],
+  "tp": false,
+  "finding_count": 10,
+  "tp_count": 0,
+  "telemetry": {
+    "tool_version": "0.11.6",
+    "rule_sha256": "shuffled",
+    "clone_head": "52188a21272c9863443ad33a4cd30d4871371642",
+    "clone_tree": "820839f6b62c157d5ab2e06b8c9234c2e3406ae6",
+    "solc_version": "0.8.28",
+    "scanned_files_sha256": "1015bf11b48865896529de9d4e1dfd3d1f3a977b51b722895b2fd926c492f6c6",
+    "scanned_file_count": 179,
+    "diff_files": 1,
+    "diff_lines": 3,
+    "excluded_hunks": 2,
+    "renames": 1,
+    "alarm_count": 10,
+    "semgrep_errors": 0,
+    "runtime_seconds": 6.54,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "shuffled_from": "GHSA-mx2q-35m2-x2rh"
+  }
+}

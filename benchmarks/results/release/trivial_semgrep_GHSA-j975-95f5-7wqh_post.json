@@ -1,0 +1,3281 @@
+{
+  "pair": "GHSA-j975-95f5-7wqh",
+  "target": "semgrep",
+  "side": "post",
+  "outcome": "ok",
+  "control": "trivial",
+  "category": "web2_mcp",
+  "repository": "https://github.com/modelcontextprotocol/python-sdk",
+  "cwe": "",
+  "oracle_unresolved": false,
+  "findings": [
+    {
+      "file": "src/mcp/cli/claude.py",
+      "line": 17,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "get_claude_config_path",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/cli/claude.py",
+      "line": 33,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "get_uv_path",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/cli/claude.py",
+      "line": 44,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "update_claude_config",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/cli/cli.py",
+      "line": 42,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_get_npx_command",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/cli/cli.py",
+      "line": 56,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_parse_env_var",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/cli/cli.py",
+      "line": 65,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_build_uv_command",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/cli/cli.py",
+      "line": 88,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_parse_file_path",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/cli/cli.py",
+      "line": 119,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_import_server",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/cli/cli.py",
+      "line": 212,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "version",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/cli/cli.py",
+      "line": 223,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "dev",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/cli/cli.py",
+      "line": 306,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "run",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/cli/cli.py",
+      "line": 364,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "install",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/cli/cli.py",
+      "line": 143,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_check_server_object",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/__main__.py",
+      "line": 26,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "message_handler",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/__main__.py",
+      "line": 36,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "run_session",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/__main__.py",
+      "line": 52,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "main",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/__main__.py",
+      "line": 66,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "cli",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/auth.py",
+      "line": 35,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "get_tokens",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/auth.py",
+      "line": 39,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "set_tokens",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/auth.py",
+      "line": 43,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "get_client_info",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/auth.py",
+      "line": 47,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "set_client_info",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/auth.py",
+      "line": 58,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__init__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/auth.py",
+      "line": 102,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_generate_code_verifier",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/auth.py",
+      "line": 106,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_generate_code_challenge",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/auth.py",
+      "line": 111,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_get_authorization_base_url",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/auth.py",
+      "line": 123,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_discover_oauth_metadata",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/auth.py",
+      "line": 155,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_register_oauth_client",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/auth.py",
+      "line": 206,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "async_auth_flow",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/auth.py",
+      "line": 224,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_has_valid_token",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/auth.py",
+      "line": 235,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_validate_token_scopes",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/auth.py",
+      "line": 268,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "initialize",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/auth.py",
+      "line": 273,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_get_or_register_client",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/auth.py",
+      "line": 286,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "ensure_token",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/auth.py",
+      "line": 300,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_perform_oauth_flow",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/auth.py",
+      "line": 358,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_exchange_code_for_token",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/auth.py",
+      "line": 412,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_refresh_access_token",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session.py",
+      "line": 45,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_default_message_handler",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session.py",
+      "line": 51,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_default_sampling_callback",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session.py",
+      "line": 61,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_default_list_roots_callback",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session.py",
+      "line": 70,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_default_logging_callback",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session.py",
+      "line": 18,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__call__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session.py",
+      "line": 26,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__call__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session.py",
+      "line": 32,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__call__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session.py",
+      "line": 39,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__call__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session.py",
+      "line": 88,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__init__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session.py",
+      "line": 112,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "initialize",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session.py",
+      "line": 150,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "send_ping",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session.py",
+      "line": 161,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "send_progress_notification",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session.py",
+      "line": 183,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "set_logging_level",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session.py",
+      "line": 195,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "list_resources",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session.py",
+      "line": 207,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "list_resource_templates",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session.py",
+      "line": 219,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "read_resource",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session.py",
+      "line": 231,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "subscribe_resource",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session.py",
+      "line": 243,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "unsubscribe_resource",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session.py",
+      "line": 255,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "call_tool",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session.py",
+      "line": 279,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "list_prompts",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session.py",
+      "line": 291,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "get_prompt",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session.py",
+      "line": 303,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "complete",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session.py",
+      "line": 322,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "list_tools",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session.py",
+      "line": 334,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "send_roots_list_changed",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session.py",
+      "line": 344,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_received_request",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session.py",
+      "line": 369,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_handle_incoming",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session.py",
+      "line": 376,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_received_notification",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session_group.py",
+      "line": 110,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__init__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session_group.py",
+      "line": 132,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__aenter__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session_group.py",
+      "line": 138,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__aexit__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session_group.py",
+      "line": 156,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "sessions",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session_group.py",
+      "line": 161,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "prompts",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session_group.py",
+      "line": 166,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "resources",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session_group.py",
+      "line": 171,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "tools",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session_group.py",
+      "line": 175,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "call_tool",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session_group.py",
+      "line": 181,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "disconnect_from_server",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session_group.py",
+      "line": 218,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "connect_with_session",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session_group.py",
+      "line": 225,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "connect_to_server",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session_group.py",
+      "line": 233,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_establish_session",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session_group.py",
+      "line": 279,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_aggregate_components",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session_group.py",
+      "line": 363,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_component_name",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/sse.py",
+      "line": 19,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "remove_request_params",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/sse.py",
+      "line": 24,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "sse_client",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/sse.py",
+      "line": 68,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "sse_reader",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/sse.py",
+      "line": 114,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "post_writer",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/stdio/__init__.py",
+      "line": 42,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "get_default_environment",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/stdio/__init__.py",
+      "line": 97,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "stdio_client",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/stdio/__init__.py",
+      "line": 196,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_get_executable_command",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/stdio/__init__.py",
+      "line": 212,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_create_platform_compatible_process",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/stdio/__init__.py",
+      "line": 130,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "stdout_reader",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/stdio/__init__.py",
+      "line": 156,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "stdin_writer",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/stdio/win32.py",
+      "line": 15,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "get_windows_executable_command",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/stdio/win32.py",
+      "line": 47,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "create_windows_process",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/stdio/win32.py",
+      "line": 89,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "terminate_windows_process",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/streamable_http.py",
+      "line": 441,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "streamablehttp_client",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/streamable_http.py",
+      "line": 77,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__init__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/streamable_http.py",
+      "line": 109,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_prepare_request_headers",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/streamable_http.py",
+      "line": 118,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_is_initialization_request",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/streamable_http.py",
+      "line": 122,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_is_initialized_notification",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/streamable_http.py",
+      "line": 126,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_maybe_extract_session_id_from_response",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/streamable_http.py",
+      "line": 136,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_maybe_extract_protocol_version_from_message",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/streamable_http.py",
+      "line": 151,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_handle_sse_event",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/streamable_http.py",
+      "line": 192,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "handle_get_stream",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/streamable_http.py",
+      "line": 220,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_handle_resumption_request",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/streamable_http.py",
+      "line": 253,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_handle_post_request",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/streamable_http.py",
+      "line": 293,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_handle_json_response",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/streamable_http.py",
+      "line": 314,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_handle_sse_response",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/streamable_http.py",
+      "line": 338,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_handle_unexpected_content_type",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/streamable_http.py",
+      "line": 348,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_send_session_terminated_error",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/streamable_http.py",
+      "line": 362,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "post_writer",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/streamable_http.py",
+      "line": 419,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "terminate_session",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/streamable_http.py",
+      "line": 435,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "get_session_id",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/streamable_http.py",
+      "line": 484,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "start_get_stream",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/streamable_http.py",
+      "line": 401,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "handle_request_async",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/websocket.py",
+      "line": 19,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "websocket_client",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/websocket.py",
+      "line": 51,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "ws_reader",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/websocket.py",
+      "line": 66,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "ws_writer",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/__main__.py",
+      "line": 21,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "receive_loop",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/__main__.py",
+      "line": 31,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "main",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/auth/errors.py",
+      "line": 4,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "stringify_pydantic_error",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/auth/handlers/authorize.py",
+      "line": 48,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "best_effort_extract_string",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/auth/handlers/authorize.py",
+      "line": 65,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "handle",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/auth/handlers/authorize.py",
+      "line": 74,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "error_response",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/auth/handlers/metadata.py",
+      "line": 14,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "handle",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/auth/handlers/register.py",
+      "line": 34,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "handle",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/auth/handlers/revoke.py",
+      "line": 38,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "handle",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/auth/handlers/token.py",
+      "line": 75,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "response",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/auth/handlers/token.py",
+      "line": 89,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "handle",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/auth/json_response.py",
+      "line": 9,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "render",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/auth/middleware/auth_context.py",
+      "line": 13,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "get_access_token",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/auth/middleware/auth_context.py",
+      "line": 34,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__init__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/auth/middleware/auth_context.py",
+      "line": 37,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__call__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/auth/middleware/bearer_auth.py",
+      "line": 15,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__init__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/auth/middleware/bearer_auth.py",
+      "line": 26,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__init__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/auth/middleware/bearer_auth.py",
+      "line": 32,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "authenticate",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/auth/middleware/bearer_auth.py",
+      "line": 62,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__init__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/auth/middleware/bearer_auth.py",
+      "line": 74,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__call__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/auth/middleware/client_auth.py",
+      "line": 9,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__init__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/auth/middleware/client_auth.py",
+      "line": 24,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__init__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/auth/middleware/client_auth.py",
+      "line": 33,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "authenticate",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/auth/provider.py",
+      "line": 272,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "construct_redirect_uri",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/auth/provider.py",
+      "line": 97,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "get_client",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/auth/provider.py",
+      "line": 112,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "register_client",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/auth/provider.py",
+      "line": 127,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "authorize",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/auth/provider.py",
+      "line": 170,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "load_authorization_code",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/auth/provider.py",
+      "line": 185,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "exchange_authorization_code",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/auth/provider.py",
+      "line": 203,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "load_refresh_token",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/auth/provider.py",
+      "line": 217,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "exchange_refresh_token",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/auth/provider.py",
+      "line": 241,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "load_access_token",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/auth/provider.py",
+      "line": 253,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "revoke_token",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/auth/routes.py",
+      "line": 23,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "validate_issuer_url",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/auth/routes.py",
+      "line": 51,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "cors_middleware",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/auth/routes.py",
+      "line": 64,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "create_auth_routes",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/auth/routes.py",
+      "line": 145,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "build_metadata",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/prompts/base.py",
+      "line": 19,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__init__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/prompts/base.py",
+      "line": 30,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__init__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/prompts/base.py",
+      "line": 39,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__init__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/prompts/base.py",
+      "line": 66,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "from_function",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/prompts/base.py",
+      "line": 111,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "render",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/prompts/manager.py",
+      "line": 14,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__init__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/prompts/manager.py",
+      "line": 18,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "get_prompt",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/prompts/manager.py",
+      "line": 22,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "list_prompts",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/prompts/manager.py",
+      "line": 26,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "add_prompt",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/prompts/manager.py",
+      "line": 42,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "render_prompt",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/prompts/prompt_manager.py",
+      "line": 12,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__init__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/prompts/prompt_manager.py",
+      "line": 16,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "add_prompt",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/prompts/prompt_manager.py",
+      "line": 27,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "get_prompt",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/prompts/prompt_manager.py",
+      "line": 31,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "list_prompts",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/resources/base.py",
+      "line": 33,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "set_default_name",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/resources/base.py",
+      "line": 42,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "read",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/resources/resource_manager.py",
+      "line": 18,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__init__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/resources/resource_manager.py",
+      "line": 23,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "add_resource",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/resources/resource_manager.py",
+      "line": 49,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "add_template",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/resources/resource_manager.py",
+      "line": 68,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "get_resource",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/resources/resource_manager.py",
+      "line": 87,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "list_resources",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/resources/resource_manager.py",
+      "line": 92,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "list_templates",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/resources/templates.py",
+      "line": 26,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "from_function",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/resources/templates.py",
+      "line": 54,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "matches",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/resources/templates.py",
+      "line": 63,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "create_resource",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/resources/types.py",
+      "line": 24,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "read",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/resources/types.py",
+      "line": 34,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "read",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/resources/types.py",
+      "line": 54,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "read",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/resources/types.py",
+      "line": 70,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "from_function",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/resources/types.py",
+      "line": 113,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "validate_absolute_path",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/resources/types.py",
+      "line": 121,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "set_binary_from_mime_type",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/resources/types.py",
+      "line": 128,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "read",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/resources/types.py",
+      "line": 144,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "read",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/resources/types.py",
+      "line": 162,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "validate_absolute_path",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/resources/types.py",
+      "line": 168,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "list_files",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/resources/types.py",
+      "line": 182,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "read",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 121,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "lifespan_wrapper",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 839,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_convert_to_content",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 126,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "wrap",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 134,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__init__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 174,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "name",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 178,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "instructions",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 182,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "session_manager",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 200,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "run",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 223,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_setup_handlers",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 233,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "list_tools",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 246,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "get_context",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 257,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "call_tool",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 264,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "list_resources",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 278,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "list_resource_templates",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 289,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "read_resource",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 303,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "add_tool",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 323,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "tool",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 367,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "add_resource",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 375,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "resource",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 463,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "add_prompt",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 471,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "prompt",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 519,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "custom_route",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 563,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "run_stdio_async",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 572,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "run_sse_async",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 587,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "run_streamable_http_async",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 602,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_normalize_path",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 628,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "sse_app",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 737,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "streamable_http_app",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 809,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "list_prompts",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 828,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "get_prompt",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 898,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__init__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 910,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "fastmcp",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 917,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "request_context",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 925,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "report_progress",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 945,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "read_resource",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 957,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "log",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 980,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "client_id",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 985,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "request_id",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 990,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "session",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 995,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "debug",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 999,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "info",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 1003,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "warning",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 1007,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "error",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 361,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "decorator",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 426,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "decorator",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 512,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "decorator",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 547,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "decorator",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 646,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "handle_sse",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 752,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "handle_streamable_http",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/server.py",
+      "line": 714,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "sse_endpoint",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/tools/base.py",
+      "line": 97,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_is_async_callable",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/tools/base.py",
+      "line": 35,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "from_function",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/tools/base.py",
+      "line": 80,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "run",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/tools/tool_manager.py",
+      "line": 22,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__init__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/tools/tool_manager.py",
+      "line": 37,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "get_tool",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/tools/tool_manager.py",
+      "line": 41,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "list_tools",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/tools/tool_manager.py",
+      "line": 45,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "add_tool",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/tools/tool_manager.py",
+      "line": 62,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "call_tool",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/utilities/func_metadata.py",
+      "line": 105,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "func_metadata",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/utilities/func_metadata.py",
+      "line": 169,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_get_typed_annotation",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/utilities/func_metadata.py",
+      "line": 188,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_get_typed_signature",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/utilities/func_metadata.py",
+      "line": 24,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "model_dump_one_level",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/utilities/func_metadata.py",
+      "line": 45,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "call_fn_with_arg_validation",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/utilities/func_metadata.py",
+      "line": 71,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "pre_parse_json",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/utilities/func_metadata.py",
+      "line": 170,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "try_eval_type",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/utilities/logging.py",
+      "line": 7,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "get_logger",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/utilities/logging.py",
+      "line": 19,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "configure_logging",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/utilities/types.py",
+      "line": 12,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__init__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/utilities/types.py",
+      "line": 28,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_get_mime_type",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/utilities/types.py",
+      "line": 44,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "to_image_content",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 114,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "lifespan",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 578,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_ping_handler",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 102,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__init__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 127,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__init__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 148,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "create_initialization_options",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 175,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "get_capabilities",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 213,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "request_context",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 219,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "list_prompts",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 232,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "get_prompt",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 247,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "list_resources",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 260,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "list_resource_templates",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 273,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "read_resource",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 331,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "set_logging_level",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 344,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "subscribe_resource",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 357,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "unsubscribe_resource",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 370,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "list_tools",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 383,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "call_tool",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 409,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "progress_notification",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 428,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "completion",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 457,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "run",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 496,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_handle_message",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 515,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_handle_request",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 568,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_handle_notification",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 155,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "pkg_version",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 220,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "decorator",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 233,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "decorator",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 248,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "decorator",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 261,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "decorator",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 274,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "decorator",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 332,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "decorator",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 345,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "decorator",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 358,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "decorator",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 371,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "decorator",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 384,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "decorator",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 410,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "decorator",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 431,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "decorator",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 223,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "handler",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 238,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "handler",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 251,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "handler",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 264,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "handler",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 279,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "handler",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 335,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "handler",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 348,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "handler",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 361,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "handler",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 374,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "handler",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 392,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "handler",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 415,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "handler",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 442,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "handler",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/lowlevel/server.py",
+      "line": 282,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "create_content",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/session.py",
+      "line": 83,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__init__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/session.py",
+      "line": 102,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "client_params",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/session.py",
+      "line": 105,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "check_client_capability",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/session.py",
+      "line": 134,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_receive_loop",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/session.py",
+      "line": 138,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_received_request",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/session.py",
+      "line": 164,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_received_notification",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/session.py",
+      "line": 174,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "send_log_message",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/session.py",
+      "line": 196,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "send_resource_updated",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/session.py",
+      "line": 207,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "create_message",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/session.py",
+      "line": 243,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "list_roots",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/session.py",
+      "line": 254,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "send_ping",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/session.py",
+      "line": 265,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "send_progress_notification",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/session.py",
+      "line": 289,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "send_resource_list_changed",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/session.py",
+      "line": 299,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "send_tool_list_changed",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/session.py",
+      "line": 309,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "send_prompt_list_changed",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/session.py",
+      "line": 319,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_handle_incoming",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/session.py",
+      "line": 323,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "incoming_messages",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/sse.py",
+      "line": 75,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__init__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/sse.py",
+      "line": 87,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "connect_sse",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/sse.py",
+      "line": 159,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "handle_post_message",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/sse.py",
+      "line": 123,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "sse_writer",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/sse.py",
+      "line": 140,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "response_wrapper",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/stdio.py",
+      "line": 34,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "stdio_server",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/stdio.py",
+      "line": 60,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "stdin_reader",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/stdio.py",
+      "line": 75,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "stdout_writer",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streamable_http.py",
+      "line": 88,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "store_event",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streamable_http.py",
+      "line": 102,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "replay_events_after",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streamable_http.py",
+      "line": 134,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__init__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streamable_http.py",
+      "line": 170,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_create_error_response",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streamable_http.py",
+      "line": 201,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_create_json_response",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streamable_http.py",
+      "line": 221,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_get_session_id",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streamable_http.py",
+      "line": 225,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_create_event_data",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streamable_http.py",
+      "line": 238,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_clean_up_memory_streams",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streamable_http.py",
+      "line": 251,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "handle_request",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streamable_http.py",
+      "line": 272,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_check_accept_headers",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streamable_http.py",
+      "line": 282,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_check_content_type",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streamable_http.py",
+      "line": 289,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_handle_post_request",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streamable_http.py",
+      "line": 495,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_handle_get_request",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streamable_http.py",
+      "line": 587,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_handle_delete_request",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streamable_http.py",
+      "line": 610,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_terminate_session",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streamable_http.py",
+      "line": 643,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_handle_unsupported_request",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streamable_http.py",
+      "line": 659,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_validate_request_headers",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streamable_http.py",
+      "line": 666,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_validate_session",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streamable_http.py",
+      "line": 695,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_validate_protocol_version",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streamable_http.py",
+      "line": 717,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_replay_events",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streamable_http.py",
+      "line": 789,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "connect",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streamable_http.py",
+      "line": 547,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "standalone_sse_writer",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streamable_http.py",
+      "line": 739,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "replay_sender",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streamable_http.py",
+      "line": 818,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "message_router",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streamable_http.py",
+      "line": 431,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "sse_writer",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streamable_http.py",
+      "line": 743,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "send_event",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streamable_http_manager.py",
+      "line": 57,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__init__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streamable_http_manager.py",
+      "line": 80,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "run",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streamable_http_manager.py",
+      "line": 120,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "handle_request",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streamable_http_manager.py",
+      "line": 145,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_handle_stateless_request",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streamable_http_manager.py",
+      "line": 187,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_handle_stateful_request",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streamable_http_manager.py",
+      "line": 168,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "run_stateless_server",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streamable_http_manager.py",
+      "line": 227,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "run_server",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streaming_asgi_transport.py",
+      "line": 48,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__init__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streaming_asgi_transport.py",
+      "line": 62,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "handle_async_request",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streaming_asgi_transport.py",
+      "line": 192,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__init__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streaming_asgi_transport.py",
+      "line": 198,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__aiter__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streaming_asgi_transport.py",
+      "line": 100,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "receive",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streaming_asgi_transport.py",
+      "line": 114,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "send",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streaming_asgi_transport.py",
+      "line": 120,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "run_app",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/streaming_asgi_transport.py",
+      "line": 136,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "process_messages",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/websocket.py",
+      "line": 17,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "websocket_server",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/websocket.py",
+      "line": 35,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "ws_reader",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/websocket.py",
+      "line": 50,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "ws_writer",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/shared/_httpx_utils.py",
+      "line": 19,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "create_mcp_http_client",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/shared/_httpx_utils.py",
+      "line": 11,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__call__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/shared/auth.py",
+      "line": 19,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "normalize_token_type",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/shared/auth.py",
+      "line": 28,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__init__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/shared/auth.py",
+      "line": 33,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__init__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/shared/auth.py",
+      "line": 71,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "validate_scope",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/shared/auth.py",
+      "line": 81,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "validate_redirect_uri",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/shared/exceptions.py",
+      "line": 11,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__init__",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/shared/memory.py",
+      "line": 22,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "create_client_server_memory_streams",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/shared/memory.py",
+      "line": 47,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "create_connected_server_and_client_session",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/shared/progress.py",
+      "line": 41,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "progress",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/shared/progress.py",
+      "line": 32,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "progress",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/shared/session.py",
+      "line": 49,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__call__",
+      "nearest_changed_line": 287
+    },
+    {
+      "file": "src/mcp/shared/session.py",
+      "line": 68,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__init__",
+      "nearest_changed_line": 268
+    },
+    {
+      "file": "src/mcp/shared/session.py",
+      "line": 93,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__enter__",
+      "nearest_changed_line": 243
+    },
+    {
+      "file": "src/mcp/shared/session.py",
+      "line": 100,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__exit__",
+      "nearest_changed_line": 236
+    },
+    {
+      "file": "src/mcp/shared/session.py",
+      "line": 116,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "respond",
+      "nearest_changed_line": 220
+    },
+    {
+      "file": "src/mcp/shared/session.py",
+      "line": 135,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "cancel",
+      "nearest_changed_line": 201
+    },
+    {
+      "file": "src/mcp/shared/session.py",
+      "line": 151,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "in_flight",
+      "nearest_changed_line": 185
+    },
+    {
+      "file": "src/mcp/shared/session.py",
+      "line": 155,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "cancelled",
+      "nearest_changed_line": 181
+    },
+    {
+      "file": "src/mcp/shared/session.py",
+      "line": 181,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__init__",
+      "nearest_changed_line": 155
+    },
+    {
+      "file": "src/mcp/shared/session.py",
+      "line": 201,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__aenter__",
+      "nearest_changed_line": 135
+    },
+    {
+      "file": "src/mcp/shared/session.py",
+      "line": 207,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "__aexit__",
+      "nearest_changed_line": 129
+    },
+    {
+      "file": "src/mcp/shared/session.py",
+      "line": 220,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "send_request",
+      "nearest_changed_line": 116
+    },
+    {
+      "file": "src/mcp/shared/session.py",
+      "line": 296,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "send_notification",
+      "nearest_changed_line": 40
+    },
+    {
+      "file": "src/mcp/shared/session.py",
+      "line": 317,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_send_response",
+      "nearest_changed_line": 19
+    },
+    {
+      "file": "src/mcp/shared/session.py",
+      "line": 331,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_receive_loop",
+      "nearest_changed_line": 5
+    },
+    {
+      "file": "src/mcp/shared/session.py",
+      "line": 438,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_received_request",
+      "nearest_changed_line": 2
+    },
+    {
+      "file": "src/mcp/shared/session.py",
+      "line": 447,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_received_notification",
+      "nearest_changed_line": 11
+    },
+    {
+      "file": "src/mcp/shared/session.py",
+      "line": 453,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "send_progress_notification",
+      "nearest_changed_line": 17
+    },
+    {
+      "file": "src/mcp/shared/session.py",
+      "line": 465,
+      "rule_id": "trivial.every-function",
+      "severity": "INFO",
+      "message": "_handle_incoming",
+      "nearest_changed_line": 29
+    }
+  ],
+  "matches": [
+    {
+      "file": "src/mcp/shared/session.py",
+      "line": 331,
+      "rule_id": "trivial.every-function",
+      "match_mode": "function"
+    }
+  ],
+  "tp": true,
+  "finding_count": 405,
+  "tp_count": 1,
+  "telemetry": {
+    "tool_version": "trivial",
+    "rule_sha256": "trivial",
+    "clone_head": "7b420656de48cfdb90b39eb582e60b6d55c2f891",
+    "clone_tree": "8c71e94d322667c187a88a210d28a31476802ca7",
+    "solc_version": "",
+    "scanned_files_sha256": "b29599eda9b59910bdf3a228ef89781bd301928df8303d108ba5c51614d92de6",
+    "scanned_file_count": 90,
+    "diff_files": 1,
+    "diff_lines": 100,
+    "excluded_hunks": 1,
+    "renames": 0,
+    "alarm_count": 405,
+    "semgrep_errors": 0,
+    "runtime_seconds": 0.656,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

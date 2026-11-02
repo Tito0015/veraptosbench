@@ -1,0 +1,33 @@
+{
+  "pair": "GHSA-699g-q6qh-q4v8",
+  "target": "slither",
+  "side": "pre",
+  "outcome": "ok",
+  "control": "empty",
+  "category": "web3_toctou_cei",
+  "repository": "https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable",
+  "cwe": "",
+  "oracle_unresolved": false,
+  "findings": [],
+  "matches": [],
+  "tp": false,
+  "finding_count": 0,
+  "tp_count": 0,
+  "telemetry": {
+    "tool_version": "empty",
+    "rule_sha256": "empty",
+    "clone_head": "f55babcbeef1d1c42c8e0f8884abcd6663a7909f",
+    "clone_tree": "e49a30f94531686095e1095b1d469cda9d856116",
+    "solc_version": "",
+    "scanned_files_sha256": "a5a3e1bb702b72a9a4116e6fa521ba65ecbf3b4c43193311eef5194e6bcf1e37",
+    "scanned_file_count": 331,
+    "diff_files": 1,
+    "diff_lines": 1,
+    "excluded_hunks": 0,
+    "renames": 0,
+    "alarm_count": 0,
+    "semgrep_errors": 0,
+    "runtime_seconds": 0.388,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

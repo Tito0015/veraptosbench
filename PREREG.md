@@ -93,7 +93,9 @@ Rules fixed before v2 scoring:
 9. H3 is inconclusive unless the unmutated rule has at least 10 pre-patch detections. The altering mutant removes the sink call. It does not insert the literal `sink_guard`. Preserving mutants are scope-aware rename, a wrap that keeps `*args`/`**kwargs` and `async`, and an alias of the sink's module.
 10. H4 asks for the same invariant text the compiler exports, as Python Semgrep and Python CodeQL. The harness supplies one unrelated few-shot and the CodeQL qlpack scaffold. Ten paraphrased prompts per model at temperature 0.0. Models: `openai/gpt-4o-mini` and `anthropic/claude-3-5-haiku-20241022`. Report pass@1, pass@3 with the validator error fed back, missing qlpack, hallucinated imports, the returned model id, and `semgrep --test` on `benchmarks/dev_fixtures/`. API errors are not syntax failures.
 
-## Addendum 2026-11-02 — Library-on-v1 (locked before library batch)
+## Addendum 2026-11-02 — Library-on-v1 (post-hoc; does not amend original H2 bars)
+
+**Written after v1 primary H2 scores were known.** This addendum does not change `HELD_OUT_DATASET_SHA256`, the locked recall/silence/fix-discrimination bars, or the original 2026-11-01 preregistration body. The library batch is a **control / descriptive arm**, not a pre-registered treatment claim.
 
 Frozen dataset: `HELD_OUT_DATASET_SHA256` unchanged (`8316802f…`). No edits to v1 pair labels or oracle ground truth.
 
@@ -126,3 +128,7 @@ Web2 rules run on `web2_mcp` pairs only; Web3 detectors on `web3_toctou_cei` onl
 4. Time-boxed hand-written expert rule per domain (author + time cap pre-registered).
 
 v2 size gate: the active hash changes only when `data/held_out_pairs.csv` has at least 20 `web2_mcp` rows and 20 `web3_toctou_cei` rows. Otherwise the active hash stays at v1 and v2 is not scored. Pairs are not invented to fill the gate. Web3 harvest keeps a row only when the fix diff contains a `.sol` file, the advisory text matches reentrancy, checks-effects-interactions, access control, or a state write, and the pragma selects an installed 0.8 solc (`0.8.10`, `0.8.20`, `0.8.28`). Dropped rows are counted.
+
+## Addendum 2026-11-02 — CWE sidecar (metadata only)
+
+`data/held_out_cwe.csv` joins GitHub Advisory CWE ids and coarse in-scope flags for the scored invariants (Python sink-map vs stock Slither reentrancy). It is **not** part of `held_out_pairs.csv` and does not change `HELD_OUT_DATASET_SHA256`.

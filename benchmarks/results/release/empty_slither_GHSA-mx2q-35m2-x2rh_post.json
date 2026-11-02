@@ -1,0 +1,33 @@
+{
+  "pair": "GHSA-mx2q-35m2-x2rh",
+  "target": "slither",
+  "side": "post",
+  "outcome": "ok",
+  "control": "empty",
+  "category": "web3_toctou_cei",
+  "repository": "https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable",
+  "cwe": "",
+  "oracle_unresolved": false,
+  "findings": [],
+  "matches": [],
+  "tp": false,
+  "finding_count": 0,
+  "tp_count": 0,
+  "telemetry": {
+    "tool_version": "empty",
+    "rule_sha256": "empty",
+    "clone_head": "58fa0f81c4036f1a3b616fdffad2fd27e5d5ce21",
+    "clone_tree": "37027e8c01adbf35aebeaf0e88e9c0ad568b12a0",
+    "solc_version": "",
+    "scanned_files_sha256": "5acaac2e413dd92328f3ece6c81f66ca9ae7649fab886a4303c945980b437e6d",
+    "scanned_file_count": 271,
+    "diff_files": 9,
+    "diff_lines": 47,
+    "excluded_hunks": 19,
+    "renames": 1,
+    "alarm_count": 0,
+    "semgrep_errors": 0,
+    "runtime_seconds": 0.387,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

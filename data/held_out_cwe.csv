@@ -1,0 +1,16 @@
+GHSA ID,CWE,in_scope_sinkmap,in_scope_reentrancy,note
+GHSA-5h93-6whr-6q8j,CWE-200,yes,no,Model Context Protocol Python SDK: HTTP client transports followed cross-origin redirects carrying custom headers and bo
+GHSA-84m7-p3x7-pcfv,CWE-400;CWE-770;CWE-772,yes,no,MCP Python SDK: Unbounded Session Accumulation in StreamableHTTP Transport Enables Resource Exhaustion
+GHSA-hvrp-rf83-w775,CWE-862,yes,no,MCP Python SDK: Experimental task handlers allow any client to access and cancel other clients' tasks
+GHSA-jpw9-pfvf-9f58,CWE-639,yes,no,MCP Python SDK: HTTP transports serve session requests without verifying the authenticated principal
+GHSA-mxxr-jv3v-6pgc,CWE-79,no,no,FastMCP vulnerable to reflected XSS in client's callback page
+GHSA-vj7q-gjh5-988w,CWE-346;CWE-1385,yes,no,MCP Python SDK: WebSocket server transport does not support Host/Origin validation
+GHSA-vv7q-7jx5-f767,CWE-918,yes,no,FastMCP OpenAPI Provider has an SSRF & Path Traversal Vulnerability
+GHSA-4h98-2769-gh6h,CWE-354,no,no,OpenZeppelin Contracts vulnerable to ECDSA signature malleability
+GHSA-5vp3-v4hc-gx76,CWE-665,no,no,UUPSUpgradeable vulnerability in @openzeppelin/contracts
+GHSA-7grf-83vw-6f5x,CWE-400;CWE-770,no,no,OpenZeppelin Contracts ERC165Checker unbounded gas consumption
+GHSA-93hq-5wgc-jc82,CWE-20,no,no,GovernorCompatibilityBravo may trim proposal calldata
+GHSA-9j3m-g383-29qr,CWE-669,no,no,OpenZeppelin Contracts's Cross chain utilities for Arbitrum L2 see EOA calls as cross chain calls
+GHSA-9vx6-7xxf-x967,CWE-125,no,no,OpenZeppelin Contracts base64 encoding may read from potentially dirty memory
+GHSA-g4vp-m682-qqmp,CWE-116,no,no,OpenZeppelin Contracts vulnerable to Improper Escaping of Output
+GHSA-wprv-93r4-jj2p,CWE-354,no,no,OpenZeppelin Contracts using MerkleProof multiproofs may allow proving arbitrary leaves for specific trees
