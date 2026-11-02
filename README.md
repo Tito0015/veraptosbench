@@ -20,7 +20,7 @@ You **cannot** regenerate `web2_invariant.yml` from this repo alone (requires cl
 
 | Arm | Status | Rule source | Scoring engine |
 |---|---|---|---|
-| **Treatment (compiler sink-map)** | Scored | `veraptos_static_cli --export-semgrep-python` → `benchmarks/veraptos_rules/web2_invariant.yml` | Opengrep on Python pairs (N=7) |
+| **Treatment (compiler sink-map)** | Scored | Veraptos static CLI Python YAML export → `benchmarks/veraptos_rules/web2_invariant.yml` | Opengrep on Python pairs (N=7) |
 | **Baseline (stock Slither)** | Scored | Slither `reentrancy-eth`, `reentrancy-no-eth` — not Veraptos-compiled; no `--export-slither` | Slither on Solidity pairs (N=8) |
 | **Control (out-of-class library rules)** | Scored (descriptive) | Pinned threat-library paths/detectors (see table below) | Opengrep + library Slither |
 
@@ -30,16 +30,21 @@ The Opengrep H2 row is the compiler Python sink-map only, not a threat-library Y
 
 | Release | Note |
 |---|---|
-| **v0.1-release** | `anthropic/claude-3-5-haiku-20241022`: API 404 on all H4 runs — **not measured** (omitted from headline H4 table). |
-| **v0.1-release** | `openai/gpt-4o-mini`: Semgrep **10/10** pass@k; CodeQL **0/10** (scaffold compile). Label: **small-model baseline**, not frontier LLM. |
-| **v0.1-release** | `claude-sonnet-5.5` row is current-generation syntax/repair (pass@k ≠ held-out recall). |
 | **v0.1.1** | Threat-library arm added **after** v1 primary H2 scores were known (PREREG post-hoc addendum; control arm). |
 | **v0.1.2** | Method-first README: status block, H2 negative controls, CWE sidecar, finding totals, fixture harness check. |
+| **v0.1.2+** | Public README scoped to **Opengrep + stock Slither** H2 only; legacy LLM syntax rows removed from this page. |
+
+## Harness checks (not held-out evidence)
+
+`scripts/fixture_check.py` runs in `reproduce.sh`:
+
+- Opengrep: `benchmarks/veraptos_rules/web2_invariant.yml` on `benchmarks/dev_fixtures/untrusted_external.py`.
+- Stock Slither: `reentrancy-eth,reentrancy-no-eth` on `benchmarks/dev_fixtures/reentrancy_harness.sol`.
 
 ## v1 archive
 
 v1 hash `8316802fb09b6a0595d58472ceb810656cf71a8549b495d5641c98dcc478222d`.
-An earlier Semgrep run on these 8 Solidity pairs scored recall 0/8 = 0.00 [0.00, 0.32] and silence 8/8 = 1.00 [0.68, 1.00]. That row is not the Web3 measurement. Semgrep is Web2 Python only. Web3 is the Slither row.
+An archived wrong-engine row once ran a Python rule engine on Solidity pairs; it is not part of this release. **Web2 H2 = Opengrep only. Web3 H2 = stock Slither only.**
 
 ## v2 harvest gate
 
@@ -179,10 +184,10 @@ Rules from [veraptos-threat-library](https://github.com/Tito0015/veraptos-threat
 | `jwt-none-alg-go` | opengrep | Python | 7 | 0/7 = 0.00 | 0/7 = 0.00 | 7/7 = 1.00 | 0 |
 | `mass-assignment-fastapi` | opengrep | Python | 7 | 0/7 = 0.00 | 0/7 = 0.00 | 7/7 = 1.00 | 0 |
 | `veraptos-puppet-spot-oracle` | slither | Solidity | 4 | 0/4 = 0.00 | 0/4 = 0.00 | 4/4 = 1.00 | 8 |
-| `veraptos-rewarder-snapshot-manipulation` | slither | Solidity | 6 | 0/6 = 0.00 | 0/6 = 0.00 | 6/6 = 1.00 | 3 |
+| `veraptos-rewarder-snapshot-manipulation` | slither | Solidity | 4 | 0/4 = 0.00 | 0/4 = 0.00 | 4/4 = 1.00 | 8 |
 | `veraptos-selfie-governance-snapshot` | slither | Solidity | 4 | 0/4 = 0.00 | 0/4 = 0.00 | 4/4 = 1.00 | 8 |
-| `veraptos-side-entrance-state-hijack` | slither | Solidity | 8 | 0/8 = 0.00 | 0/8 = 0.00 | 8/8 = 1.00 | 0 |
-| `veraptos-truster-arbitrary-call` | slither | Solidity | 8 | 0/8 = 0.00 | 0/8 = 0.00 | 8/8 = 1.00 | 0 |
+| `veraptos-side-entrance-state-hijack` | slither | Solidity | 4 | 0/4 = 0.00 | 0/4 = 0.00 | 4/4 = 1.00 | 8 |
+| `veraptos-truster-arbitrary-call` | slither | Solidity | 4 | 0/4 = 0.00 | 0/4 = 0.00 | 4/4 = 1.00 | 8 |
 
 Library Slither `compile_error` stderr tails:
 
@@ -194,6 +199,27 @@ Library Slither `compile_error` stderr tails:
 - `GHSA-g4vp-m682-qqmp`: slither exited without JSON (~1.4s on veraptos-* detect)
 - `GHSA-wprv-93r4-jj2p`: slither exited without JSON (~1.4s on veraptos-* detect)
 - `GHSA-wprv-93r4-jj2p`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-93hq-5wgc-jc82`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-93hq-5wgc-jc82`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-9vx6-7xxf-x967`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-9vx6-7xxf-x967`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-g4vp-m682-qqmp`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-g4vp-m682-qqmp`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-wprv-93r4-jj2p`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-wprv-93r4-jj2p`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-93hq-5wgc-jc82`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-93hq-5wgc-jc82`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-9vx6-7xxf-x967`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-9vx6-7xxf-x967`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-g4vp-m682-qqmp`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-g4vp-m682-qqmp`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-wprv-93r4-jj2p`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-wprv-93r4-jj2p`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-93hq-5wgc-jc82`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-93hq-5wgc-jc82`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-9vx6-7xxf-x967`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-9vx6-7xxf-x967`: slither exited without JSON (~1.4s on veraptos-* detect)
+- `GHSA-g4vp-m682-qqmp`: slither exited without JSON (~1.4s on veraptos-* detect)
 - `GHSA-g4vp-m682-qqmp`: slither exited without JSON (~1.4s on veraptos-* detect)
 - `GHSA-wprv-93r4-jj2p`: slither exited without JSON (~1.4s on veraptos-* detect)
 - `GHSA-wprv-93r4-jj2p`: slither exited without JSON (~1.4s on veraptos-* detect)
@@ -210,38 +236,22 @@ Library Slither `compile_error` sides (four GHSA pairs: `93hq`, `9vx6`, `g4vp`, 
 
 
 
-## In Progress / Compiler Roadmap
+## Scope of this release
 
-CodeQL export is not implemented. **Slither H2** uses stock reentrancy detectors only. **Opengrep H2** uses the Veraptos compiler Python sink-map (`--export-semgrep-python`). Library rules are scored separately (out-of-class on v1). There is no `--export-slither`.
+Public scorecard: **Opengrep** (Python sink-map) and **stock Slither** (Solidity reentrancy) on frozen v1 pairs, plus out-of-class library controls. Legacy PREREG arms outside those two engines are not on this page.
+
+## H3 — metamorphic mutators
+
+**Not scored on v1 held-out.** PREREG requires at least **10 pre-patch detections** on the unmutated rule before mutant preserving/altering rates are reported. Primary Opengrep recall on v1 is **1/7**, so the held-out corpus does not meet the H3 gate.
+
+**What did run:** `python scripts/mutator.py --self-check` on the four Web2 dev mutants (altering + preserving). That checks the mutator machinery only — not advisory recall.
+
+Slither mutants are out of scope for this pilot (H3 is Web2 Python fixtures in PREREG).
 
 ## Pending fair baselines (pre-registered, not scored in this release)
 
-- Opengrep/Semgrep registry rules by upstream rule id + commit only (no vendored rule text).
-- CodeQL default query suites on these public clone targets.
-- LLM held-out pair recall (H4 today is syntax pass@k only).
+- Community Opengrep registry rules by upstream rule id + commit only (no vendored rule text).
 - Time-boxed hand-written expert rule per domain.
 
 See [`PREREG.md`](PREREG.md) addenda *Library-on-v1* and *Fair baselines pending*.
-
-## H3
-
-Not scored on the corpus in this release. The mutator self-check covers the four mutants. H3 is inconclusive unless an unmutated rule has at least 10 pre-patch detections.
-
-## H4 — syntax, pack, and repair
-
-pass@1 is the first sample. pass@3 allows two repairs that see the validator error. API errors are separate from syntax failures. A missing qlpack is recorded even when compile uses the supplied scaffold.
-
-| Model | Semgrep pass@1 | Semgrep pass@3 | CodeQL pass@1 | CodeQL pass@3 | API errors | Missing qlpack | Hallucinated imports | semgrep --test |
-|---|---|---|---|---|---|---|---|---|
-| `anthropic/claude-sonnet-5.5` | 9/10 | 10/10 | 9/10 | 10/10 | 0 | 10 | 0 | 10/10 |
-| `openai/gpt-4o-mini` | 10/10 | 10/10 | 0/10 | 0/10 | 0 | 10 | 0 | 10/10 |
-
-Haiku 3.5 (`anthropic/claude-3-5-haiku-20241022`) is omitted: all H4 runs returned API 404 (not measured).
-
-
-Returned model ids: `anthropic/claude-sonnet-5.5` returned `anthropic/claude-sonnet-5.5`; `openai/gpt-4o-mini` returned `openai/gpt-4o-mini`
-
-## H4 — paired held-out recall
-
-Held-out H4 recall was not scored. McNemar is not measured.
 

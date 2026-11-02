@@ -19,7 +19,7 @@ ROOT = Path(__file__).resolve().parents[1]
 HELD = ROOT / "data" / "held_out_pairs.csv"
 RESULTS = ROOT / "benchmarks" / "results" / "release"
 LLM = ROOT / "benchmarks" / "raw_llm_outputs"
-README = ROOT / "README_BENCHMARK.md"
+README = ROOT / "README.md"
 H4_PAIRS = RESULTS / "h4_pairs.json"
 GATE_JSON = ROOT / "data" / "v2_candidate" / "gate.json"
 CWE_SIDE = ROOT / "data" / "held_out_cwe.csv"
@@ -173,11 +173,21 @@ def results_changelog_lines() -> list[str]:
         "",
         "| Release | Note |",
         "|---|---|",
-        "| **v0.1-release** | `anthropic/claude-3-5-haiku-20241022`: API 404 on all H4 runs — **not measured** (omitted from headline H4 table). |",
-        "| **v0.1-release** | `openai/gpt-4o-mini`: Semgrep **10/10** pass@k; CodeQL **0/10** (scaffold compile). Label: **small-model baseline**, not frontier LLM. |",
-        "| **v0.1-release** | `claude-sonnet-5.5` row is current-generation syntax/repair (pass@k ≠ held-out recall). |",
         "| **v0.1.1** | Threat-library arm added **after** v1 primary H2 scores were known (PREREG post-hoc addendum; control arm). |",
         "| **v0.1.2** | Method-first README: status block, H2 negative controls, CWE sidecar, finding totals, fixture harness check. |",
+        "| **v0.1.2+** | Public README scoped to **Opengrep + stock Slither** H2 only; legacy LLM syntax rows removed from this page. |",
+        "",
+    ]
+
+
+def harness_checks_lines() -> list[str]:
+    return [
+        "## Harness checks (not held-out evidence)",
+        "",
+        "`scripts/fixture_check.py` runs in `reproduce.sh`:",
+        "",
+        "- Opengrep: `benchmarks/veraptos_rules/web2_invariant.yml` on `benchmarks/dev_fixtures/untrusted_external.py`.",
+        "- Stock Slither: `reentrancy-eth,reentrancy-no-eth` on `benchmarks/dev_fixtures/reentrancy_harness.sol`.",
         "",
     ]
 
@@ -409,6 +419,20 @@ def scorecards() -> list[dict]:
     return found
 
 
+def h3_lines(primary_opengrep_recall: int, primary_n: int) -> list[str]:
+    return [
+        "## H3 — metamorphic mutators",
+        "",
+        "**Not scored on v1 held-out.** PREREG requires at least **10 pre-patch detections** on the unmutated rule before mutant preserving/altering rates are reported. Primary Opengrep recall on v1 is "
+        f"**{primary_opengrep_recall}/{primary_n}**, so the held-out corpus does not meet the H3 gate.",
+        "",
+        "**What did run:** `python scripts/mutator.py --self-check` on the four Web2 dev mutants (altering + preserving). That checks the mutator machinery only — not advisory recall.",
+        "",
+        "Slither mutants are out of scope for this pilot (H3 is Web2 Python fixtures in PREREG).",
+        "",
+    ]
+
+
 def h4_text() -> list[str]:
     path = H4_PAIRS
     if not path.is_file():
@@ -547,7 +571,7 @@ def scored_arms_lines() -> list[str]:
         "",
         "| Arm | Status | Rule source | Scoring engine |",
         "|---|---|---|---|",
-        "| **Treatment (compiler sink-map)** | Scored | `veraptos_static_cli --export-semgrep-python` → `benchmarks/veraptos_rules/web2_invariant.yml` | Opengrep on Python pairs (N=7) |",
+        "| **Treatment (compiler sink-map)** | Scored | Veraptos static CLI Python YAML export → `benchmarks/veraptos_rules/web2_invariant.yml` | Opengrep on Python pairs (N=7) |",
         "| **Baseline (stock Slither)** | Scored | Slither `reentrancy-eth`, `reentrancy-no-eth` — not Veraptos-compiled; no `--export-slither` | Slither on Solidity pairs (N=8) |",
         "| **Control (out-of-class library rules)** | Scored (descriptive) | Pinned threat-library paths/detectors (see table below) | Opengrep + library Slither |",
         "",
@@ -590,12 +614,13 @@ def render() -> str:
     lines.extend(status_pilot_lines())
     lines.extend(scored_arms_lines())
     lines.extend(results_changelog_lines())
+    lines.extend(harness_checks_lines())
     lines.extend(
         [
         "## v1 archive",
         "",
         "v1 hash `8316802fb09b6a0595d58472ceb810656cf71a8549b495d5641c98dcc478222d`.",
-        "An earlier Semgrep run on these 8 Solidity pairs scored recall 0/8 = 0.00 [0.00, 0.32] and silence 8/8 = 1.00 [0.68, 1.00]. That row is not the Web3 measurement. Semgrep is Web2 Python only. Web3 is the Slither row.",
+        "An archived wrong-engine row once ran a Python rule engine on Solidity pairs; it is not part of this release. **Web2 H2 = Opengrep only. Web3 H2 = stock Slither only.**",
         "",
         ]
     )
@@ -721,81 +746,28 @@ def render() -> str:
             ]
         )
     lines.extend(library_table_lines(rows))
+    opengrep_summary = summaries.get("semgrep") or {}
     lines.extend(
         [
             "",
-            "## In Progress / Compiler Roadmap",
+            "## Scope of this release",
             "",
-            "CodeQL export is not implemented. **Slither H2** uses stock reentrancy detectors only. **Opengrep H2** uses the Veraptos compiler Python sink-map (`--export-semgrep-python`). Library rules are scored separately (out-of-class on v1). There is no `--export-slither`.",
+            "Public scorecard: **Opengrep** (Python sink-map) and **stock Slither** (Solidity reentrancy) on frozen v1 pairs, plus out-of-class library controls. Legacy PREREG arms outside those two engines are not on this page.",
             "",
+        ]
+    )
+    lines.extend(h3_lines(opengrep_summary.get("recall", 0), opengrep_summary.get("n", 0) or 0))
+    lines.extend(
+        [
             "## Pending fair baselines (pre-registered, not scored in this release)",
             "",
-            "- Opengrep/Semgrep registry rules by upstream rule id + commit only (no vendored rule text).",
-            "- CodeQL default query suites on these public clone targets.",
-            "- LLM held-out pair recall (H4 today is syntax pass@k only).",
+            "- Community Opengrep registry rules by upstream rule id + commit only (no vendored rule text).",
             "- Time-boxed hand-written expert rule per domain.",
             "",
             "See [`PREREG.md`](PREREG.md) addenda *Library-on-v1* and *Fair baselines pending*.",
             "",
-            "## H3",
-            "",
-            "Not scored on the corpus in this release. The mutator self-check covers the four mutants. H3 is inconclusive unless an unmutated rule has at least 10 pre-patch detections.",
-            "",
-            "## H4 — syntax, pack, and repair",
-            "",
-            "pass@1 is the first sample. pass@3 allows two repairs that see the validator error. API errors are separate from syntax failures. A missing qlpack is recorded even when compile uses the supplied scaffold.",
-            "",
-            "| Model | Semgrep pass@1 | Semgrep pass@3 | CodeQL pass@1 | CodeQL pass@3 | API errors | Missing qlpack | Hallucinated imports | semgrep --test |",
-            "|---|---|---|---|---|---|---|---|---|",
         ]
     )
-    cards = scorecards()
-    headline_cards = [
-        card
-        for card in cards
-        if "haiku" not in (card.get("model") or "").lower()
-        and not (
-            card.get("runs")
-            and card.get("api_errors") == card.get("runs")
-        )
-    ]
-    if not headline_cards:
-        lines.append("| — | not measured | not measured | not measured | not measured | — | — | — | — |")
-    for card in headline_cards:
-        sem = card["pass_at_1"]["semgrep"]
-        sem3 = card["pass_at_3"]["semgrep"]
-        ql = card["pass_at_1"]["codeql"]
-        ql3 = card["pass_at_3"]["codeql"]
-        runs = card["runs"]
-        lines.append(
-            "| `{model}` | {s}/{n} | {s3}/{n} | {q}/{n} | {q3}/{n} | {api} | {pack} | {imp} | {semtest}/{valid} |".format(
-                model=card["model"],
-                s=sem,
-                s3=sem3,
-                q=ql,
-                q3=ql3,
-                n=runs,
-                api=card.get("api_errors", 0),
-                pack=card.get("missing_qlpack", 0),
-                imp=card.get("hallucinated_imports", 0),
-                semtest=card.get("semantic_semgrep_pass", 0),
-                valid=card.get("semgrep_validated", sem),
-            )
-        )
-    lines.extend(
-        [
-            "",
-            "Haiku 3.5 (`anthropic/claude-3-5-haiku-20241022`) is omitted: all H4 runs returned API 404 (not measured).",
-            "",
-        ]
-    )
-    returned = []
-    for card in cards:
-        for model_id in card.get("returned_models") or []:
-            returned.append(f"`{card['model']}` returned `{model_id}`")
-    lines.extend(["", "Returned model ids: " + ("; ".join(returned) if returned else "not measured."), ""])
-    lines.extend(["## H4 — paired held-out recall", ""])
-    lines.extend(h4_text())
     return "\n".join(lines) + "\n"
 
 
