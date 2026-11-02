@@ -1,0 +1,29 @@
+rules:
+  - id: python.state-mutation-after-untrusted-external-call
+    languages: [python]
+    severity: WARNING
+    mode: taint
+    message: >
+      A public function calls an external, untrusted source (requests, httpx or
+      subprocess) and then writes the result into persistent state (an attribute
+      or item assignment). Validate or sanitize the response before storing it.
+    metadata:
+      category: security
+      invariant: state-mutation-following-external-untrusted-interaction
+    pattern-sources:
+      - pattern-either:
+          - pattern: requests.$M(...)
+          - pattern: httpx.$M(...)
+          - pattern: subprocess.$M(...)
+    pattern-sinks:
+      - patterns:
+          - pattern-inside: |
+              def $FUNC(...):
+                  ...
+          - metavariable-regex:
+              metavariable: $FUNC
+              regex: ^[^_].*
+          - pattern-either:
+              - pattern: $OBJ.$ATTR = $SINK
+              - pattern: $OBJ[$KEY] = $SINK
+          - focus-metavariable: $SINK

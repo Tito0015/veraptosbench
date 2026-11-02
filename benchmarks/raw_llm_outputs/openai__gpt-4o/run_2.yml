@@ -1,0 +1,16 @@
+rules:
+  - id: state-mutation-after-external-call
+    patterns:
+      - pattern: |
+          function $FUNC($ARGS) public {
+            ...
+            $UNTRUSTED_CALL(...);
+            ...
+            $STATE_MUTATION;
+            ...
+          }
+    message: "Avoid state mutation after an external call to untrusted input."
+    languages: [solidity]
+    severity: WARNING
+    metadata:
+      cwe: "CWE-710: Improper Adherence to Coding Standards"

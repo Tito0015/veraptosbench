@@ -1,0 +1,21 @@
+rules:
+  - id: state-mutation-after-external-call
+    patterns:
+      - pattern: |
+          function $FUNC(...) {
+            ...
+            $CALL(...);
+            ...
+            $STATE = ...;
+            ...
+          }
+      - pattern-inside: |
+          $CALL(...);
+      - pattern-inside: |
+          $STATE = ...;
+    message: "State mutation following an external untrusted interaction."
+    languages: [solidity]
+    severity: WARNING
+    metadata:
+      author: "Your Name"
+      description: "Detects state mutations following external calls in Solidity functions."

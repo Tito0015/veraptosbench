@@ -1,0 +1,54 @@
+rules:
+  - id: python.state-mutation-after-external-call
+    languages: [python]
+    severity: WARNING
+    message: >-
+      Public function `$F` makes an external call (requests, httpx, or subprocess)
+      and then writes object state (`self.$A`) using the result `$R`. Untrusted
+      external data is persisted without validation, and state changes after the
+      interaction. Validate the response first, or do the external call before any
+      state handling and write the state atomically.
+    metadata:
+      category: security
+      invariant: state-mutation-following-external-untrusted-interaction
+    patterns:
+      - pattern-either:
+          - pattern: |
+              def $F(...):
+                ...
+                $R = requests.$M(...)
+                ...
+                self.$A = <... $R ...>
+          - pattern: |
+              def $F(...):
+                ...
+                $R = httpx.$M(...)
+                ...
+                self.$A = <... $R ...>
+          - pattern: |
+              def $F(...):
+                ...
+                $R = subprocess.$M(...)
+                ...
+                self.$A = <... $R ...>
+          - pattern: |
+              async def $F(...):
+                ...
+                $R = await httpx.$M(...)
+                ...
+                self.$A = <... $R ...>
+          - pattern: |
+              async def $F(...):
+                ...
+                $R = requests.$M(...)
+                ...
+                self.$A = <... $R ...>
+          - pattern: |
+              async def $F(...):
+                ...
+                $R = subprocess.$M(...)
+                ...
+                self.$A = <... $R ...>
+      - metavariable-regex:
+          metavariable: $F
+          regex: ^[^_].*

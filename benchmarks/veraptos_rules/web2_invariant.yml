@@ -1,0 +1,9 @@
+rules:
+  - id: veraptos.untrusted-external-interaction
+    languages: [python]
+    severity: ERROR
+    message: "untrusted external interaction"
+    pattern-either:
+      - pattern: requests.$M(...)
+      - pattern: httpx.$M(...)
+      - pattern: subprocess.$M(...)

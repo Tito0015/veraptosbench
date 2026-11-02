@@ -1,0 +1,21 @@
+{
+  "compiler_package": "veraptos_static",
+  "compiler_version": "0.1.0",
+  "compiler_git": "29ffa0f4986535aecb7927139d17da0d2c9df9b0",
+  "compiler_usage": [
+    "veraptos_static_cli --scan <dir> --severity-threshold <f>",
+    "veraptos_static_cli --source <path> --export-glider",
+    "veraptos_static_cli --source <path> --export-semgrep",
+    "veraptos_static_cli --export-semgrep-python"
+  ],
+  "native_rule_exports": [
+    "glider",
+    "semgrep"
+  ],
+  "glider_rule_sha256": "481225c646a58494eb3d64214fe5f78a1b59d9943d530f9d91e9b3588d4831a2",
+  "veraptos_rules_sha256": {
+    "benchmarks/veraptos_rules/state_after_external.yml": "73392a6952ee5cd6d3f4da0c176ab29a50bbf8127cbe98dca95a5e4c9a943c0b",
+    "benchmarks/veraptos_rules/web2_invariant.yml": "9f54c90659f2e21ffdb458d6e17cde9ff749ccbd6a4ce10d81570881bc6f1256"
+  },
+  "HELD_OUT_DATASET_SHA256": "8316802fb09b6a0595d58472ceb810656cf71a8549b495d5641c98dcc478222d"
+}

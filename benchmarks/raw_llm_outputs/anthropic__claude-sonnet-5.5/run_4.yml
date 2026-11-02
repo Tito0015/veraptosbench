@@ -1,0 +1,43 @@
+rules:
+  - id: python.state-mutation-after-external-call
+    languages: [python]
+    severity: WARNING
+    message: >-
+      Public function `$FUNC` calls an external, untrusted source (requests,
+      httpx or subprocess) and then writes state using the result. Validate or
+      sanitize the response before assigning it to object or global state.
+    metadata:
+      category: security
+      invariant: state mutation following an external untrusted interaction
+    patterns:
+      - pattern-inside: |
+          def $FUNC(...):
+              ...
+      - metavariable-regex:
+          metavariable: $FUNC
+          regex: ^(?!_).*
+      - pattern-either:
+          - pattern: |
+              $RESP = requests.$M(...)
+              ...
+              self.$ATTR = <... $RESP ...>
+          - pattern: |
+              $RESP = requests.$M(...)
+              ...
+              $STATE[$K] = <... $RESP ...>
+          - pattern: |
+              $RESP = httpx.$M(...)
+              ...
+              self.$ATTR = <... $RESP ...>
+          - pattern: |
+              $RESP = httpx.$M(...)
+              ...
+              $STATE[$K] = <... $RESP ...>
+          - pattern: |
+              $RESP = subprocess.$M(...)
+              ...
+              self.$ATTR = <... $RESP ...>
+          - pattern: |
+              $RESP = subprocess.$M(...)
+              ...
+              $STATE[$K] = <... $RESP ...>

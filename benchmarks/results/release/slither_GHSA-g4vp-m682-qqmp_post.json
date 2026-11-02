@@ -1,0 +1,362 @@
+{
+  "pair": "GHSA-g4vp-m682-qqmp",
+  "target": "slither",
+  "side": "post",
+  "outcome": "ok",
+  "control": "",
+  "category": "web3_toctou_cei",
+  "repository": "https://github.com/OpenZeppelin/openzeppelin-contracts",
+  "cwe": "",
+  "oracle_unresolved": false,
+  "findings": [
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 376,
+      "rule_id": "reentrancy-eth",
+      "severity": "High",
+      "message": "Reentrancy in TimelockController.executeBatch(address[],uint256[],bytes[],bytes32,bytes32) (contracts/governance/TimelockController.sol#376-396):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 393,
+      "rule_id": "reentrancy-eth",
+      "severity": "High",
+      "message": "Reentrancy in TimelockController.executeBatch(address[],uint256[],bytes[],bytes32,bytes32) (contracts/governance/TimelockController.sol#376-396):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 400,
+      "rule_id": "reentrancy-eth",
+      "severity": "High",
+      "message": "Reentrancy in TimelockController.executeBatch(address[],uint256[],bytes[],bytes32,bytes32) (contracts/governance/TimelockController.sol#376-396):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 396,
+      "rule_id": "reentrancy-eth",
+      "severity": "High",
+      "message": "Reentrancy in TimelockController.executeBatch(address[],uint256[],bytes[],bytes32,bytes32) (contracts/governance/TimelockController.sol#376-396):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 424,
+      "rule_id": "reentrancy-eth",
+      "severity": "High",
+      "message": "Reentrancy in TimelockController.executeBatch(address[],uint256[],bytes[],bytes32,bytes32) (contracts/governance/TimelockController.sol#376-396):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 349,
+      "rule_id": "reentrancy-eth",
+      "severity": "High",
+      "message": "Reentrancy in TimelockController.execute(address,uint256,bytes,bytes32,bytes32) (contracts/governance/TimelockController.sol#349-362):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 357,
+      "rule_id": "reentrancy-eth",
+      "severity": "High",
+      "message": "Reentrancy in TimelockController.execute(address,uint256,bytes,bytes32,bytes32) (contracts/governance/TimelockController.sol#349-362):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 400,
+      "rule_id": "reentrancy-eth",
+      "severity": "High",
+      "message": "Reentrancy in TimelockController.execute(address,uint256,bytes,bytes32,bytes32) (contracts/governance/TimelockController.sol#349-362):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 361,
+      "rule_id": "reentrancy-eth",
+      "severity": "High",
+      "message": "Reentrancy in TimelockController.execute(address,uint256,bytes,bytes32,bytes32) (contracts/governance/TimelockController.sol#349-362):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/TimelockController.sol",
+      "line": 424,
+      "rule_id": "reentrancy-eth",
+      "severity": "High",
+      "message": "Reentrancy in TimelockController.execute(address,uint256,bytes,bytes32,bytes32) (contracts/governance/TimelockController.sol#349-362):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorTimelockControl.sol",
+      "line": 138,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in GovernorTimelockControl._cancel(address[],uint256[],bytes[],bytes32) (contracts/governance/extensions/GovernorTimelockControl.sol#138-152):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorTimelockControl.sol",
+      "line": 147,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in GovernorTimelockControl._cancel(address[],uint256[],bytes[],bytes32) (contracts/governance/extensions/GovernorTimelockControl.sol#138-152):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/governance/extensions/GovernorTimelockControl.sol",
+      "line": 148,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in GovernorTimelockControl._cancel(address[],uint256[],bytes[],bytes32) (contracts/governance/extensions/GovernorTimelockControl.sol#138-152):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20FlashMint.sol",
+      "line": 107,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC20FlashMint.flashLoan(IERC3156FlashBorrower,address,uint256,bytes) (contracts/token/ERC20/extensions/ERC20FlashMint.sol#107-129):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20FlashMint.sol",
+      "line": 117,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC20FlashMint.flashLoan(IERC3156FlashBorrower,address,uint256,bytes) (contracts/token/ERC20/extensions/ERC20FlashMint.sol#107-129):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20FlashMint.sol",
+      "line": 125,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC20FlashMint.flashLoan(IERC3156FlashBorrower,address,uint256,bytes) (contracts/token/ERC20/extensions/ERC20FlashMint.sol#107-129):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/ERC20.sol",
+      "line": 249,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC20FlashMint.flashLoan(IERC3156FlashBorrower,address,uint256,bytes) (contracts/token/ERC20/extensions/ERC20FlashMint.sol#107-129):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/ERC20.sol",
+      "line": 261,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC20FlashMint.flashLoan(IERC3156FlashBorrower,address,uint256,bytes) (contracts/token/ERC20/extensions/ERC20FlashMint.sol#107-129):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20FlashMint.sol",
+      "line": 126,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC20FlashMint.flashLoan(IERC3156FlashBorrower,address,uint256,bytes) (contracts/token/ERC20/extensions/ERC20FlashMint.sol#107-129):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/ERC20.sol",
+      "line": 249,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC20FlashMint.flashLoan(IERC3156FlashBorrower,address,uint256,bytes) (contracts/token/ERC20/extensions/ERC20FlashMint.sol#107-129):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/ERC20.sol",
+      "line": 261,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC20FlashMint.flashLoan(IERC3156FlashBorrower,address,uint256,bytes) (contracts/token/ERC20/extensions/ERC20FlashMint.sol#107-129):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20FlashMint.sol",
+      "line": 126,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC20FlashMint.flashLoan(IERC3156FlashBorrower,address,uint256,bytes) (contracts/token/ERC20/extensions/ERC20FlashMint.sol#107-129):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/ERC20.sol",
+      "line": 249,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC20FlashMint.flashLoan(IERC3156FlashBorrower,address,uint256,bytes) (contracts/token/ERC20/extensions/ERC20FlashMint.sol#107-129):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/ERC20.sol",
+      "line": 261,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC20FlashMint.flashLoan(IERC3156FlashBorrower,address,uint256,bytes) (contracts/token/ERC20/extensions/ERC20FlashMint.sol#107-129):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20FlashMint.sol",
+      "line": 125,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC20FlashMint.flashLoan(IERC3156FlashBorrower,address,uint256,bytes) (contracts/token/ERC20/extensions/ERC20FlashMint.sol#107-129):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/ERC20.sol",
+      "line": 242,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC20FlashMint.flashLoan(IERC3156FlashBorrower,address,uint256,bytes) (contracts/token/ERC20/extensions/ERC20FlashMint.sol#107-129):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/ERC20.sol",
+      "line": 255,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC20FlashMint.flashLoan(IERC3156FlashBorrower,address,uint256,bytes) (contracts/token/ERC20/extensions/ERC20FlashMint.sol#107-129):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20FlashMint.sol",
+      "line": 126,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC20FlashMint.flashLoan(IERC3156FlashBorrower,address,uint256,bytes) (contracts/token/ERC20/extensions/ERC20FlashMint.sol#107-129):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/ERC20.sol",
+      "line": 242,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC20FlashMint.flashLoan(IERC3156FlashBorrower,address,uint256,bytes) (contracts/token/ERC20/extensions/ERC20FlashMint.sol#107-129):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/ERC20.sol",
+      "line": 255,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC20FlashMint.flashLoan(IERC3156FlashBorrower,address,uint256,bytes) (contracts/token/ERC20/extensions/ERC20FlashMint.sol#107-129):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/extensions/ERC20FlashMint.sol",
+      "line": 126,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC20FlashMint.flashLoan(IERC3156FlashBorrower,address,uint256,bytes) (contracts/token/ERC20/extensions/ERC20FlashMint.sol#107-129):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/ERC20.sol",
+      "line": 242,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC20FlashMint.flashLoan(IERC3156FlashBorrower,address,uint256,bytes) (contracts/token/ERC20/extensions/ERC20FlashMint.sol#107-129):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC20/ERC20.sol",
+      "line": 255,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC20FlashMint.flashLoan(IERC3156FlashBorrower,address,uint256,bytes) (contracts/token/ERC20/extensions/ERC20FlashMint.sol#107-129):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/extensions/ERC721Wrapper.sol",
+      "line": 47,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC721Wrapper.withdrawTo(address,uint256[]) (contracts/token/ERC721/extensions/ERC721Wrapper.sol#47-60):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/extensions/ERC721Wrapper.sol",
+      "line": 59,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC721Wrapper.withdrawTo(address,uint256[]) (contracts/token/ERC721/extensions/ERC721Wrapper.sol#47-60):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/extensions/ERC721Wrapper.sol",
+      "line": 54,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC721Wrapper.withdrawTo(address,uint256[]) (contracts/token/ERC721/extensions/ERC721Wrapper.sol#47-60):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/ERC721.sol",
+      "line": 318,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC721Wrapper.withdrawTo(address,uint256[]) (contracts/token/ERC721/extensions/ERC721Wrapper.sol#47-60):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/extensions/ERC721Wrapper.sol",
+      "line": 54,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC721Wrapper.withdrawTo(address,uint256[]) (contracts/token/ERC721/extensions/ERC721Wrapper.sol#47-60):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/ERC721.sol",
+      "line": 318,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC721Wrapper.withdrawTo(address,uint256[]) (contracts/token/ERC721/extensions/ERC721Wrapper.sol#47-60):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/extensions/ERC721Wrapper.sol",
+      "line": 54,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC721Wrapper.withdrawTo(address,uint256[]) (contracts/token/ERC721/extensions/ERC721Wrapper.sol#47-60):",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "contracts/token/ERC721/ERC721.sol",
+      "line": 313,
+      "rule_id": "reentrancy-no-eth",
+      "severity": "Medium",
+      "message": "Reentrancy in ERC721Wrapper.withdrawTo(address,uint256[]) (contracts/token/ERC721/extensions/ERC721Wrapper.sol#47-60):",
+      "nearest_changed_line": null
+    }
+  ],
+  "matches": [],
+  "tp": false,
+  "finding_count": 41,
+  "tp_count": 0,
+  "telemetry": {
+    "tool_version": "0.11.6",
+    "rule_sha256": "",
+    "clone_head": "9445f96223041abf2bf08daa56f8da50b674cbcd",
+    "clone_tree": "5171e109a1ad79b55c352a9c6ec81f337c1db41f",
+    "solc_version": "0.8.28",
+    "scanned_files_sha256": "d08906138ac9dcb4f8dc659952aff38831c9fbf14c682f63b8c714271870abcc",
+    "scanned_file_count": 575,
+    "diff_files": 1,
+    "diff_lines": 1,
+    "excluded_hunks": 7,
+    "renames": 0,
+    "alarm_count": 41,
+    "semgrep_errors": 0,
+    "runtime_seconds": 62.736,
+    "stderr_sha256": "68b2217066d879611642869c02e0c8bde4580984a64235845c62173a5f595e55"
+  }
+}

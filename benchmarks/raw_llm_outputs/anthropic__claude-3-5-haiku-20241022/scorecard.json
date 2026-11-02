@@ -1,0 +1,20 @@
+{
+  "model": "anthropic/claude-3-5-haiku-20241022",
+  "runs": 10,
+  "temperature": 0.0,
+  "pass_at_1": {
+    "semgrep": 0,
+    "codeql": 0
+  },
+  "pass_at_3": {
+    "semgrep": 0,
+    "codeql": 0
+  },
+  "api_errors": 10,
+  "missing_qlpack": 0,
+  "hallucinated_imports": 0,
+  "semantic_semgrep_pass": 0,
+  "semgrep_validated": 0,
+  "best_semgrep": "",
+  "returned_models": []
+}

@@ -1,0 +1,53 @@
+rules:
+  - id: python.state-write-after-untrusted-external-call
+    languages: [python]
+    severity: WARNING
+    message: >-
+      Public function $FUNC performs an external call (requests, httpx or
+      subprocess) and then writes state using the response. Validate the
+      untrusted result before mutating state, and make sure a failure or a
+      re-entrant call cannot leave the state inconsistent.
+    metadata:
+      category: security
+      invariant: state mutation following an external untrusted interaction
+    patterns:
+      - pattern-either:
+          - pattern: |
+              def $FUNC(...):
+                  ...
+                  $RESP = requests.$M(...)
+                  ...
+                  self.$ATTR = <... $RESP ...>
+          - pattern: |
+              def $FUNC(...):
+                  ...
+                  $RESP = requests.$M(...)
+                  ...
+                  self.$ATTR[...] = <... $RESP ...>
+          - pattern: |
+              def $FUNC(...):
+                  ...
+                  $RESP = httpx.$M(...)
+                  ...
+                  self.$ATTR = <... $RESP ...>
+          - pattern: |
+              def $FUNC(...):
+                  ...
+                  $RESP = httpx.$M(...)
+                  ...
+                  self.$ATTR[...] = <... $RESP ...>
+          - pattern: |
+              def $FUNC(...):
+                  ...
+                  $RESP = subprocess.$M(...)
+                  ...
+                  self.$ATTR = <... $RESP ...>
+          - pattern: |
+              def $FUNC(...):
+                  ...
+                  $RESP = subprocess.$M(...)
+                  ...
+                  self.$ATTR[...] = <... $RESP ...>
+      - metavariable-regex:
+          metavariable: $FUNC
+          regex: ^(?!_).*

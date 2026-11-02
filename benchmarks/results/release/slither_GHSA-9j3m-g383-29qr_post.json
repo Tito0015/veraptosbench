@@ -1,0 +1,33 @@
+{
+  "pair": "GHSA-9j3m-g383-29qr",
+  "target": "slither",
+  "side": "post",
+  "outcome": "ok",
+  "control": "",
+  "category": "web3_toctou_cei",
+  "repository": "https://github.com/OpenZeppelin/openzeppelin-contracts",
+  "cwe": "",
+  "oracle_unresolved": false,
+  "findings": [],
+  "matches": [],
+  "tp": false,
+  "finding_count": 0,
+  "tp_count": 0,
+  "telemetry": {
+    "tool_version": "0.11.6",
+    "rule_sha256": "",
+    "clone_head": "81336aefb52d5777cd140cf2eac31fdf65d9bc95",
+    "clone_tree": "416939899fafa8f755dcce76aaf2fc23986b513c",
+    "solc_version": "0.8.28",
+    "scanned_files_sha256": "21b792f9844e9657c00615fb7ca645270e0865ab93c6d7504d986a38e9bca8d3",
+    "scanned_file_count": 251,
+    "diff_files": 1,
+    "diff_lines": 2,
+    "excluded_hunks": 3,
+    "renames": 1,
+    "alarm_count": 0,
+    "semgrep_errors": 0,
+    "runtime_seconds": 5.523,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

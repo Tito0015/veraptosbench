@@ -1,0 +1,2 @@
+API_ERROR
+Error code: 404 - anthropic/claude-3.5-sonnet is no longer available on OpenRouter: no provider serves this model anymore. See available models at https://openrouter.ai/models

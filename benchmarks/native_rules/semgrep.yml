@@ -1,0 +1,8 @@
+rules:
+  - id: veraptosbench.native.python-function
+    languages: [python]
+    severity: INFO
+    message: Python function definition
+    pattern: |
+      def $F(...):
+        ...

@@ -1,0 +1,13 @@
+rules:
+  - id: state.mutation.external.interaction
+    languages: [python]
+    severity: ERROR
+    message: "State mutation following an external untrusted interaction detected."
+    pattern: |
+      def $FUNC_NAME(...):
+          ...
+          $RESPONSE = requests.get(...)  # or httpx.get(...) or subprocess.run(...)
+          ...
+          $STATE_WRITE = $RESPONSE.json()  # or any assignment using the response
+    metadata:
+      category: security

@@ -1,0 +1,105 @@
+returned_model: anthropic/claude-sonnet-5.5
+```yaml
+rules:
+  - id: python.state-mutation-after-untrusted-external-call
+    languages: [python]
+    severity: WARNING
+    message: >
+      Public function $FUNC performs an external call (requests/httpx/subprocess)
+      and then writes the response into persistent state ($ATTR). Validate or
+      sanitize the external result before mutating state.
+    patterns:
+      - pattern-inside: |
+          def $FUNC(...):
+              ...
+      - metavariable-regex:
+          metavariable: $FUNC
+          regex: ^(?!_).*
+      - pattern-either:
+          - pattern: |
+              $R = requests.$M(...)
+              ...
+              self.$ATTR = <... $R ...>
+          - pattern: |
+              $R = httpx.$M(...)
+              ...
+              self.$ATTR = <... $R ...>
+          - pattern: |
+              $R = subprocess.$M(...)
+              ...
+              self.$ATTR = <... $R ...>
+          - pattern: |
+              $R = requests.$M(...)
+              ...
+              self.$ATTR[$K] = <... $R ...>
+          - pattern: |
+              $R = httpx.$M(...)
+              ...
+              self.$ATTR[$K] = <... $R ...>
+          - pattern: |
+              $R = subprocess.$M(...)
+              ...
+              self.$ATTR[$K] = <... $R ...>
+          - pattern: |
+              requests.$M(...)
+              ...
+              self.$ATTR = <... requests.$M(...) ...>
+          - pattern: |
+              self.$ATTR = <... requests.$M(...) ...>
+          - pattern: |
+              self.$ATTR = <... httpx.$M(...) ...>
+          - pattern: |
+              self.$ATTR = <... subprocess.$M(...) ...>
+```
+
+```ql
+import python
+import semmle.python.ApiGraphs
+
+/**
+ * @name State mutation following an external untrusted interaction
+ * @description A public function calls requests/httpx/subprocess and then
+ *              writes object state using the result.
+ * @kind problem
+ * @problem.severity warning
+ * @id py/state-write-after-external-call
+ */
+
+predicate externalCall(Call c) {
+  exists(string m |
+    m in ["requests", "httpx", "subprocess"] and
+    c = API::moduleImport(m).getAMember().getACall().asExpr()
+  )
+}
+
+predicate stateTarget(Expr target) {
+  target.(Attribute).getObject().(Name).getId() = "self"
+  or
+  target.(Subscript).getObject().(Attribute).getObject().(Name).getId() = "self"
+}
+
+predicate usesResponse(Assign write, Call call) {
+  write.getValue().getASubExpression*() = call
+  or
+  exists(Assign ca, Name v, Name use |
+    ca.getValue() = call and
+    v = ca.getATarget() and
+    use = write.getValue().getASubExpression*() and
+    use.getId() = v.getId()
+  )
+}
+
+from Function f, Call call, Assign write, Expr target
+where
+  not f.getName().prefix(1) = "_" and
+  externalCall(call) and
+  call.getScope() = f and
+  write.getScope() = f and
+  target = write.getATarget() and
+  stateTarget(target) and
+  usesResponse(write, call) and
+  call.getLocation().getStartLine() <= write.getLocation().getStartLine()
+select write,
+  "Public function '" + f.getName() +
+    "' writes state using the result of an external call $@.", call, "here"
+```

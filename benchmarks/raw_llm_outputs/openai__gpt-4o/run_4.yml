@@ -1,0 +1,21 @@
+rules:
+  - id: external-call-state-mutation
+    patterns:
+      - pattern: |
+          function $FUNC($ARGS) {
+            ...
+            $EXTERNAL_CALL(...);
+            ...
+            $STATE_MUTATION;
+            ...
+          }
+    pattern-either:
+      - pattern: $EXTERNAL_CALL(...);
+      - pattern: $STATE_MUTATION;
+    pattern-not: $SAFE_CALL(...);
+    message: "State mutation following an external untrusted interaction detected."
+    languages: [solidity]
+    severity: WARNING
+    metadata:
+      author: "Your Name"
+      description: "Detects state mutations following external calls to untrusted input."

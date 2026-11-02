@@ -1,0 +1,9 @@
+rules:
+  - id: state.mutation.external.untrusted
+    languages: [python]
+    severity: ERROR
+    message: "State mutation following an external untrusted interaction detected."
+    pattern: |
+      def $FUNC(...):
+          $RESPONSE = requests.get(...)
+          $STATE = $RESPONSE.json()  # or any assignment using the response

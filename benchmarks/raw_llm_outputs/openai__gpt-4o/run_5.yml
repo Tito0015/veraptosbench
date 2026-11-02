@@ -1,0 +1,14 @@
+rules:
+  - id: state-mutation-after-external-call
+    patterns:
+      - pattern: |
+          function $FUNC($ARGS) public {
+            ...
+            $CALL($UNTRUSTED_INPUT);
+            ...
+            $STATE_VAR = $VALUE;
+            ...
+          }
+    message: "Avoid state mutation after an external call with untrusted input."
+    languages: [solidity]
+    severity: WARNING

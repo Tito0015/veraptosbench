@@ -1,0 +1,1506 @@
+{
+  "pair": "GHSA-84m7-p3x7-pcfv",
+  "target": "semgrep",
+  "side": "pre",
+  "outcome": "ok",
+  "control": "",
+  "category": "web2_mcp",
+  "repository": "https://github.com/modelcontextprotocol/python-sdk",
+  "cwe": "",
+  "oracle_unresolved": false,
+  "findings": [
+    {
+      "file": ".github/actions/conformance/client.py",
+      "line": 117,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": ".github/actions/conformance/client.py",
+      "line": 319,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "examples/clients/conformance-auth-client/mcp_conformance_auth_client/__init__.py",
+      "line": 112,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "examples/clients/simple-auth-client/mcp_simple_auth_client/main.py",
+      "line": 215,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "examples/clients/simple-chatbot/mcp_simple_chatbot/main.py",
+      "line": 250,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "examples/fastmcp/text_me.py",
+      "line": 48,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "examples/servers/simple-auth/mcp_simple_auth/token_verifier.py",
+      "line": 44,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "examples/servers/simple-auth/mcp_simple_auth/token_verifier.py",
+      "line": 45,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "examples/servers/simple-auth/mcp_simple_auth/token_verifier.py",
+      "line": 47,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "examples/snippets/clients/oauth_client.py",
+      "line": 72,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/cli/cli.py",
+      "line": 48,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/cli/cli.py",
+      "line": 278,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/auth/extensions/client_credentials.py",
+      "line": 107,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/auth/extensions/client_credentials.py",
+      "line": 335,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/auth/extensions/client_credentials.py",
+      "line": 485,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/auth/oauth2.py",
+      "line": 407,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/auth/oauth2.py",
+      "line": 452,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/auth/utils.py",
+      "line": 212,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/auth/utils.py",
+      "line": 227,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/session_group.py",
+      "line": 316,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/sse.py",
+      "line": 66,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/client/streamable_http.py",
+      "line": 711,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/os/win32/utilities.py",
+      "line": 209,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/os/win32/utilities.py",
+      "line": 221,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/server/fastmcp/resources/types.py",
+      "line": 160,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/shared/_httpx_utils.py",
+      "line": 75,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "src/mcp/shared/_httpx_utils.py",
+      "line": 87,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/cli/test_utils.py",
+      "line": 84,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/cli/test_utils.py",
+      "line": 86,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/cli/test_utils.py",
+      "line": 98,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 108,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 121,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 134,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 137,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 144,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 147,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 287,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 288,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 405,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 415,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 430,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 445,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 457,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 469,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 487,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 503,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 518,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 918,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 928,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 943,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 953,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 967,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 980,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 997,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1015,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1031,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1053,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1065,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1134,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1141,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1155,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1170,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1291,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1299,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1306,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1313,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1321,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1341,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1353,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1388,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1394,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1407,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1414,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1421,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1428,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1445,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1454,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1485,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1486,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1531,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1541,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1549,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1557,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1573,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1584,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1594,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1621,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1626,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1700,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1703,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1735,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1736,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1883,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1891,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1895,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1903,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1934,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1943,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1974,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1981,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1985,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 1993,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 2010,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 2022,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_auth.py",
+      "line": 2029,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_config.py",
+      "line": 47,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_scope_bug_1630.py",
+      "line": 79,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_scope_bug_1630.py",
+      "line": 90,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_scope_bug_1630.py",
+      "line": 101,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_scope_bug_1630.py",
+      "line": 116,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_scope_bug_1630.py",
+      "line": 152,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/client/test_scope_bug_1630.py",
+      "line": 162,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/issues/test_1363_race_condition_streamable_http.py",
+      "line": 143,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/issues/test_1363_race_condition_streamable_http.py",
+      "line": 144,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/issues/test_1363_race_condition_streamable_http.py",
+      "line": 158,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/issues/test_1363_race_condition_streamable_http.py",
+      "line": 159,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/issues/test_1363_race_condition_streamable_http.py",
+      "line": 173,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/issues/test_1363_race_condition_streamable_http.py",
+      "line": 174,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/issues/test_1363_race_condition_streamable_http.py",
+      "line": 215,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/issues/test_1363_race_condition_streamable_http.py",
+      "line": 216,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/issues/test_1363_race_condition_streamable_http.py",
+      "line": 256,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/issues/test_1363_race_condition_streamable_http.py",
+      "line": 257,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/server/auth/test_error_handling.py",
+      "line": 54,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/server/auth/test_error_handling.py",
+      "line": 56,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/server/auth/test_protected_resource.py",
+      "line": 34,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/server/auth/test_protected_resource.py",
+      "line": 34,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/server/auth/test_protected_resource.py",
+      "line": 84,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/server/auth/test_protected_resource.py",
+      "line": 85,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/server/fastmcp/auth/test_auth_integration.py",
+      "line": 224,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/server/fastmcp/auth/test_auth_integration.py",
+      "line": 224,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/server/fastmcp/test_server.py",
+      "line": 1539,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/server/fastmcp/test_server.py",
+      "line": 1540,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/server/test_sse_security.py",
+      "line": 110,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/server/test_sse_security.py",
+      "line": 129,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/server/test_sse_security.py",
+      "line": 152,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/server/test_sse_security.py",
+      "line": 172,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/server/test_sse_security.py",
+      "line": 205,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/server/test_sse_security.py",
+      "line": 230,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/server/test_sse_security.py",
+      "line": 239,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/server/test_sse_security.py",
+      "line": 264,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/server/test_sse_security.py",
+      "line": 272,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/server/test_sse_security.py",
+      "line": 293,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/server/test_streamable_http_security.py",
+      "line": 92,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/server/test_streamable_http_security.py",
+      "line": 124,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/server/test_streamable_http_security.py",
+      "line": 152,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/server/test_streamable_http_security.py",
+      "line": 172,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/server/test_streamable_http_security.py",
+      "line": 213,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/server/test_streamable_http_security.py",
+      "line": 245,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/server/test_streamable_http_security.py",
+      "line": 271,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/server/test_streamable_http_security.py",
+      "line": 282,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/shared/test_httpx_utils.py",
+      "line": 19,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/shared/test_sse.py",
+      "line": 149,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/shared/test_streamable_http.py",
+      "line": 577,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/shared/test_streamable_http.py",
+      "line": 589,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/shared/test_streamable_http.py",
+      "line": 605,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/shared/test_streamable_http.py",
+      "line": 620,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/shared/test_streamable_http.py",
+      "line": 635,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/shared/test_streamable_http.py",
+      "line": 652,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/shared/test_streamable_http.py",
+      "line": 724,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/shared/test_streamable_http.py",
+      "line": 739,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/shared/test_streamable_http.py",
+      "line": 749,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/shared/test_streamable_http.py",
+      "line": 765,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/shared/test_streamable_http.py",
+      "line": 782,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/shared/test_streamable_http.py",
+      "line": 800,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/shared/test_streamable_http.py",
+      "line": 815,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/shared/test_streamable_http.py",
+      "line": 830,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/shared/test_streamable_http.py",
+      "line": 845,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/shared/test_streamable_http.py",
+      "line": 861,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/shared/test_streamable_http.py",
+      "line": 886,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/shared/test_streamable_http.py",
+      "line": 901,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/shared/test_streamable_http.py",
+      "line": 921,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/shared/test_streamable_http.py",
+      "line": 946,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/shared/test_streamable_http.py",
+      "line": 958,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/shared/test_streamable_http.py",
+      "line": 974,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/shared/test_streamable_http.py",
+      "line": 1202,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/shared/test_streamable_http.py",
+      "line": 1641,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/shared/test_streamable_http.py",
+      "line": 1653,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/shared/test_streamable_http.py",
+      "line": 1667,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/shared/test_streamable_http.py",
+      "line": 1683,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/shared/test_streamable_http.py",
+      "line": 1699,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/shared/test_streamable_http.py",
+      "line": 1711,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/shared/test_streamable_http.py",
+      "line": 2227,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/shared/test_streamable_http.py",
+      "line": 2258,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    },
+    {
+      "file": "tests/shared/test_streamable_http.py",
+      "line": 2296,
+      "rule_id": "veraptos.untrusted-external-interaction",
+      "severity": "ERROR",
+      "message": "untrusted external interaction",
+      "nearest_changed_line": null
+    }
+  ],
+  "matches": [],
+  "tp": false,
+  "finding_count": 184,
+  "tp_count": 0,
+  "telemetry": {
+    "tool_version": "opengrep 1.33.1",
+    "rule_sha256": "9f54c90659f2e21ffdb458d6e17cde9ff749ccbd6a4ce10d81570881bc6f1256",
+    "clone_head": "5ebdfed4060d8e5b11b8e2348f86bad4d1fb8836",
+    "clone_tree": "8331755fe4b6180ab98c6cfe1bcfe62bd45f2bba",
+    "solc_version": "",
+    "scanned_files_sha256": "377cec300234b2c11d23e823ec7c431d645e8f22fb815637118e5fbd51ca4a67",
+    "scanned_file_count": 134,
+    "diff_files": 3,
+    "diff_lines": 137,
+    "excluded_hunks": 46,
+    "renames": 0,
+    "alarm_count": 184,
+    "semgrep_errors": 0,
+    "runtime_seconds": 66.271,
+    "stderr_sha256": "07050f244e8d077672fcde5834093ce3cb91a13430ff4ca1cea5e5edf509d229"
+  }
+}

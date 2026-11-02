@@ -1,0 +1,6 @@
+rules:
+  - id: veraptos.unchecked-low-level-call
+    languages: [solidity]
+    severity: ERROR
+    message: "UncheckedLowLevelCall in pull"
+    pattern: $RECV.call(...)

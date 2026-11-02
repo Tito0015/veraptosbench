@@ -1,0 +1,33 @@
+Certainly! Below are the two fenced blocks containing a Semgrep rule and a CodeQL query to detect the pattern where a public function performs an external call to untrusted input and then writes to the contract state.
+
+```yaml
+rules:
+  - id: external-call-then-state-mutation
+    patterns:
+      - pattern: |
+          function $FUNC(...) public {
+            ...
+            $UNTRUSTED_CALL(...);
+            ...
+            $STATE_VAR = ...;
+            ...
+          }
+    message: "Avoid state mutation after an external call to untrusted input."
+    languages: [solidity]
+    severity: WARNING
+```
+
+```ql
+import solidity
+
+from FunctionCall fc, Function f, Assignment a
+where
+  f.isPublic() and
+  fc.getEnclosingFunction() = f and
+  fc.getTarget().getName() = "call" and
+  a.getEnclosingFunction() = f and
+  a.getLocation().getStartLine() > fc.getLocation().getEndLine()
+select a, "Avoid state mutation after an external call to untrusted input."
+```
+
+These rules are designed to identify the pattern where a public function in a Solidity contract makes an external call and then modifies the contract's state, which can be a security risk if the external call is to untrusted input.

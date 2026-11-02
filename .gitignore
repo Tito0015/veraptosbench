@@ -1,0 +1,16 @@
+.env
+.env.*
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.log
+.DS_Store
+
+# Scanner caches (never vendor clones in the public repo)
+benchmarks/clones/
+benchmarks/codeql_dbs/
+benchmarks/solc_bin/
+benchmarks/mutants/
+benchmarks/results/*
+!benchmarks/results/release/

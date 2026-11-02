@@ -1,0 +1,34 @@
+rules:
+  - id: python.state-mutation-after-untrusted-external-call
+    languages: [python]
+    severity: WARNING
+    message: >-
+      Public function $F calls an external, untrusted source ($MOD.$M) and then
+      writes state ($OBJ.$ATTR) using the result. Validate or sanitize the
+      response before mutating state.
+    patterns:
+      - pattern-either:
+          - pattern: |
+              def $F(...):
+                ...
+                $R = $MOD.$M(...)
+                ...
+                $OBJ.$ATTR = <... $R ...>
+          - pattern: |
+              def $F(...):
+                ...
+                $R = $MOD.$M(...).$X(...)
+                ...
+                $OBJ.$ATTR = <... $R ...>
+          - pattern: |
+              async def $F(...):
+                ...
+                $R = await $MOD.$M(...)
+                ...
+                $OBJ.$ATTR = <... $R ...>
+      - metavariable-regex:
+          metavariable: $MOD
+          regex: ^(requests|httpx|subprocess)$
+      - metavariable-regex:
+          metavariable: $F
+          regex: ^[^_]

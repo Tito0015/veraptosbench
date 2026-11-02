@@ -1,0 +1,25 @@
+returned_model: openai/gpt-4o-mini
+```yaml
+rules:
+  - id: state.mutation.external.untrusted
+    languages: [python]
+    severity: ERROR
+    message: "State mutation following an external untrusted interaction detected."
+    pattern: |
+      def $FUNC(...):
+          requests.get(...)  # or httpx.get(...) or subprocess.run(...)
+          $STATE = ...
+    metadata:
+      category: security
+```
+
+```ql
+import python
+from Function f, Call c, Assignment a
+where 
+  f.isPublic() and 
+  (c.getFunc().(Name).getName() = "get" and (c.getTarget().(Name).getName() = "requests" or c.getTarget().(Name).getName() = "httpx" or c.getTarget().(Name).getName() = "subprocess")) and 
+  a.getValue() = c and 
+  a.getTarget().(Name).getName() = f.getName()
+select f, "State mutation following an external untrusted interaction detected."
+```

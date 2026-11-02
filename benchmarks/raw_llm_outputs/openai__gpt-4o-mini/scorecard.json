@@ -1,0 +1,22 @@
+{
+  "model": "openai/gpt-4o-mini",
+  "runs": 10,
+  "temperature": 0.0,
+  "pass_at_1": {
+    "semgrep": 10,
+    "codeql": 0
+  },
+  "pass_at_3": {
+    "semgrep": 10,
+    "codeql": 0
+  },
+  "api_errors": 0,
+  "missing_qlpack": 10,
+  "hallucinated_imports": 0,
+  "semantic_semgrep_pass": 10,
+  "semgrep_validated": 10,
+  "best_semgrep": "benchmarks/raw_llm_outputs/openai__gpt-4o-mini/run_1.yml",
+  "returned_models": [
+    "openai/gpt-4o-mini"
+  ]
+}

@@ -1,0 +1,27 @@
+returned_model: openai/gpt-4o-mini
+```yaml
+rules:
+  - id: state.mutation.external.untrusted
+    languages: [python]
+    severity: ERROR
+    message: "Public function performs an external call to untrusted input and then writes contract state."
+    pattern: |
+      def $FUNC_NAME(...):
+          ...
+          $RESPONSE = requests.get(...)  # or httpx.get(...) or subprocess.run(...)
+          ...
+          $STATE_WRITE = $RESPONSE  # State mutation using the response
+    metadata:
+      severity: ERROR
+```
+
+```ql
+import python
+from Function f, Call c, Assignment a
+where f.isPublic() and
+      c.getFunc().(Name).getId() in ["get", "run"] and
+      c.getReceiver().(Name).getId() in ["requests", "httpx", "subprocess"] and
+      a.getTarget() = f.getAChild() and
+      a.getValue() = c
+select f, "Public function performs an external call to untrusted input and then writes contract state."
+```

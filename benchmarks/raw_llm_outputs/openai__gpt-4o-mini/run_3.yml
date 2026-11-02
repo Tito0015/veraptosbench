@@ -1,0 +1,11 @@
+rules:
+  - id: state.mutation.external.untrusted
+    languages: [python]
+    severity: ERROR
+    message: "State mutation following an external untrusted interaction detected."
+    pattern: |
+      def $FUNC(...):
+          requests.get(...)  # or httpx.get(...) or subprocess.run(...)
+          $STATE = ...
+    metadata:
+      category: security

@@ -1,0 +1,6 @@
+rules:
+  - id: veraptosbench.native.model-validate
+    languages: [python]
+    severity: WARNING
+    message: model_validate sink
+    pattern: $OBJ.model_validate(...)

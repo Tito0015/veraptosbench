@@ -1,0 +1,59 @@
+rules:
+  - id: python.state-write-after-untrusted-external-call
+    languages: [python]
+    severity: WARNING
+    message: >-
+      Public function `$F` makes an external call (requests, httpx or subprocess)
+      and then writes object state using the result. Untrusted response data
+      changes state without validation. Validate the data before the write, or
+      make the update atomic.
+    metadata:
+      category: security
+      invariant: state mutation following an external untrusted interaction
+    patterns:
+      - pattern-either:
+          - pattern: |
+              def $F(...):
+                ...
+                $R = requests.$M(...)
+                ...
+                self.$A = <... $R ...>
+          - pattern: |
+              def $F(...):
+                ...
+                $R = httpx.$M(...)
+                ...
+                self.$A = <... $R ...>
+          - pattern: |
+              def $F(...):
+                ...
+                $R = subprocess.$M(...)
+                ...
+                self.$A = <... $R ...>
+          - pattern: |
+              async def $F(...):
+                ...
+                $R = await $C.$M(...)
+                ...
+                self.$A = <... $R ...>
+          - pattern: |
+              def $F(...):
+                ...
+                $R = requests.$M(...)
+                ...
+                self.$A[$K] = <... $R ...>
+          - pattern: |
+              def $F(...):
+                ...
+                $R = httpx.$M(...)
+                ...
+                self.$A[$K] = <... $R ...>
+          - pattern: |
+              def $F(...):
+                ...
+                $R = subprocess.$M(...)
+                ...
+                self.$A[$K] = <... $R ...>
+      - metavariable-regex:
+          metavariable: $F
+          regex: ^[^_].*

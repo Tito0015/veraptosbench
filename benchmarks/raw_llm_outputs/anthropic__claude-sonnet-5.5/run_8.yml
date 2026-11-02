@@ -1,0 +1,43 @@
+rules:
+  - id: python.state-mutation-after-external-untrusted-call
+    languages: [python]
+    severity: WARNING
+    message: >
+      Public function $F makes an external call (requests, httpx or subprocess)
+      and then writes the result into persistent state. Validate the untrusted
+      response before assigning it.
+    patterns:
+      - pattern-inside: |
+          def $F(...):
+            ...
+      - metavariable-regex:
+          metavariable: $F
+          regex: ^[^_]
+      - pattern-either:
+          - pattern: |
+              $R = requests.$M(...)
+              ...
+              self.$A = <... $R ...>
+          - pattern: |
+              $R = requests.$M(...)
+              ...
+              self.$A[...] = <... $R ...>
+          - pattern: |
+              $R = httpx.$M(...)
+              ...
+              self.$A = <... $R ...>
+          - pattern: |
+              $R = httpx.$M(...)
+              ...
+              self.$A[...] = <... $R ...>
+          - pattern: |
+              $R = subprocess.$M(...)
+              ...
+              self.$A = <... $R ...>
+          - pattern: |
+              $R = subprocess.$M(...)
+              ...
+              self.$A[...] = <... $R ...>
+          - pattern: self.$A = requests.$M(...)
+          - pattern: self.$A = httpx.$M(...)
+          - pattern: self.$A = subprocess.$M(...)

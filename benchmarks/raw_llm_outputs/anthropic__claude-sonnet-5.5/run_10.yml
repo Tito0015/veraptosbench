@@ -1,0 +1,50 @@
+rules:
+  - id: python.state-mutation-after-untrusted-external-call
+    languages: [python]
+    severity: WARNING
+    message: >
+      Public function $FUNC performs an external call (requests/httpx/subprocess)
+      and then writes the response into persistent state ($ATTR). Validate or
+      sanitize the external result before mutating state.
+    patterns:
+      - pattern-inside: |
+          def $FUNC(...):
+              ...
+      - metavariable-regex:
+          metavariable: $FUNC
+          regex: ^(?!_).*
+      - pattern-either:
+          - pattern: |
+              $R = requests.$M(...)
+              ...
+              self.$ATTR = <... $R ...>
+          - pattern: |
+              $R = httpx.$M(...)
+              ...
+              self.$ATTR = <... $R ...>
+          - pattern: |
+              $R = subprocess.$M(...)
+              ...
+              self.$ATTR = <... $R ...>
+          - pattern: |
+              $R = requests.$M(...)
+              ...
+              self.$ATTR[$K] = <... $R ...>
+          - pattern: |
+              $R = httpx.$M(...)
+              ...
+              self.$ATTR[$K] = <... $R ...>
+          - pattern: |
+              $R = subprocess.$M(...)
+              ...
+              self.$ATTR[$K] = <... $R ...>
+          - pattern: |
+              requests.$M(...)
+              ...
+              self.$ATTR = <... requests.$M(...) ...>
+          - pattern: |
+              self.$ATTR = <... requests.$M(...) ...>
+          - pattern: |
+              self.$ATTR = <... httpx.$M(...) ...>
+          - pattern: |
+              self.$ATTR = <... subprocess.$M(...) ...>

@@ -1,0 +1,31 @@
+rules:
+  - id: python.state-write-after-untrusted-external-call
+    languages: [python]
+    severity: WARNING
+    mode: taint
+    message: >-
+      Public function $F makes an external call (requests/httpx/subprocess) and then
+      writes object state using the result. Validate the untrusted response before
+      mutating state.
+    metadata:
+      category: security
+      invariant: state mutation following an external untrusted interaction
+    pattern-sources:
+      - patterns:
+          - pattern-either:
+              - pattern: requests.$M(...)
+              - pattern: httpx.$M(...)
+              - pattern: subprocess.$M(...)
+    pattern-sinks:
+      - patterns:
+          - pattern-inside: |
+              def $F(...):
+                  ...
+          - metavariable-regex:
+              metavariable: $F
+              regex: ^[^_].*
+          - pattern-either:
+              - pattern: self.$A = $X
+              - pattern: self.$A[...] = $X
+              - pattern: self.$A += $X
+          - focus-metavariable: $X

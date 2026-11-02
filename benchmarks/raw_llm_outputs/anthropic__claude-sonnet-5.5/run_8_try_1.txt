@@ -1,0 +1,76 @@
+returned_model: anthropic/claude-sonnet-5.5
+```yaml
+rules:
+  - id: python.state-mutation-after-external-untrusted-call
+    languages: [python]
+    severity: WARNING
+    message: >
+      Public function $F makes an external call (requests, httpx or subprocess)
+      and then writes the result into persistent state. Validate the untrusted
+      response before assigning it.
+    patterns:
+      - pattern-inside: |
+          def $F(...):
+            ...
+      - metavariable-regex:
+          metavariable: $F
+          regex: ^[^_]
+      - pattern-either:
+          - pattern: |
+              $R = requests.$M(...)
+              ...
+              self.$A = <... $R ...>
+          - pattern: |
+              $R = requests.$M(...)
+              ...
+              self.$A[...] = <... $R ...>
+          - pattern: |
+              $R = httpx.$M(...)
+              ...
+              self.$A = <... $R ...>
+          - pattern: |
+              $R = httpx.$M(...)
+              ...
+              self.$A[...] = <... $R ...>
+          - pattern: |
+              $R = subprocess.$M(...)
+              ...
+              self.$A = <... $R ...>
+          - pattern: |
+              $R = subprocess.$M(...)
+              ...
+              self.$A[...] = <... $R ...>
+          - pattern: |
+              self.$A = requests.$M(...)...
+          - pattern: |
+              self.$A = httpx.$M(...)...
+          - pattern: |
+              self.$A = subprocess.$M(...)...
+```
+
+```ql
+import python
+import semmle.python.dataflow.new.DataFlow
+import semmle.python.dataflow.new.TaintTracking
+
+predicate externalCall(Call c) {
+  exists(Attribute attr, Name base |
+    attr = c.getFunc() and
+    base = attr.getObject() and
+    base.getId() in ["requests", "httpx", "subprocess"]
+  )
+}
+
+from Function f, Call c, Assign a, Expr target
+where
+  f.getName().charAt(0) != "_" and
+  c.getScope() = f and
+  a.getScope() = f and
+  externalCall(c) and
+  target = a.getATarget() and
+  (target instanceof Attribute or target instanceof Subscript) and
+  TaintTracking::localTaint(DataFlow::exprNode(c), DataFlow::exprNode(a.getValue()))
+select a,
+  "Public function '" + f.getName() +
+    "' writes state using data from an external untrusted call $@.", c, "here"
+```

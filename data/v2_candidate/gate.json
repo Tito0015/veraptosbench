@@ -1,0 +1,28 @@
+{
+  "status": "GATE_FAIL",
+  "raw": 48,
+  "dropped": {
+    "no_fix_or_parent": 11,
+    "compare_failed": 2,
+    "keyword": 17
+  },
+  "dev": {
+    "web2_mcp": 35,
+    "web3_toctou_cei": 1
+  },
+  "held": {
+    "web2_mcp": 12
+  },
+  "missing_seeds": [
+    "GHSA-4g63-csjh-x5h7",
+    "GHSA-g4vp-m682-jc2c",
+    "GHSA-wprv-93r4-jjvs",
+    "GHSA-f5x4-25w9-4hhq",
+    "GHSA-4858-v52v-2748",
+    "GHSA-vj4m-mgj8-hp8t"
+  ],
+  "gate": {
+    "web2_mcp": 20,
+    "web3_toctou_cei": 20
+  }
+}

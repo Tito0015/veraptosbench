@@ -1,0 +1,67 @@
+returned_model: anthropic/claude-sonnet-5.5
+```yaml
+rules:
+  - id: python.state-mutation-after-untrusted-external-call
+    languages: [python]
+    severity: WARNING
+    mode: taint
+    message: >
+      A public function calls an external, untrusted source (requests, httpx or
+      subprocess) and then writes the result into persistent state (an attribute
+      or item assignment). Validate or sanitize the response before storing it.
+    metadata:
+      category: security
+      invariant: state-mutation-following-external-untrusted-interaction
+    pattern-sources:
+      - pattern-either:
+          - pattern: requests.$M(...)
+          - pattern: httpx.$M(...)
+          - pattern: subprocess.$M(...)
+    pattern-sinks:
+      - patterns:
+          - pattern-inside: |
+              def $FUNC(...):
+                  ...
+          - metavariable-regex:
+              metavariable: $FUNC
+              regex: ^[^_].*
+          - pattern-either:
+              - pattern: $OBJ.$ATTR = $SINK
+              - pattern: $OBJ[$KEY] = $SINK
+          - focus-metavariable: $SINK
+```
+
+```ql
+import python
+import semmle.python.ApiGraphs
+import semmle.python.dataflow.new.DataFlow
+
+/** A call into requests, httpx or subprocess. */
+predicate externalCall(DataFlow::CallCfgNode call) {
+  call = API::moduleImport("requests").getAMember().getACall()
+  or
+  call = API::moduleImport("httpx").getAMember().getACall()
+  or
+  call = API::moduleImport("subprocess").getAMember().getACall()
+}
+
+/** An assignment that writes to an attribute or item (state write). */
+predicate stateWrite(Assign a) {
+  a.getATarget() instanceof Attribute
+  or
+  a.getATarget() instanceof Subscript
+}
+
+from Function f, DataFlow::CallCfgNode call, Assign a, Expr used
+where
+  f.getName().charAt(0) != "_" and
+  externalCall(call) and
+  call.asExpr().getScope() = f and
+  a.getScope() = f and
+  stateWrite(a) and
+  used = a.getValue().getASubExpression*() and
+  DataFlow::localFlow(call, DataFlow::exprNode(used)) and
+  call.getLocation().getStartLine() < a.getLocation().getStartLine()
+select a, "Public function $@ writes state using data from an untrusted external call $@.", f,
+  f.getName(), call, "here"
+```
